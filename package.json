@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "author": "misogohan",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "private": false,
   "dependencies": {
     "next": "^10.0.9",
