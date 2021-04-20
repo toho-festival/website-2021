@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import Link        from 'next/link';
 import styled      from 'styled-components';
-import { routes }  from '../../scripts/routes';
+import { routes }  from '~/scripts/routes';
 
 const Header: FC = () => <Layout>
   {
