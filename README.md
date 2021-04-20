@@ -9,3 +9,7 @@ yarn install
 yarn build
 yarn start
 ```
+
+## 開発への協力
+
+[CONTRIBUTING.md](CONTRIBUTING.md)をお読み下さい。
