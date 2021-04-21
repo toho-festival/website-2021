@@ -1,0 +1,21 @@
+{
+  "hosting": [
+    {
+      "site": "tohofes-70th",
+      "public": "out",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  ],
+  "emulators": {
+    "hosting": {
+      "port": 5680
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}
