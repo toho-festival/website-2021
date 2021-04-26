@@ -1,36 +1,59 @@
 import type { FC } from 'react';
-import Link from 'next/link';
-import styled from 'styled-components';
-import { routes } from '~/scripts/routes';
-import { StyledMenu, DownwardTriangle, UpwardTriangle} from '~/scripts/Menu'
+import Link        from 'next/link';
+import styled      from 'styled-components';
+import { routes }  from '~/scripts/routes';
 
-interface Props {
-    open: boolean,
-}
-
-const Menu: FC<Props> = ({open}) => <StyledMenu open={open}>
-<DownwardTriangle></DownwardTriangle>
-<UpwardTriangle></UpwardTriangle>
-{
+const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
+  <DownwardTriangle/>
+  <UpwardTriangle/>
+  {
     routes.map(
-        ({ key, path }) => <span key={key}><Link href={path} passHref><Anchor>{key}</Anchor></Link></span>,
+      ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
     )
-}
-</StyledMenu>;
-
-const MenuLayout = styled.nav`
-  
-
-  > span {
-    margin: 0 1rem;
   }
-`;
+</Layout>;
 
 const Anchor = styled.a`
-  text-align: center;
   font-size: 1.5rem;
   line-height: 3rem;
-  z-index: 20;
+`;
+
+const Layout = styled.nav<{ open: boolean }>`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 70vh;
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  overflow: hidden;
+
+  padding-top: 3.5rem;
+
+  background-color: #ffc674;
+  opacity: .9;
+  transform: ${ ({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)' };
+  transition: transform 0.3s ease-in-out;
+`;
+
+const DownwardTriangle = styled.div`
+  margin: 30% 0 -30% -100%;
+  width: 200%;
+  height: 4px;
+  opacity: .5;
+  background-color: white;
+  transform: skewY(15deg);
+`;
+
+const UpwardTriangle = styled.div`
+  margin: 50% 0 -50% -100%;
+  width: 200%;
+  height: 8px;
+  opacity: .5;
+  background-color: white;
+  transform: skewY(120deg);
 `;
 
 

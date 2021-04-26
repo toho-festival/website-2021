@@ -5,23 +5,37 @@ import Footer                from '~/components/Footer';
 
 const Layout: FC = ({ children }) => <div>
   <Header/>
-  { children }
+  <div className='page-root'>
+    { children }
+  </div>
   <Footer/>
   <GlobalStyle/>
 </div>;
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 16px;
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
   body {
-    background: linear-gradient(#d4fffd, #ffe4bf);
-    background-repeat: no-repeat;
+    background: linear-gradient(#d4fffd, #ffe4bf) no-repeat;
     min-height: 100vh;
   }
+
   * {
     margin: 0;
   }
+
   a {
     color: unset;
     text-decoration: none;
+  }
+
+  .page-root {
+    padding-top: 3rem;
   }
 `;
 

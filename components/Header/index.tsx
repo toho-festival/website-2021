@@ -1,55 +1,59 @@
-import { FC, useState } from 'react';
-import styled      from 'styled-components';
-import Image from 'next/image';
-import Hamburger from '~/components/Header/hamburger';
-import Menu from './menu'
-import MediaQuery from "react-responsive";
+import { FC, useCallback, useState } from 'react';
+import styled                        from 'styled-components';
+import Image                         from 'next/image';
+import Hamburger                     from '~/components/Header/hamburger';
+import Menu                          from '~/components/Header/menu';
 
-const Header: FC = () =>{
-  const [open, isOpen]= useState(false);
+const Header: FC = () => {
+  const [open, setOpen] = useState(false);
+  
+  const toggle = useCallback(() => setOpen(!open), [open]);
+  
+  return <Layout>
+    <div>
+      <Image src='/logo2.jpg' width={ 64 } height={ 64 }/>
+    </div>
+    <div>
+      <Title>桐朋祭</Title>
+    </div>
+    <div>
+      <Hamburger open={ open } toggle={ toggle }/>
+    </div>
+    <Menu display={ open }/>
+  </Layout>;
+};
 
-  return(
-    <Layout>
-      <ImgLayout>
-        <MediaQuery query="(max-width: 767px)">
-          <Image
-            src="/logo2.jpg"
-            width="50px"
-            height="50px"
-          />
-        </MediaQuery>
-        <MediaQuery query="(min-width: 767px)">
-          <Image
-            src="/logo2.jpg"
-            width="60px"
-            height="60px"
-          />
-        </MediaQuery>
-    </ImgLayout>
-    <Title>桐朋祭</Title>
-    <Hamburger open={open} isOpen={isOpen}/>
-    <Menu open={open} /> 
-    </Layout>
-  );
-}
-
-const Layout = styled.nav`
+const Layout = styled.header`
   position: fixed;
-`;
+  width: calc(100% - 2rem);
+  height: 2rem;
+  display: flex;
+  align-items: stretch;
 
-const ImgLayout = styled.div`
-  display: inline;
+  padding: .5rem 1rem;
+
+  > div {
+
+    &:first-child {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &:nth-child(2) {
+      margin: 0 1rem;
+      flex-grow: 1;
+    }
+
+    &:nth-child(3) {
+      z-index: 10;
+    }
+  }
 `;
 
 const Title = styled.a`
-  position: relative;  
-  margin-left: 15px;
-  top: -14px;
   font-weight: bold;
-  font-size: 40px;
-  @media screen and (max-width: 768px) {
-    font-size: 30px;
-  }
+  font-size: 2rem;
+  line-height: 1;
 `;
 
 export default Header;
