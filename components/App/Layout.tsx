@@ -11,6 +11,11 @@ const Layout: FC = ({ children }) => <div>
 </div>;
 
 const GlobalStyle = createGlobalStyle`
+  body {
+    background: linear-gradient(#d4fffd, #ffe4bf);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
   * {
     margin: 0;
   }
