@@ -1,8 +1,8 @@
 export type Slide = {
-    title: string
-    date1: string
-    date2: string
-    date3: string
+    title: string,
+    date1: string,
+    date2: string,
+    date3: string,
 }
 
 export const entrance: Slide[] = [
@@ -25,4 +25,13 @@ export const info3: ContentInfo[] = [
 ]
 export const info4: ContentInfo[] = [
     {title:'パンフレット', detail:'こだわりの１冊',}
+]
+export const info5: ContentInfo[] = [
+    {title:'アクセス', detail:'僕らの学び舎',}
+]
+export const info6: ContentInfo[] = [
+    {title:'コロナ対策', detail:'感染症に配慮します',}
+]
+export const info7: ContentInfo[] = [
+    {title:'ブログ', detail:'事前の準備などを配信',}
 ]
