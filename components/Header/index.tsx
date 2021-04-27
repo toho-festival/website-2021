@@ -1,28 +1,59 @@
-import type { FC } from 'react';
-import Link        from 'next/link';
-import styled      from 'styled-components';
-import { routes }  from '~/scripts/routes';
+import { FC, useCallback, useState } from 'react';
+import styled                        from 'styled-components';
+import Image                         from 'next/image';
+import Hamburger                     from '~/components/Header/hamburger';
+import Menu                          from '~/components/Header/menu';
 
-const Header: FC = () => <Layout>
-  {
-    routes.map(
-      ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
-    )
-  }
-</Layout>;
+const Header: FC = () => {
+  const [open, setOpen] = useState(false);
+  
+  const toggle = useCallback(() => setOpen(!open), [open]);
+  
+  return <Layout>
+    <div>
+      <Image src='/logo2.jpg' width={ 64 } height={ 64 }/>
+    </div>
+    <div>
+      <Title>桐朋祭</Title>
+    </div>
+    <div>
+      <Hamburger open={ open } toggle={ toggle }/>
+    </div>
+    <Menu display={ open }/>
+  </Layout>;
+};
 
-const Layout = styled.nav`
-  text-align: center;
+const Layout = styled.header`
+  position: fixed;
+  width: calc(100% - 2rem);
+  height: 2rem;
+  display: flex;
+  align-items: stretch;
 
-  > span {
-    margin: 0 1rem;
+  padding: .5rem 1rem;
+
+  > div {
+
+    &:first-child {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &:nth-child(2) {
+      margin: 0 1rem;
+      flex-grow: 1;
+    }
+
+    &:nth-child(3) {
+      z-index: 10;
+    }
   }
 `;
 
-const Anchor = styled.a`
-  font-size: 1rem;
-  line-height: 3rem;
+const Title = styled.a`
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1;
 `;
 
 export default Header;
-
