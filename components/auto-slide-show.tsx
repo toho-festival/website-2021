@@ -19,9 +19,6 @@ const AutoSlideShow = () => {
           <div className="each-fade">
             <Image src="/entrance-backgrund-2.jpg" /> 
           </div>
-          <div className="each-fade">
-            <Image src="/entrance-backgrund-3.jpg"  />
-          </div>
         </Fade>
       </div>
       </div>
