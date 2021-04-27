@@ -18,19 +18,23 @@ const Content1 = () => {
       </DataUl>
       )}
       <AutoSlideShow></AutoSlideShow>
-      <HexagonContent1></HexagonContent1>
+      <div><HexagonContent1></HexagonContent1>
       {info1.map(({title,detail})=>
       <Hexagon1><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon1>)}
-      <HexagonContent2></HexagonContent2> 
+      </div>
+      <div><HexagonContent2></HexagonContent2>
       {info2.map(({title,detail})=>
       <Hexagon2><Info3>{title}</Info3><Info4>{detail}</Info4></Hexagon2>)}
-      <HexagonContent3></HexagonContent3>
+      </div>
+      <div><HexagonContent3></HexagonContent3>
       {info3.map(({title,detail})=>
       <Hexagon3><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon3>)}
-     <HexagonContent4></HexagonContent4>
+      </div>
+      <div><HexagonContent4></HexagonContent4>
       {info4.map(({title,detail})=>
       <Hexagon2><Info3>{title}</Info3><Info4>{detail}</Info4></Hexagon2>)}
-      
+      </div>
+
 
     </div>     
    )
@@ -59,6 +63,7 @@ const Date = styled.li`
 list-style: none;;
 font-size: 2vw;
 font-weight: bold;
+color: cyan;
 `;
 const Info1 = styled.p`
 font-size:20px;
