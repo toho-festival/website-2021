@@ -29,7 +29,7 @@ const Layout = styled.header`
   height: 2rem;
   display: flex;
   align-items: stretch;
-
+  z-index:200;
   padding: .5rem 1rem;
 
   > div {
