@@ -25,6 +25,8 @@ const Div = styled.div`
   color:white;
   display:flex;
   flex-direction: column;
+  margin-top:18rem;
+  margin-bottom: 0;
 `;
 
 const Span = styled.span`
