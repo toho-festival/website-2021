@@ -50,6 +50,8 @@ const Content1:FC = () => {
   )
 }
 
+export default Content1;
+
 const Move = styled.div`
   margin-top:3rem;
 `;
@@ -80,7 +82,7 @@ const Date = styled.li`
 
 const Info1 = styled.p`
   margin-top:1.5rem;
-  margin-left:2rem;
+  margin-left:1.5rem;
   font-size:20px;
   @media screen and (max-width:767px) { 
     font-size:7px;
@@ -99,7 +101,7 @@ const Info2 = styled.p`
     margin-top:0.5rem;
   }
   margin-top:1rem;
-  margin-left:0.8rem;
+  margin-left:0.5rem;
   z-index: 5;
   transform: rotate(10deg);
     -moz-transform: rotate(10deg);
@@ -110,7 +112,7 @@ const Info3 = styled.p`
   color: #ffffff;
   font-size:20px;
   margin-top:2rem;
-  margin-left:1rem;
+  margin-left:0.5rem;
   @media screen and (max-width:767px) { 
     font-size:7px;
     margin-top:1rem;
@@ -125,7 +127,7 @@ const Info4 = styled.p`
   color: #f89a0b;
   font-size:14px;
   text-align:center;
-  margin-top:1.5rem;
+  margin-top:0.5rem;
   @media screen and (max-width:767px) {
     font-size:3px;
     margin-top:1rem;
@@ -340,5 +342,3 @@ const Hexagon3 = styled.div`
     -moz-transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
 `;
-
-export default Content1
