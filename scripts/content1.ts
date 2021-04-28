@@ -30,7 +30,7 @@ export const info5: ContentInfo[] = [
     {title:'アクセス', detail:'僕らの学び舎',}
 ]
 export const info6: ContentInfo[] = [
-    {title:'コロナ対策', detail:'感染症に配慮します',}
+    {title:'コロナ対策', detail:'感染症への配慮',}
 ]
 export const info7: ContentInfo[] = [
     {title:'ブログ', detail:'事前の準備などを配信',}
