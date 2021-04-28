@@ -4,6 +4,6 @@ export type footerRoute = {
   }
   
   export const footerRoutes: footerRoute[] = [
-    {sikiKey　　　　　:'～織～70th 桐朋祭',
-     sightmapKey     :'サイトマップ'},
+    {sikiKey:'～織～70th 桐朋祭',
+     sightmapKey:'サイトマップ'},
   ];
