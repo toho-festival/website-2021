@@ -19,35 +19,30 @@ const Content1:FC = () => {
             <Date>{date3}</Date>
           </DataUl>
       )}
+      <Move1>
       <AutoSlideShow></AutoSlideShow>
-        <HexagonContent1></HexagonContent1>
-        {info1.map(({ title, detail }) =>
-          <Hexagon1><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon1>)}
-      <HexagonContent2></HexagonContent2>
-      {info2.map(({ title, detail }) =>
-        <Hexagon2><Info3>{title}</Info3><Info4>{detail}</Info4></Hexagon2>)}
+      <HexagonContent1></HexagonContent1>
+     <HexagonContent2></HexagonContent2>
+     <HexagonContent3></HexagonContent3>
+    <HexagonContent4></HexagonContent4>
+    </Move1>
+    <Move2>
+      {info1.map(({title,detail})=>
+      <Hexagon1><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon1>)}
 
-      <HexagonContent3></HexagonContent3>
-      {info3.map(({ title, detail }) =>
-        <Hexagon3><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon3>)}
+      {info2.map(({title,detail})=>
+      <Hexagon2><Info3>{title}</Info3><Info4>{detail}</Info4></Hexagon2>)}
 
-      <HexagonContent4></HexagonContent4>
-      {info4.map(({ title, detail }) =>
-        <Hexagon2><Info3>{title}</Info3><Info4>{detail}</Info4></Hexagon2>)}
+      {info3.map(({title,detail})=>
+      <Hexagon3><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon3>)}
 
-      <HexagonContent5></HexagonContent5>
-      {info5.map(({ title, detail }) =>
-        <Hexagon3><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon3>)}
+      {info4.map(({title,detail})=>
+      <Hexagon4><Info3>{title}</Info3><Info4>{detail}</Info4></Hexagon4>)}
+    </Move2>
 
-      <HexagonContent6></HexagonContent6>
-      {info6.map(({ title, detail }) =>
-        <Hexagon2><Info3>{title}</Info3><Info4>{detail}</Info4></Hexagon2>)}
 
-      <HexagonContent7></HexagonContent7>
-      {info7.map(({ title, detail }) =>
-        <Hexagon3><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon3>)}
-    </div>
-  )
+    </div>     
+   )
 }
 
 const Move = styled.div`
@@ -76,8 +71,14 @@ const Date = styled.li`
   font-weight: bold;
   color: cyan;
 `;
-
-
+const Move1 = styled.div`
+margin-top: -50vw;
+position: sticky;
+`
+const Move2 = styled.div`
+margin-top: -0vw;
+position: sticky;
+`
 const Info1 = styled.p`
   margin-top:1.5rem;
   margin-left:2rem;
@@ -238,107 +239,55 @@ const HexagonContent5 = styled.div`
     background-image: url(http://placekitten.com/240/240);
   -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin: 1vw 0 0 15vw;
-  position: absolute;
-`;
-
-const HexagonContent6 = styled.div`
-  background-color: black;
-  height: 250px;
-  width: 250px;
-  @media screen and (max-width:767px) { 
-    height: 150px;
-    width: 150px;
-  }
-  @media screen and (min-width:768px) and ( max-width:1024px) {
-    height: 200px;
-    width: 200px;
-  }
-  background-repeat: no-repeat;
-    background-position: 50%;
-    background-image: url(http://placekitten.com/240/240);
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin:8vw 0 0 60vw;
-  position: relative;
-`;
-
-const HexagonContent7 = styled.div`
-  height: 250px;
-  width: 250px;
-  @media screen and (max-width:767px) { 
-    height: 150px;
-    width: 150px;
-  }
-  @media screen and (min-width:768px) and ( max-width:1024px) {
-    height: 200px;
-    width: 200px;
-  }
-  background-color: black;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-image: url(http://placekitten.com/240/240);
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin: 1vw 0 0 15vw;
-  position: absolute;
-`;
-
-const Hexagon1 = styled.div`
-  opacity: 0.8;
-  height: 150px;
-  width: 150px;
-  @media screen and (max-width:767px) { 
-    height: 90px;
-    width: 90px;
-  }
-  background: #cf9fff;
-    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin:19vw 0 0 25vw;
-  z-index: 5;
-  position: absolute;
-  transform: rotate(-10deg);
+  margin: -43vw 0 0 25vw;
+z-index: 5;
+position: absolute;
+transform: rotate(-10deg);
     -moz-transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
 `;
 
 const Hexagon2 = styled.div`
-  opacity: 0.8;
-  height: 150px;
-  width: 150px;
-  @media screen and (max-width:767px) { 
-    height: 90px;
-    width: 90px;
-  }
-  background: #525252;
-    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin: -11vw 0 0 58vw;
+opacity: 0.8;
+height: 150px;
+width: 150px;
+background: #525252;
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  margin:3vw 0 0 60vw;
   z-index: 7;
-  position:absolute;
+  position:relative;
   transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -webkit-transform: rotate(10deg);
 `;
 
 const Hexagon3 = styled.div`
-  opacity: 0.8;
-  height: 150px;
-  width: 150px;
-  @media screen and (max-width:767px) { 
-    height: 90px;
-    width: 90px;
-  }
-  background: #cf9fff;
-    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin:9vw 0 0 25vw;
-  z-index: 5;
-  position: absolute;
-  transform: rotate(-10deg);
+opacity: 0.8;
+height: 150px;
+width: 150px;
+background: #c90fd7;
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  margin: -32vw 0 0 25vw;
+z-index: 5;
+position: absolute;
+transform: rotate(-10deg);
     -moz-transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
-`;
-
+`
+const Hexagon4 = styled.div`
+opacity: 0.8;
+height: 150px;
+width: 150px;
+background: #525252;
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  margin:4vw 0 0 60vw;
+  z-index: 7;
+  position:relative;
+  transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    `
 export default Content1
