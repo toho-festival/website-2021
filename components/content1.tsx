@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FC } from 'react';
 import AutoSlideShow from "./auto-slide-show";
-import { entrance, info1, info2, info3, info4, info5, info6, info7 } from "../scripts/content1";
+import { entrance, info1, info2, info3, info4, info5, info6, info7, info8, info9, info10} from "../scripts/content1";
 
 const Content1:FC = () => {
   const HexagonTitleProperties={
@@ -76,6 +76,18 @@ const Content1:FC = () => {
       <HexagonContent inputMargin="1vw 0 0 15vw"></HexagonContent>
       {info7.map(({ title, detail }) =>
         <Hexagon inputMargin="9vw 0 0 23vw"><Info>{title}</Info><Info {...HexagonContent1Properties}>{detail}</Info></Hexagon>)}
+
+      <HexagonContent inputMargin="8vw 0 0 60vw" inputPosition=" relative"></HexagonContent>
+      {info8.map(({ title, detail }) =>
+      <Hexagon {...HexagonProperties}><Info {...HexagonTitleProperties}>{title}</Info><Info {...HexagonContent2Properties}>{detail}</Info></Hexagon>)}
+
+      <HexagonContent inputMargin="1vw 0 0 15vw"></HexagonContent>
+      {info9.map(({ title, detail }) =>
+        <Hexagon inputMargin="9vw 0 0 23vw"><Info>{title}</Info><Info {...HexagonContent1Properties}>{detail}</Info></Hexagon>)}
+
+      <HexagonContent inputMargin="8vw 0 5vw 60vw" inputPosition=" relative"></HexagonContent>
+      {info10.map(({ title, detail }) =>
+      <Hexagon {...HexagonProperties} inputMargin="-12vw 0 0 58vw"><Info {...HexagonTitleProperties}>{title}</Info><Info {...HexagonContent2Properties}>{detail}</Info></Hexagon>)}
     </div>
   )
 }
