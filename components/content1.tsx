@@ -2,52 +2,86 @@ import styled from "styled-components";
 import { FC } from 'react';
 import AutoSlideShow from "./auto-slide-show";
 import { entrance, info1, info2, info3, info4, info5, info6, info7 } from "../scripts/content1";
-import {categoly1, categoly2, categoly3} from '~/scripts/categoly';
 
 const Content1:FC = () => {
+  const HexagonTitleProperties={
+    inputMargin:"2rem 0 0 0.5rem",
+    inputColor:"#ffffff",
+    inputTransform:"rotate(-10deg)",
+    inputMediaFontsize:"7px",
+    inputMediaMargin:"1rem 0 0 0.8rem",
+    inputLineheight:"0"
+  }
+  const HexagonProperties ={
+    inputBackground: "#525252",
+    inputMargin:"-7vw 0 0 58vw" ,
+    inputZindex:"7" ,
+    inputTransform:"rotate(10deg)",
+  }
+  const HexagonContent1Properties={
+    inputLineheight:"0" ,
+    inputFontsize:"14px" ,
+    inputMediaFontsize:"3px" ,
+    inputMargin:"1rem 0 0 0.5rem" ,
+    inputMediaMargin:"0.5rem 0 0 0",
+  } 
+   const HexagonContent2Properties = {
+    inputFontsize: "14px" ,
+    inputMediaFontsize:"3px" ,
+    inputMargin:"1rem 0 0 0.5rem" ,
+    inputMediaMargin:"0.5rem 0 0 0" ,
+    inputTransform:"rotate(-10deg)"  ,
+    inputColor:"#f89a0b",
+  }
+
   return (
     <div>
       {entrance.map(
-        ({ title, date1, date2, date3 }) => <Title>{title}</Title>
+        ({ title}) => <Title>{title}</Title>
       )}
 
       {entrance.map(
-        ({ title, date1, date2, date3 }) =>
+        ({ date1, date2, date3 }) =>
           <DataUl>
             <Date>{date1}</Date>
             <Date>{date2}</Date>
             <Date>{date3}</Date>
           </DataUl>
       )}
-      <Move1>
       <AutoSlideShow></AutoSlideShow>
-      <HexagonContent1></HexagonContent1>
-     <HexagonContent2></HexagonContent2>
-     <HexagonContent3></HexagonContent3>
-    <HexagonContent4></HexagonContent4>
-    </Move1>
-    <Move2>
-      {info1.map(({title,detail})=>
-      <Hexagon1><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon1>)}
+      <HexagonContent></HexagonContent>
+        {info1.map(({ title, detail1, detail2}) =>
+          <Hexagon><Info>{title}</Info><Info {...HexagonContent1Properties}>{detail1}</Info><Info {...HexagonContent1Properties}>{detail2}</Info></Hexagon>)}
 
-      {info2.map(({title,detail})=>
-      <Hexagon2><Info3>{title}</Info3><Info4>{detail}</Info4></Hexagon2>)}
+      <HexagonContent inputMargin="15vw 0 0 60vw" inputPosition=" relative"></HexagonContent>
+      {info2.map(({ title, detail}) =>
+        <Hexagon {...HexagonProperties}><Info inputLineheight="0" {...HexagonTitleProperties}>{title}</Info><Info {...HexagonContent2Properties}>{detail}</Info></Hexagon>)}
 
-      {info3.map(({title,detail})=>
-      <Hexagon3><Info1>{title}</Info1><Info2>{detail}</Info2></Hexagon3>)}
+        <HexagonContent inputMargin="1vw 0 0 15vw"></HexagonContent>
+      {info3.map(({ title, detail1, detail2 }) =>
+        <Hexagon inputMargin="9vw 0 0 23vw"><Info>{title}</Info><Info {...HexagonContent1Properties}>{detail1}</Info><Info {...HexagonContent1Properties}>{detail2}</Info></Hexagon>)}
 
-      {info4.map(({title,detail})=>
-      <Hexagon4><Info3>{title}</Info3><Info4>{detail}</Info4></Hexagon4>)}
-    </Move2>
+      <HexagonContent inputMargin="5vw 0 0 60vw" inputPosition=" relative"></HexagonContent>
+      {info4.map(({ title, detail1, detail2 }) =>
+        <Hexagon {...HexagonProperties}><Info  {...HexagonTitleProperties} >{title}</Info><Info {...HexagonContent2Properties}>{detail1}</Info><Info inputLineheight="0" inputTextalign="center" {...HexagonContent2Properties}>{detail2}</Info></Hexagon>)}
 
+      <HexagonContent inputMargin="1vw 0 0 15vw"></HexagonContent>
+      {info5.map(({ title, detail }) =>
+        <Hexagon inputMargin="9vw 0 0 23vw"><Info>{title}</Info><Info {...HexagonContent1Properties}>{detail}</Info></Hexagon>)}
 
-    </div>     
-   )
+      <HexagonContent inputMargin="8vw 0 0 60vw" inputPosition=" relative"></HexagonContent>
+      {info6.map(({ title, detail }) =>
+      <Hexagon {...HexagonProperties}><Info {...HexagonTitleProperties}>{title}</Info><Info {...HexagonContent2Properties}>{detail}</Info></Hexagon>)}
+
+      <HexagonContent inputMargin="1vw 0 0 15vw"></HexagonContent>
+      {info7.map(({ title, detail }) =>
+        <Hexagon inputMargin="9vw 0 0 23vw"><Info>{title}</Info><Info {...HexagonContent1Properties}>{detail}</Info></Hexagon>)}
+    </div>
+  )
 }
 
-const Move = styled.div`
-  margin-top:3rem;
-`;
+export default Content1;
+
 
 const DataUl = styled.ul`
   position: absolute;
@@ -71,73 +105,25 @@ const Date = styled.li`
   font-weight: bold;
   color: cyan;
 `;
-const Move1 = styled.div`
-margin-top: -50vw;
-position: sticky;
-`
-const Move2 = styled.div`
-margin-top: -0vw;
-position: sticky;
-`
-const Info1 = styled.p`
-  margin-top:1.5rem;
-  margin-left:2rem;
-  font-size:20px;
-  @media screen and (max-width:767px) { 
-    font-size:7px;
-    margin-left:1.5rem;
-  }
-  z-index: 5;
-  transform: rotate(10deg);
-    -moz-transform: rotate(10deg);
-    -webkit-transform: rotate(10deg);
+
+const Info = styled.p`
+z-index: 5;
+text-align:${props => props.inputTextalign || ""};
+font-size: ${props => props.inputFontsize || "20px"};
+margin: ${props => props.inputMargin || "1.5rem 0 0 1.5rem"};
+color: ${props => props.inputColor || "black"};
+line-height: ${props => props.inputLineheight || ""};
+transform:${props => props.inputTransform || "rotate(10deg)"};
+@media screen and (max-width:767px) { 
+    font-size:${props => props.inputMediaFontsize || "7px"};
+    margin:${props => props.inputMediaMergin || "1.5rem"};
+    line-height: ${props => props.inputMediaLineheight || ""};
+  }  
+
 `;
 
-const Info2 = styled.p`
-  font-size:14px;
-  @media screen and (max-width:767px) { 
-    font-size:3px;
-    margin-top:0.5rem;
-  }
-  margin-top:1rem;
-  margin-left:0.8rem;
-  z-index: 5;
-  transform: rotate(10deg);
-    -moz-transform: rotate(10deg);
-    -webkit-transform: rotate(10deg);
-`;
-
-const Info3 = styled.p`
-  color: #ffffff;
-  font-size:20px;
-  margin-top:2rem;
-  margin-left:1rem;
-  @media screen and (max-width:767px) { 
-    font-size:7px;
-    margin-top:1rem;
-    margin-left:0.8rem;
-}
-  transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-`;
-
-const Info4 = styled.p`
-  color: #f89a0b;
-  font-size:14px;
-  text-align:center;
-  margin-top:1.5rem;
-  @media screen and (max-width:767px) {
-    font-size:3px;
-    margin-top:1rem;
-  }
-  transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-`;
-
-const HexagonContent1 = styled.div`
-  height: 250px;
+ const HexagonContent = styled.div`
+   height: 250px;
   width: 250px;
   @media screen and (max-width:767px) { 
     height: 150px;
@@ -147,147 +133,26 @@ const HexagonContent1 = styled.div`
     height: 200px;
     width: 200px;
   }
-  background-color: black;
   background-repeat: no-repeat;
       background-position: 50%;
       background-image: url(http://placekitten.com/240/240);
-    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin: 11vw 0 0 15vw;
-  position: absolute;
-`;
+   margin: ${props => props.inputMargin || "11vw 0 0 15vw"};
+   position: ${props => props.inputPosition || "absolute"};
+ `;
 
-const HexagonContent2 = styled.div`
-  background-color: black;
-  height: 250px;
-  width: 250px;
-  @media screen and (max-width:767px) { 
-    height: 150px;
-    width: 150px;
-  }
-  @media screen and (min-width:768px) and ( max-width:1024px) {
-    height: 200px;
-    width: 200px;
-  }
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-image: url(http://placekitten.com/240/240);
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin:15vw 0 0 60vw;
-  position: relative;
-`;
-
-const HexagonContent3 = styled.div`
-  background-color: black;
-  height: 250px;
-  width: 250px;
-  @media screen and (max-width:767px) { 
-    height: 150px;
-    width: 150px;
-  }
-  @media screen and (min-width:768px) and ( max-width:1024px) {
-    height: 200px;
-    width: 200px;
-  }
-  border-style: solid black;
-  background-repeat: no-repeat;
-    background-position: 50%;
-    background-image: url(http://placekitten.com/240/240);
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin: 1vw 0 0 15vw;
-  position: absolute;
-`;
-
-const HexagonContent4 = styled.div`
-  background-color: black;
-  height: 250px;
-  width: 250px;
-  @media screen and (max-width:767px) { 
-    height: 150px;
-    width: 150px;
-  }
-  @media screen and (min-width:768px) and ( max-width:1024px) {
-    height: 200px;
-    width: 200px;
-  }
-  border-style: solid black;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-image: url(http://placekitten.com/240/240);
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  position: relative;
-  margin:5vw 0 0 60vw;
-`;
-
-const HexagonContent5 = styled.div`
-  height: 250px;
-  width: 250px;
-  @media screen and (max-width:767px) { 
-    height: 150px;
-    width: 150px;
-  }
-  @media screen and (min-width:768px) and ( max-width:1024px) {
-    height: 200px;
-    width: 200px;
-  }
-  background-color: black;
-  background-repeat: no-repeat;
-    background-position: 50%;
-    background-image: url(http://placekitten.com/240/240);
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin: -43vw 0 0 25vw;
-z-index: 5;
-position: absolute;
-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-`;
-
-const Hexagon2 = styled.div`
+const Hexagon = styled.div`
 opacity: 0.8;
-height: 150px;
-width: 150px;
-background: #525252;
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin:3vw 0 0 60vw;
-  z-index: 7;
-  position:relative;
-  transform: rotate(10deg);
-    -moz-transform: rotate(10deg);
-    -webkit-transform: rotate(10deg);
+  height: 150px;
+  width: 150px;
+  @media screen and (max-width:767px) { 
+    height: 90px;
+    width: 90px;
+  }
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    background:  ${props => props.inputBackground || "#cf9fff"};
+    margin:  ${props => props.inputMargin || "19vw 0 0 23vw"};
+    z-index:  ${props => props.inputZindex || "5"};
+    position:  absolute;
+    transform:  ${props => props.inputTransform ||  "rotate(-10deg)"}; 
 `;
-
-const Hexagon3 = styled.div`
-opacity: 0.8;
-height: 150px;
-width: 150px;
-background: #c90fd7;
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin: -32vw 0 0 25vw;
-z-index: 5;
-position: absolute;
-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-`
-const Hexagon4 = styled.div`
-opacity: 0.8;
-height: 150px;
-width: 150px;
-background: #525252;
-  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  margin:4vw 0 0 60vw;
-  z-index: 7;
-  position:relative;
-  transform: rotate(10deg);
-    -moz-transform: rotate(10deg);
-    -webkit-transform: rotate(10deg);
-    `
-export default Content1
