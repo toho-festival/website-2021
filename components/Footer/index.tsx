@@ -4,31 +4,33 @@ import styled      from 'styled-components';
 import { footerRoutes }  from '~/scripts/footerRoutes';
 
 const Footer: FC = () => <>
-  <Div>
+  <FooterContent>
+    <Theme>～織～70th 桐朋祭</Theme>
     {
       footerRoutes.map(
-      ({ sikiKey }) => <span key={ sikiKey }>{ sikiKey }</span>,
+        ( sitemap ) => <Sitemap key={sitemap.toString()}>{ sitemap }</Sitemap>,
       )
     }
-    {
-      footerRoutes.map(
-      ({ sightmapKey }) => <Span key={ sightmapKey }>{ sightmapKey }</Span>,
-      )
-    }
-  </Div>
+  </FooterContent>
 </>;
 
 
 
-const Div = styled.div`
+const FooterContent = styled.footer`
   background-color: #0f233c;
   color:white;
   display:flex;
   flex-direction: column;
+  > nav{
+    margin: 3rem 4rem
+  }
 `;
 
-const Span = styled.span`
-  margin: 3rem 4rem
+const Theme = styled.h2`
+  /* font-weight: bold; */
+`;
+
+const Sitemap = styled.nav`
 `;
 export default Footer;
 
