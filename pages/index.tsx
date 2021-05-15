@@ -1,6 +1,11 @@
 import type { FC } from 'react';
+import AutoSlideehow from '~/components/AutoSlideShow';
+// import Main from '~/components/Main/index'
 
-const Entrance: FC = () => <div>Welcome to Toho Festival 2021!</div>;
+const Entrance: FC = () => <div>
+  <AutoSlideehow />
+  {/* <Main /> */}
+</div>;
 
 export default Entrance;
 
