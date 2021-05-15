@@ -47,15 +47,21 @@ const AutoSlideShow = () => {
 }
 
 const SlideShow = styled.div`
+  z-index:3;
+  top:0;
   position:relative;
 `;
 
 const Title = styled.h1`
+  color:white;
+  font-size:100px;
+  @media screen and (max-width: 1200px) {
+		font-size: calc(100 / 1200 * 100vw);
+	}
   position:absolute;
-  right:0;
-  left:0;
-  margin:auto;
   z-index:8;
+  margin-top:20%;
+  margin-left:10%;
 `;
 
 const Info = styled.span`
