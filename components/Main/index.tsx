@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import { projectsComment,projectsTitle } from '~/scripts/projects-comment';
-// import SubContents from '~/components/Main/subContents';
+import SubContents from '~/components/Main/subContents';
 
 interface MarginProps{
   right:number;
@@ -18,7 +18,7 @@ const Main: FC = () =>
     <Reset/><Project right={10} left={0} ><Band src="/band808080.png" side="right"/><Exhibit src="/exhibit.png" side="right" /><ProjectTitle side="right">{projectsTitle[1]}</ProjectTitle><ProjectComment marginLeft={45}>{projectsComment[1]}</ProjectComment></Project>
     <Reset/><Project right={0} left={10} ><Band src="/band808080.png" side="left" /><Music src="/music.png" side="left" /><ProjectTitle side="left">{projectsTitle[2]}</ProjectTitle><ProjectComment marginLeft={40}>{projectsComment[2]}</ProjectComment ></Project>
     <Reset/>
-    {/* <SubContents /> */}
+    <SubContents />
   </>;
 
 const Project = styled.section<MarginProps>`
