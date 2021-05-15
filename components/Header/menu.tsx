@@ -23,7 +23,7 @@ const Layout = styled.nav<{ open: boolean }>`
   top: 0;
   right: 0;
   width: 100%;
-  height: 70vh;
+  height: 100vh;
 
   display: flex;
   flex-flow: column wrap;
@@ -32,8 +32,7 @@ const Layout = styled.nav<{ open: boolean }>`
 
   padding-top: 3.5rem;
 
-  background-color: #ffc674;
-  opacity: .9;
+  background-color: rgba(255,198,116, .9);
   transform: ${ ({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)' };
   transition: transform 0.3s ease-in-out;
 `;
@@ -43,6 +42,7 @@ const DownwardTriangle = styled.div`
   width: 200%;
   height: 4px;
   opacity: .5;
+  z-index:-1;
   background-color: white;
   transform: skewY(15deg);
 `;
@@ -52,6 +52,7 @@ const UpwardTriangle = styled.div`
   width: 200%;
   height: 8px;
   opacity: .5;
+  z-index:-1;
   background-color: white;
   transform: skewY(120deg);
 `;
