@@ -30,6 +30,9 @@ const Layout = styled.header`
   display: flex;
   align-items: stretch;
 
+  z-index:100;
+  background-color:white;
+  opacity: .7;
   padding: .5rem 1rem;
 
   > div {
