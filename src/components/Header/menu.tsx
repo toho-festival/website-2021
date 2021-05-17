@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import Link        from 'next/link';
 import styled      from 'styled-components';
-import { routes }  from '~/scripts/routes';
+import { routes }  from '~/src/scripts/routes';
 
 const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
   <DownwardTriangle/>
@@ -32,7 +32,7 @@ const Layout = styled.nav<{ open: boolean }>`
 
   padding-top: 3.5rem;
 
-  background-color: rgba(255,198,116, .9);
+  background-color: rgba(255, 198, 116, .9);
   transform: ${ ({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)' };
   transition: transform 0.3s ease-in-out;
 `;
@@ -42,7 +42,7 @@ const DownwardTriangle = styled.div`
   width: 200%;
   height: 4px;
   opacity: .5;
-  z-index:-1;
+  z-index: -1;
   background-color: white;
   transform: skewY(15deg);
 `;
@@ -52,7 +52,7 @@ const UpwardTriangle = styled.div`
   width: 200%;
   height: 8px;
   opacity: .5;
-  z-index:-1;
+  z-index: -1;
   background-color: white;
   transform: skewY(120deg);
 `;

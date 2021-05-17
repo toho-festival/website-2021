@@ -4,6 +4,13 @@
 
 ## 実行方法
 
+### 開発時
+```shell
+yarn install
+yarn dev
+```
+
+### 実行時
 ```shell
 yarn install
 yarn build

@@ -1,8 +1,8 @@
 import { FC, useCallback, useState } from 'react';
 import styled                        from 'styled-components';
 import Image                         from 'next/image';
-import Hamburger                     from '~/components/Header/hamburger';
-import Menu                          from '~/components/Header/menu';
+import Hamburger                     from '~/src/components/Header/hamburger';
+import Menu                          from '~/src/components/Header/menu';
 
 const Header: FC = () => {
   const [open, setOpen] = useState(false);
@@ -30,8 +30,8 @@ const Layout = styled.header`
   display: flex;
   align-items: stretch;
 
-  z-index:100;
-  background-color:white;
+  z-index: 100;
+  background-color: white;
   opacity: .7;
   padding: .5rem 1rem;
 
