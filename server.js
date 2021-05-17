@@ -5,8 +5,6 @@ const dev    = process.env.NODE_ENV === 'development';
 const app    = next({ dev });
 const handle = app.getRequestHandler();
 
-console.log(process.env.NODE_ENV, +process.env.PORT)
-
 app.prepare().then(() => {
   const express = require('express');
   const server = express();
