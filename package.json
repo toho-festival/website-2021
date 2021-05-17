@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "generate": "next build && next export",
-    "start": "next start"
+    "start": "NODE_ENV=production node ./server.js"
   },
   "author": "misogohan",
   "license": "BSD-3-Clause",
