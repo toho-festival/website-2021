@@ -15,8 +15,8 @@ ARG MODE
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/.yarn ./.yarn
-COPY ./server.js ./next.config.js ./.yarnrc.yml ./package.json ./yarn.lock ./.pnp.js ./
+COPY --from=builder /app/server.js /app/next.config.js /app/.yarnrc.yml /app/package.json /app/yarn.lock /app/.pnp.js ./
 
 ENV PORT=8080 NODE_ENV=$MODE
 
-CMD yarn start
+CMD ["yarn", "node", "./server.js"]
