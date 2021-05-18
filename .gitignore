@@ -12,3 +12,10 @@ dest
 !.vscode/extensions.json
 *.code-workspace
 
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
