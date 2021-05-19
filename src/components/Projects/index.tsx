@@ -114,7 +114,6 @@ type prop = {
   }
   div[role="tabpanel"] {
     padding: 20px 40px;
-    border: 1px solid #ccc;
     p {
       margin-bottom: 20px;
       line-height: 1.6;

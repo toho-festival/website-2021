@@ -11,8 +11,8 @@ const Experience:FC = () => (
       </article>
       <Aside>
         <H2>　体験型企画</H2>
-        <h2>　　　最高の</h2>
-        <h2>　　　エンターテイメント</h2>
+        <h2>　最高の</h2>
+        <h2>　エンターテイメント</h2>
         <H4>体験企画について</H4>
         <h4>あああああああああああああああああああああああ</h4>
       </Aside>
@@ -40,7 +40,7 @@ const Div1 = styled.div`
 const Experienceimg = styled.img`
     width: 20vw;
     @media screen and (max-width: 767px) {
-    width:30vw;
+    width:25vw;
     }
 `;
 
