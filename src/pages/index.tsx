@@ -5,6 +5,8 @@ import Head from 'next/head';
 
 const Entrance: FC = () => <div>
   <Head>
+    <link rel="icon" type="image/x-icon" href="/fabicon.png" />
+    <title>第70回桐朋祭</title>
     <script dangerouslySetInnerHTML={{__html:`
       (function(d) {
         var config = {
