@@ -6,17 +6,27 @@ import { routes }  from '~/src/scripts/routes';
 const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
   <DownwardTriangle/>
   <UpwardTriangle/>
+  <Attention>※開発中のため、各ページを見ることができません。ご了承ください</Attention>
   {
+    // routes.map(
+    //   ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
+    // )
     routes.map(
-      ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
+      ({ key }) => <span key={ key }><Anchor>{ key }</Anchor></span>,
     )
   }
 </Layout>;
 
-const Anchor = styled.a`
+// const Anchor = styled.a`
+//   font-size: 1.5rem;
+//   line-height: 3rem;
+// `;
+
+const Anchor = styled.p`
   font-size: 1.5rem;
   line-height: 3rem;
 `;
+
 
 const Layout = styled.nav<{ open: boolean }>`
   position: fixed;
@@ -57,5 +67,8 @@ const UpwardTriangle = styled.div`
   transform: skewY(120deg);
 `;
 
+const Attention = styled.p`
+  margin-bottom: 3%;
+`;
 
 export default Menu;
