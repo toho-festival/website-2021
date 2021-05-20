@@ -7,6 +7,7 @@ const Entrance: FC = () => <div>
   <Head>
     <link rel="icon" type="image/x-icon" href="/fabicon.png" />
     <title>第70回桐朋祭</title>
+    <meta name="robots" content="noindex" />
     <script dangerouslySetInnerHTML={{__html:`
       (function(d) {
         var config = {
