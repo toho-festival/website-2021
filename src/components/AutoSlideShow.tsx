@@ -18,9 +18,9 @@ const AutoSlideShow = () => {
           </Title>
           <Info>
             <Date>
-              <p>
+              {/* <p>
                 ６月５日(土)13:00～17:00
-              </p>
+              </p> */}
               <p>
                 ６月６日(日) 9:30～12:00 13:00～17:00
               </p>
@@ -31,7 +31,7 @@ const AutoSlideShow = () => {
             <Note>
               <p>※日曜日は午前と午後のⅡ部制です。</p>
               <p>※ご来場いただく際はスリッパをお持ち下さい。</p>
-              <p>※６月７日(月)は生徒と保護者のみとなります</p>
+              <p>※今年度の桐朋祭は生徒と保護者のみとなります</p>
             </Note>
           </Info>
           <Fade { ...AutoSlideShowProperties }>
@@ -72,6 +72,9 @@ const Info = styled.span`
   left: 50%;
   z-index: 8;
   background: rgba(255, 255, 255, 0.5);
+  @media screen and (max-width: 410px) {
+    left:30%;
+  }
 `;
 
 const Date = styled.time`
