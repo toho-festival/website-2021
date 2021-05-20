@@ -70,6 +70,9 @@ const Info = styled.span`
   position: absolute;
   bottom: 10%;
   left: 50%;
+  @media screen and (max-width: 410px) {
+    left:30%;
+  }
   z-index: 8;
   background: rgba(255, 255, 255, 0.5);
 `;
