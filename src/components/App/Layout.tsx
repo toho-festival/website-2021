@@ -23,9 +23,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: linear-gradient(#d4fffd, #ffe4bf) no-repeat;
     min-height: 100vh;
-    font-family: dnp-shuei-shogomincho-std,sans-serif;
-    font-weight: 700;
-    font-style: normal;
   }
 
   * {
