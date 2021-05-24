@@ -6,7 +6,8 @@ import { routes }  from '~/src/scripts/routes';
 const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
   <DownwardTriangle/>
   <UpwardTriangle/>
-  <Attention>※開発中のため、各ページを見ることができません。ご了承ください</Attention>
+  <Attention>※開発中のため、各ページに飛ぶことができません。ご了承ください。</Attention>
+  
   {
     // routes.map(
     //   ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
