@@ -31,7 +31,7 @@ const AutoSlideShow = () => {
             <Note>
               <p>※日曜日は午前と午後のⅡ部制です。</p>
               <p>※ご来場いただく際はスリッパをお持ち下さい。</p>
-              <p>※今年度の桐朋祭は生徒と保護者のみとなります</p>
+              <p>今年度の桐朋祭は生徒と保護者のみとなります</p>
             </Note>
           </Info>
           <Fade { ...AutoSlideShowProperties }>
@@ -70,11 +70,11 @@ const Info = styled.span`
   position: absolute;
   bottom: 10%;
   left: 50%;
-  z-index: 8;
-  background: rgba(255, 255, 255, 0.5);
   @media screen and (max-width: 410px) {
     left:30%;
   }
+  z-index: 8;
+  background: rgba(255, 255, 255, 0.5);
 `;
 
 const Date = styled.time`

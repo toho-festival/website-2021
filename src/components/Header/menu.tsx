@@ -7,12 +7,13 @@ const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }
   <DownwardTriangle/>
   <UpwardTriangle/>
   <Attention>※開発中のため、各ページに飛ぶことができません。ご了承ください。</Attention>
+  
   {
     // routes.map(
     //   ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
     // )
     routes.map(
-      ({key}) => <span key = { key }><Anchor>{ key }</Anchor></span>,
+      ({ key }) => <span key={ key }><Anchor>{ key }</Anchor></span>,
     )
   }
 </Layout>;
@@ -26,6 +27,7 @@ const Anchor = styled.p`
   font-size: 1.5rem;
   line-height: 3rem;
 `;
+
 
 const Layout = styled.nav<{ open: boolean }>`
   position: fixed;
