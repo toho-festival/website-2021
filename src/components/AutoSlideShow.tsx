@@ -2,6 +2,7 @@ import React    from 'react';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import styled   from 'styled-components';
+import Image from 'next/image'
 
 const AutoSlideShow = () => {
   const AutoSlideShowProperties = {
@@ -18,9 +19,6 @@ const AutoSlideShow = () => {
           </Title>
           <Info>
             <Date>
-              {/* <p>
-                ６月５日(土)13:00～17:00
-              </p> */}
               <p>
                 ６月６日(日) 9:30～12:00 13:00～17:00
               </p>
@@ -36,10 +34,18 @@ const AutoSlideShow = () => {
           </Info>
           <Fade { ...AutoSlideShowProperties }>
             <div className='each-fade'>
-              <Image src='/entrance-backgrund-1.jpg'/>
+              <StyledImage 
+                src='/entrance-backgrund-1.jpg'
+                width={1500}
+                height={1000}
+              />
             </div>
             <div className='each-fade'>
-              <Image src='/entrance-backgrund-2.jpg'/>
+              <StyledImage 
+                src='/entrance-backgrund-2.jpg'
+                width={1500}
+                height={1000}
+              />
             </div>
           </Fade>
         </SlideShow>
@@ -93,10 +99,8 @@ const Note = styled.data`
   }
 `;
 
-const Image = styled.img`
+const StyledImage = styled(Image)`
   display: block;
-  width: 100%;
-  height: 70%;
 `;
 
 export default AutoSlideShow;
