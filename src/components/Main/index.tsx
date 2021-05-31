@@ -2,6 +2,7 @@ import { FC }                             from 'react';
 import styled                             from 'styled-components';
 import { projectsComment, projectsTitle } from '~/src/scripts/projects-comment';
 import SubContents                        from '~/src/components/Main/subContents';
+import Image                              from 'next/image';
 
 interface MarginProps {
   right: number;
@@ -15,13 +16,13 @@ type Margin = {
 
 const Main: FC = () =>
   <>
-    <Project right={ 0 } left={ 10 }><Band src='/band808080.png' side='left'/><Experience src='/experience.png'
+    <Project right={ 0 } left={ 10 }><Band side='left'><Image src='/band808080.png' width={800} height={200} layout='responsive' /></Band><Experience src='/experience.png'
                                                                                           side='left'/><ProjectTitle
       side='left'>{ projectsTitle[0] }</ProjectTitle><ProjectComment marginLeft={ 45 }>{ projectsComment[0] }</ProjectComment></Project>
-    <Reset/><Project right={ 10 } left={ 0 }><Band src='/band808080.png' side='right'/><Exhibit src='/exhibit.png'
+    <Reset/><Project right={ 10 } left={ 0 }><Band side='right'><Image src='/band808080.png' width={800} height={200} layout='responsive' /></Band><Exhibit src='/exhibit.png'
                                                                                                 side='right'/><ProjectTitle
     side='right'>{ projectsTitle[1] }</ProjectTitle><ProjectComment marginLeft={ 35 }>{ projectsComment[1] }</ProjectComment></Project>
-    <Reset/><Project right={ 0 } left={ 10 }><Band src='/band808080.png' side='left'/><Music src='/music.png'
+    <Reset/><Project right={ 0 } left={ 10 }><Band side='left'><Image src='/band808080.png' width={800} height={200} layout='responsive' /></Band><Music src='/music.png'
                                                                                              side='left'/><ProjectTitle
     side='left'>{ projectsTitle[2] }</ProjectTitle><ProjectComment marginLeft={ 45 }>{ projectsComment[2] }</ProjectComment></Project>
     <Reset/>
@@ -48,12 +49,14 @@ const Experience = styled.img<Side>`
   width: 30%;
 `;
 
-const Band = styled.img<Side>`
+const Band = styled.div<Side>`
   z-index: -1;
   position: absolute;
+  margin-top: 5%;
   right: ${ (props) => props.side === 'right' ? 0 : null };
   left: ${ (props) => props.side === 'right' ? null : 0 };
-  width: 90%;
+  width:90%;
+  height:30%;
 `;
 
 const ProjectTitle = styled.div<Side>`
@@ -62,8 +65,8 @@ const ProjectTitle = styled.div<Side>`
   color: #FBB03B;
   margin-left: ${ (props) => props.side === 'right' ? 30 : 41 }%;
   opacity: .8;
-  @media screen and (max-width: 1200px) {
-    font-size: calc(24 / 1200 * 100vw);
+  @media screen and (max-width: 1230px) {
+    font-size: calc(24 / 1230 * 100vw);
   }
 `;
 
@@ -73,8 +76,8 @@ const ProjectComment = styled.p<Margin>`
   color: white;
   margin-left: ${ (props) => props.marginLeft }%;
   opacity: .8;
-  @media screen and (max-width: 1200px) {
-    font-size: calc(20 / 1200 * 100vw);
+  @media screen and (max-width: 1230px) {
+    font-size: calc(20 / 1230 * 100vw);
   }
 `;
 
