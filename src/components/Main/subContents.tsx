@@ -9,11 +9,11 @@ type SubSideAndMarginTop = {
 
 const SubContents: FC = () =>
   <>
-    <SubContent><Greetings side='left' top={ 10 }><Image src='/images/greetings.png' quality={100} width={17} height={17} layout='responsive'/></Greetings></SubContent><Reset/>
-    <SubContent><Schedule side='right' top={ -5 }><Image src='/images/schedule.png' quality={100} width={17} height={17} layout='responsive'/></Schedule></SubContent><Reset/>
-    <SubContent><Pamphlet side='left' top={ -5 }><Image src='/images/pamphlet.png' quality={100} width={17} height={17} layout='responsive'/></Pamphlet></SubContent><Reset/>
-    <SubContent><Covid19 side='right' top={ -5 }><Image src='/images/covid19.png' quality={100} width={17} height={17} layout='responsive'/></Covid19></SubContent><Reset/>
-    <SubContent><Blog side='left' top={ -5 }><Image src='/images/blog.png' quality={100} width={17} height={17} layout='responsive'/></Blog></SubContent><Reset/>
+    <SubContent><Greetings side='left' top={ 10 }><Image src='/images/greetings.png' width={17} height={17} layout='responsive'/></Greetings></SubContent><Reset/>
+    <SubContent><Schedule side='right' top={ -5 }><Image src='/images/schedule.png' width={17} height={17} layout='responsive'/></Schedule></SubContent><Reset/>
+    <SubContent><Pamphlet side='left' top={ -5 }><Image src='/images/pamphlet.png' width={17} height={17} layout='responsive'/></Pamphlet></SubContent><Reset/>
+    <SubContent><Covid19 side='right' top={ -5 }><Image src='/images/covid19.png' width={17} height={17} layout='responsive'/></Covid19></SubContent><Reset/>
+    <SubContent><Blog side='left' top={ -5 }><Image src='/images/blog.png' width={17} height={17} layout='responsive'/></Blog></SubContent><Reset/>
   </>;
 
 export default SubContents;
