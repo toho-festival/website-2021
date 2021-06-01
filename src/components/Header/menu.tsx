@@ -33,7 +33,7 @@ const Layout = styled.nav<{ open: boolean }>`
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   display: flex;
@@ -70,6 +70,8 @@ const UpwardTriangle = styled.div`
 
 const Attention = styled.p`
   margin-bottom: 3%;
+  margin-left:7%;
+  margin-right:7%;
 `;
 
 export default Menu;
