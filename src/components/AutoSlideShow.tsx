@@ -1,10 +1,10 @@
-import React    from 'react';
+import { FC }    from 'react';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import styled   from 'styled-components';
 import Image from 'next/image'
 
-const AutoSlideShow = () => {
+const AutoSlideShow:FC = () => {
   const AutoSlideShowProperties = {
     duration: 5000,
     canSwipe: false,
@@ -35,14 +35,14 @@ const AutoSlideShow = () => {
           <Fade { ...AutoSlideShowProperties }>
             <div className='each-fade'>
               <StyledImage 
-                src='/entrance-backgrund-1.jpg'
+                src='/images/entrance-backgrund-1.jpg'
                 width={1500}
                 height={1000}
               />
             </div>
             <div className='each-fade'>
               <StyledImage 
-                src='/entrance-backgrund-2.jpg'
+                src='/images/entrance-backgrund-2.jpg'
                 width={1500}
                 height={1000}
               />
