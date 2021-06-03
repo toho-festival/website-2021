@@ -2,7 +2,7 @@
   "hosting": [
     {
       "site": "tohofes-70th",
-      "public": "out",
+      "public": "public",
       "ignore": [
         "firebase.json",
         "**/.*",
