@@ -24,7 +24,7 @@ const Main: FC = () =>
       <Band side='left'>
         <Image src='/images/band808080.png' width={800} height={200} layout='responsive' />
       </Band>
-      <Experience side='left' right={ 0 } left={ 10 }><Image src='/images/experience.png' width={17} height={20} layout='responsive' /></Experience><ProjectTitle side='left'>{ projectsTitle[0] }</ProjectTitle>
+      <Experience side='left' right={ 0 } left={ 10 }><Image src='/images/experience.png' width={17} height={20} layout='responsive' alt="体験型企画写真"/></Experience><ProjectTitle side='left'>{ projectsTitle[0] }</ProjectTitle>
       <ProjectComment marginLeft={ 42 }>{ projectsComment[0] }</ProjectComment>
     </Project>
     
