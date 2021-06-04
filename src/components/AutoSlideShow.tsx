@@ -38,6 +38,7 @@ const AutoSlideShow:FC = () => {
                 src='/images/entrance-backgrund-1.jpg'
                 width={1500}
                 height={1000}
+                alt="スライドショー画像1"
               />
             </div>
             <div className='each-fade'>
@@ -45,6 +46,7 @@ const AutoSlideShow:FC = () => {
                 src='/images/entrance-backgrund-2.jpg'
                 width={1500}
                 height={1000}
+                alt="スライドショー画像2"
               />
             </div>
           </Fade>
