@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import Image from 'next/image'
+import Image from 'next/image';
 
 type SubSideAndMarginTop = {
   side: 'right' | 'left';
@@ -9,7 +9,7 @@ type SubSideAndMarginTop = {
 
 const SubContents: FC = () =>
   <>
-    <SubContent><Greetings side='left' top={ 10 }><Image src='/images/greetings.png' width={17} height={17} layout='responsive'/></Greetings></SubContent><Reset/>
+    <SubContent><Greetings side='left' top={ 10 }><Image src={ process.env.basePath + '/images/greetings.png' } width={17} height={17} layout='responsive'/></Greetings></SubContent><Reset/>
     <SubContent><Schedule side='right' top={ -5 }><Image src='/images/schedule.png' width={17} height={17} layout='responsive'/></Schedule></SubContent><Reset/>
     <SubContent><Pamphlet side='left' top={ -5 }><Image src='/images/pamphlet.png' width={17} height={17} layout='responsive'/></Pamphlet></SubContent><Reset/>
     <SubContent><Covid19 side='right' top={ -5 }><Image src='/images/covid19.png' width={17} height={17} layout='responsive'/></Covid19></SubContent><Reset/>
