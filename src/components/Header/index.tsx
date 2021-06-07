@@ -11,7 +11,7 @@ const Header: FC = () => {
   
   return <Layout>
     <div>
-      <Image src='/images/logo.jpg' width={ 64 } height={ 64 }/>
+      <Image src={process.env.basePath + '/images/logo.jpg'} width={ 64 } height={ 64 }/>
     </div>
     <div>
       <Title>桐朋祭</Title>
