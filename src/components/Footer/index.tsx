@@ -5,7 +5,7 @@ import { footerRoutes } from '~/src/scripts/footerRoutes';
 
 const Footer: FC = () => <>
   <FooterContent>
-    <Theme>～織～70th 桐朋祭</Theme>
+    <Theme>TohoFes 70th</Theme>
     {
       footerRoutes.map(
         (sitemap) => <Sitemap key={ sitemap.toString() }>{ sitemap }</Sitemap>,
@@ -27,6 +27,7 @@ const FooterContent = styled.footer`
 `;
 
 const Theme = styled.h2`
+  margin-left:1rem;
   /* font-weight: bold; */
 `;
 
