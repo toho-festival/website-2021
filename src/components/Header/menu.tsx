@@ -41,7 +41,7 @@ const Layout = styled.nav<{ open: boolean }>`
   align-items: center;
   overflow: hidden;
 
-  padding-top: 3.5rem;
+  padding-top: 1rem;
 
   background-color: rgba(255, 198, 116, .9);
   transform: ${ ({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)' };
