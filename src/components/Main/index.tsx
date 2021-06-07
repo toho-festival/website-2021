@@ -1,119 +1,32 @@
 import { FC }                             from 'react';
 import styled                             from 'styled-components';
-import { projectsComment, projectsTitle } from '~/src/scripts/projects-comment';
-import SubContents                        from '~/src/components/Main/subContents';
-import Image                              from 'next/image';
+import SubContent                         from '~/src/components/Main/subContents';
+import MainContent                        from './mainContent';
 
-interface MarginProps {
-  right: number;
-  left: number;
+const Main: FC = () =>{
+  return(
+    <>
+      <MainContents>
+        <MainContent side='left'  right={0}  left={10} categoly="/images/experience.png" name="ExperienceProject" num={0} marginLeft={42} />
+        <MainContent side='right' right={10} left={0}  categoly="/images/exhibit.png"    name="ExhibitProject"    num={1} marginLeft={35} />
+        <MainContent side='left'  right={0}  left={10} categoly="/images/music.png"      name="MusicProject"      num={2} marginLeft={42} />
+      </MainContents>
+
+      <SubContents>
+        <SubContent side='left'  top={10}  subSrc="/images/greetings.png"/>
+        <SubContent side='right' top={-5}  subSrc="/images/schedule.png"/>
+        <SubContent side='left'  top={-5}  subSrc="/images/pamphlet.png"/>
+        <SubContent side='right' top={-5}  subSrc="/images/covid19.png"/>
+        <SubContent side='left'  top={-5}  subSrc="/images/blog.png"/>
+      </SubContents>
+    </>
+  );
 }
 
-type Side = { 
-  side: 'right' | 'left'; 
-  right?: number;
-  left?: number;
-};
-type Margin = {
-  marginLeft?: number;
-}
-
-const Main: FC = () =>
-  <>
-    <Project>
-      <Band side='left'>
-        <Image src='/images/band808080.png' width={800} height={200} layout='responsive' />
-      </Band>
-      <Experience side='left' right={ 0 } left={ 10 }><Image src='/images/experience.png' width={17} height={20} layout='responsive' alt="体験型企画写真"/></Experience><ProjectTitle side='left'>{ projectsTitle[0] }</ProjectTitle>
-      <ProjectComment marginLeft={ 42 }>{ projectsComment[0] }</ProjectComment>
-    </Project>
-    
-    <Reset/>
-
-    <Project>
-      <Band side='right'>
-        <Image src='/images/band808080.png' width={800} height={200} layout='responsive' />
-      </Band>
-      <Exhibit side='right' right={ 10 } left={ 0 }><Image src='/images/exhibit.png' width={17} height={20} layout='responsive' /></Exhibit><ProjectTitle side='right'>{ projectsTitle[1] }</ProjectTitle>
-      <ProjectComment marginLeft={ 35 }>{ projectsComment[1] }</ProjectComment>
-    </Project>
-
-    <Reset/>
-    
-    <Project>
-      <Band side='left'>
-        <Image src='/images/band808080.png' width={800} height={200} layout='responsive' />
-      </Band>
-      <Music side='left' right={ 0 } left={ 10 }><Image src='/images/music.png' width={17} height={20} layout='responsive' /></Music><ProjectTitle side='left'>{ projectsTitle[2] }</ProjectTitle>
-      <ProjectComment marginLeft={ 42 }>{ projectsComment[2] }</ProjectComment>
-    </Project>
-
-    <Reset/>
-
-    <SubContents/>
-  </>;
-
-const Project = styled.section`
-  position: relative;
-  margin-top: 5%;
-  margin-bottom: -5%;
+const MainContents = styled.section`
 `;
 
-const Experience = styled.div<Side>`
-  float: ${ (props) => props.side };
-  margin-right: ${ (props) => props.right }%;
-  margin-left: ${ (props) => props.left }%;
-  width: 25%;
-`;
-
-const Band = styled.div<Side>`
-  z-index: -1;
-  position: absolute;
-  margin-top: 5%;
-  right: ${ (props) => props.side === 'right' ? 0 : null };
-  left: ${ (props) => props.side === 'right' ? null : 0 };
-  width:85%;
-  height:40%;
-`;
-
-const ProjectTitle = styled.div<Side>`
-  position: absolute;
-  margin-top: calc(30% / 4);
-  color: #FBB03B;
-  margin-left: ${ (props) => props.side === 'right' ? 30 : 38 }%;
-  opacity: .8;
-  @media screen and (max-width: 1230px) {
-    font-size: calc(24 / 1230 * 100vw);
-  }
-`;
-
-const ProjectComment = styled.p<Margin>`
-  position: absolute;
-  margin-top: calc(30% / 2);
-  color: white;
-  margin-left: ${ (props) => props.marginLeft }%;
-  opacity: .8;
-  @media screen and (max-width: 1230px) {
-    font-size: calc(20 / 1230 * 100vw);
-  }
-`;
-
-const Reset = styled.div`
-  clear: both;
-`;
-
-const Exhibit = styled.div<Side>`
-  float: ${ (props) => props.side };
-  margin-right: ${ (props) => props.right }%;
-  margin-left: ${ (props) => props.left }%;
-  width: 25%;
-`;
-
-const Music = styled.div<Side>`
-  float: ${ (props) => props.side };
-  margin-right: ${ (props) => props.right }%;
-  margin-left: ${ (props) => props.left }%;
-  width: 25%;
+const SubContents = styled.section`
 `;
 
 export default Main;

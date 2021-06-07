@@ -35,7 +35,7 @@ const AutoSlideShow:FC = () => {
           <Fade { ...AutoSlideShowProperties }>
             <div className='each-fade'>
               <StyledImage 
-                src='/images/entrance-backgrund-1.jpg'
+                src={process.env.basePath + '/images/entrance-backgrund-1.jpg'}
                 width={1500}
                 height={1000}
                 alt="スライドショー画像1"
@@ -43,7 +43,7 @@ const AutoSlideShow:FC = () => {
             </div>
             <div className='each-fade'>
               <StyledImage 
-                src='/images/entrance-backgrund-2.jpg'
+                src={process.env.basePath + '/images/entrance-backgrund-2.jpg'}
                 width={1500}
                 height={1000}
                 alt="スライドショー画像2"
