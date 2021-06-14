@@ -17,6 +17,12 @@ yarn build
 yarn start
 ```
 
+Dockerを用いる場合
+```shell
+docker build -t tohofes-webserver-2021 --build-arg MODE=production .
+docker run --name tohofes-webserver-2021 -p 8080:8080 tohofes-webserver-2021
+```
+
 ## 開発への協力
 
 [CONTRIBUTING.md](CONTRIBUTING.md)をお読み下さい。
