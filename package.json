@@ -9,7 +9,6 @@
     "generate": "next build && next export",
     "start": "NODE_ENV=production node ./server.js"
   },
-  "author": "misogohan",
   "license": "BSD-3-Clause",
   "private": false,
   "dependencies": {
