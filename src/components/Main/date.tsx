@@ -6,16 +6,19 @@ const Dating: FC = () =>{
       <Layout>
           <Date>
             <Detail>
-              ６月６日(日) 9:30～12:00　13:00～17:00
+              ９月１１日(土) 13:00~17:00
             </Detail>
             <Detail>
-              ６月７日(月) 9:30～13:00　　　　　　 　
+              ９月１２日(日) 9:30～12:00　13:00～17:00
+            </Detail>
+            <Detail>
+              ９月１３日(月) 9:30～13:00
             </Detail>
           </Date>
           <Note>
-            <Annotation>※日曜日は午前と午後のⅡ部制です。</Annotation>
+            <Annotation>※日曜日は午前と午後のⅡ部制となっています。</Annotation>
             <Annotation>※ご来場いただく際はスリッパをお持ち下さい。</Annotation>
-            <Annotation>※今年度の桐朋祭は生徒と保護者のみとなります</Annotation>
+            {/* <Annotation>※今年度の桐朋祭は生徒と保護者のみとなります</Annotation> */}
           </Note>
       </Layout>
     );
@@ -25,7 +28,7 @@ const Layout = styled.div`
   
 `;
 
-const Date = styled.time`
+const Date = styled.span`
   background-color: white;
   font-size: 24px;
   text-align: center;
@@ -35,7 +38,6 @@ const Date = styled.time`
 `;
 
 const Detail = styled.p`
-  
 `;
 
 const Note = styled.data`
@@ -47,7 +49,6 @@ const Note = styled.data`
 `;
 
 const Annotation = styled.p`
-  
 `;
 
 export default Dating;
