@@ -15,17 +15,17 @@ const Main: FC = () =>{
         <h2>－PROJECT－</h2>
         <MainContents>
           <MainContent side='left'  right={0}  left={10} categoly="/images/newExperience.png" name="ExperienceProject" num={0} marginLeft={42} />
-          <MainContent side='right' right={10} left={0}  categoly="/images/newExhibit.png"    name="ExhibitProject"    num={1} marginLeft={35} />
+          <MainContent side='right' right={10} left={0}  categoly="/images/newExhibit.png"    name="ExhibitProject"    num={1} marginLeft={44} />
           <MainContent side='left'  right={0}  left={10} categoly="/images/newMusic.png"      name="MusicProject"      num={2} marginLeft={42} />
         </MainContents>
 
         <SubContents>
           <h2>－SUB CONTENTS－</h2>
-          <SubContent side='left'　top={10}  subSrc="/images/newGreetings.png" num={0}/>
-          <SubContent side='right' top={-5}  subSrc="/images/newSchedule.png" num={1}/>
-          <SubContent side='left'  top={-5}  subSrc="/images/newPamphlet.png" num={2}/>
-          <SubContent side='right' top={-5}  subSrc="/images/newCovid19.png" num={3}/>
-          <SubContent side='left'  top={-5}  subSrc="/images/newBlog.png" num={4}/>
+          <SubContent side='left'  top={10}  subSrc="/images/newGreetings.png" num={0}/>
+          <SubContent side='right' top={-5}  subSrc="/images/newSchedule.png"  num={1}/>
+          <SubContent side='left'  top={-5}  subSrc="/images/newPamphlet.png"  num={2}/>
+          <SubContent side='right' top={-5}  subSrc="/images/newCovid19.png"   num={3}/> 
+          <SubContent side='left'  top={-5}  subSrc="/images/newBlog.png"      num={4}/>
         </SubContents>
       </Categories>
     </Layout>
@@ -55,28 +55,7 @@ const Categories = styled.div`
     margin-top: 7vw;
     text-align: center;
     font-size: 3vw;
-    // color: #704308;
-      color: white;
-  // background-image: -webkit-linear-gradient(
-  //   315deg,
-  //   #704308 0%,
-  //   #ffce08 37%,
-  //   #fefeb2 47%,
-  //   #fafad6 50%,
-  //   #fefeb2 53%,
-  //   #e1ce08 63%,
-  //   #704308 100%
-  // );
-  // background-image: linear-gradient(
-  //   135deg,
-  //   #704308 0%,
-  //   #ffce08 37%,
-  //   #fefeb2 47%,
-  //   #fafad6 50%,
-  //   #fefeb2 53%,
-  //   #e1ce08 63%,
-  //   #704308 100%
-  // );
+    color: white;
   }
 `;
 
