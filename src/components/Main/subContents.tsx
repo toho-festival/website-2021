@@ -60,13 +60,6 @@ const SubjectTitle = styled.h3<SubTexts>`
   margin-right: ${ (props) => props.textside === 'left' ? null : 10 }%;
   margin-left: ${ (props) => props.textside === 'left' ? 10 : null }%;
   color: white;
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#ffffdb),
-    to(#a16422)
-  );
   background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
   background: linear-gradient(to top, #ffffdb, #a16422);
   -webkit-background-clip: text;
@@ -95,26 +88,6 @@ const SubComment = styled.p<SubTexts>`
 
 const Wrap = styled.div`
 border-radius: 0.5rem;
-  background-image: -webkit-linear-gradient(
-    315deg,
-    #704308 0%,
-    #ffce08 37%,
-    #fefeb2 47%,
-    #fafad6 50%,
-    #fefeb2 53%,
-    #e1ce08 63%,
-    #704308 100%
-  );
-  background-image: linear-gradient(
-    135deg,
-    #704308 0%,
-    #ffce08 37%,
-    #fefeb2 47%,
-    #fafad6 50%,
-    #fefeb2 53%,
-    #e1ce08 63%,
-    #704308 100%
-  );
 `;
 
 const Anchor = styled.a`
