@@ -37,7 +37,7 @@ const Theme = styled.h2`
 const Author = styled.small`
   margin-top: 2%;
   text-align: center;
-  font-size: small;
+  font-size: 0.5rem;
 `;
 
 const Sitemap = styled.nav`
@@ -45,7 +45,7 @@ const Sitemap = styled.nav`
 
 const CopyRight = styled.small`
   text-align: center;
-  font-size: small;
+  font-size: 0.5rem;
   margin-bottom: 1%;
 `;
 export default Footer;
