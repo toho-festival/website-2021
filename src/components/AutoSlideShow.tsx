@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const AutoSlideShow:FC = () => {
   const AutoSlideShowProperties = {
-    duration: 5000,
+    duration: 3000,
     canSwipe: false,
     arrows  : false,
   };
