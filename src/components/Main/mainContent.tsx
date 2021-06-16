@@ -60,27 +60,7 @@ const Project = styled.section`
 `;
 
 const Wrap = styled.div`
-border-radius: 0.5rem;
-  background-image: -webkit-linear-gradient(
-    315deg,
-    #704308 0%,
-    #ffce08 37%,
-    #fefeb2 47%,
-    #fafad6 50%,
-    #fefeb2 53%,
-    #e1ce08 63%,
-    #704308 100%
-  );
-  background-image: linear-gradient(
-    135deg,
-    #704308 0%,
-    #ffce08 37%,
-    #fefeb2 47%,
-    #fafad6 50%,
-    #fefeb2 53%,
-    #e1ce08 63%,
-    #704308 100%
-  );
+  border-radius: 0.5rem;
 `;
 
 const Anchor = styled.a`
@@ -110,15 +90,8 @@ const ProjectTitle = styled.div<Side>`
   position: absolute;
   margin-top: calc(30% / 4);
   color: #FBB03B;
-  margin-left: ${ (props) => props.side === 'right' ? 30 : 38 }%;
+  margin-left: ${ (props) => props.side === 'right' ? 52 : 38 }%;
   opacity: .8;
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#ffffdb),
-    to(#a16422)
-  );
   background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
   background: linear-gradient(to top, #ffffdb, #a16422);
   -webkit-background-clip: text;
