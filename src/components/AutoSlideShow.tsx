@@ -17,25 +17,10 @@ const AutoSlideShow:FC = () => {
           <Title>
             <div>Tohofes 70th</div>
           </Title>
-          <Info>
-            <Date>
-              <p>
-                ６月６日(日) 9:30～12:00 13:00～17:00
-              </p>
-              <p>
-                ６月７日(月) 9:30～13:00
-              </p>
-            </Date>
-            <Note>
-              <p>※日曜日は午前と午後のⅡ部制です。</p>
-              <p>※ご来場いただく際はスリッパをお持ち下さい。</p>
-              <p>今年度の桐朋祭は生徒と保護者のみとなります</p>
-            </Note>
-          </Info>
           <Fade { ...AutoSlideShowProperties }>
             <div className='each-fade'>
               <StyledImage 
-                src={process.env.basePath + '/images/entrance-backgrund-1.jpg'}
+                src={process.env.basePath + '/images/newEntrance-background-1.jpg'}
                 width={1500}
                 height={1000}
                 alt="スライドショー画像1"
@@ -43,7 +28,7 @@ const AutoSlideShow:FC = () => {
             </div>
             <div className='each-fade'>
               <StyledImage 
-                src={process.env.basePath + '/images/entrance-backgrund-2.jpg'}
+                src={process.env.basePath + '/images/newEntrance-background-2.jpg'}
                 width={1500}
                 height={1000}
                 alt="スライドショー画像2"
@@ -60,6 +45,7 @@ const SlideShow = styled.div`
   z-index: 3;
   top: 0;
   position: relative;
+  background-color:black;
 `;
 
 const Title = styled.h1`
@@ -72,33 +58,6 @@ const Title = styled.h1`
   z-index: 8;
   margin-top: 20%;
   margin-left: 10%;
-`;
-
-const Info = styled.span`
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  @media screen and (max-width: 410px) {
-    left:30%;
-  }
-  z-index: 8;
-  background: rgba(255, 255, 255, 0.5);
-`;
-
-const Date = styled.time`
-  text-align: left;
-  font-size: 24px;
-  @media screen and (max-width: 1200px) {
-    font-size: calc(24 / 1200 * 100vw);
-  }
-`;
-
-const Note = styled.data`
-  text-align: left;
-  font-size: 16px;
-  @media screen and (max-width: 1200px) {
-    font-size: calc(16 / 1200 * 100vw);
-  }
 `;
 
 const StyledImage = styled(Image)`
