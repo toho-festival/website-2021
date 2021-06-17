@@ -7,9 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "generate": "next build && next export",
-    "start": "NODE_ENV=production node ./server.js"
+    "start": "cross-env NODE_ENV=\"production\" node ./server.js"
   },
-  "author": "misogohan",
   "license": "BSD-3-Clause",
   "private": false,
   "dependencies": {
@@ -27,6 +26,7 @@
   "devDependencies": {
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
-    "@types/styled-components": "^5.1.9"
+    "@types/styled-components": "^5.1.9",
+    "cross-env": "^7.0.3"
   }
 }
