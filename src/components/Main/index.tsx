@@ -23,7 +23,7 @@ const Main: FC = () =>{
           <h2>－SUB CONTENTS－</h2>
           <SubContent side='left'  top={10}  subSrc="/images/newGreetings.png" num={0}/>
           <SubContent side='right' top={-5}  subSrc="/images/newSchedule.png"  num={1}/>
-          <SubContent side='left'  top={-5}  subSrc="/images/newPamphlet.png"  num={2}/>
+          <SubContent side='left'  top={-5}  subSrc="/images/newProgram.png"   num={2}/>
           <SubContent side='right' top={-5}  subSrc="/images/newCovid19.png"   num={3}/> 
           <SubContent side='left'  top={-5}  subSrc="/images/newBlog.png"      num={4}/>
         </SubContents>
