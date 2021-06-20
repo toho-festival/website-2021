@@ -9,6 +9,6 @@ export const routes: Route[] = [
   { key: 'ご案内', path: '/info' },
   { key: 'マップ', path: '/maps' },
   { key: '桐朋祭について', path: '/about' },
-  { key: 'パンフレット', path: '/pamphlet' },
+  { key: 'プログラム', path: '/program' },
   { key: 'コロナ対策', path: '/covid19' },
 ];

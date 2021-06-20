@@ -11,7 +11,7 @@ const Header: FC = () => {
   
   return <Layout>
     <div>
-      <Image src='/logo2.jpg' width={ 64 } height={ 64 }/>
+      <Image src={process.env.basePath + '/images/logo.png'} width={ 64 } height={ 64 }/>
     </div>
     <div>
       <Title>桐朋祭</Title>
@@ -36,7 +36,6 @@ const Layout = styled.header`
   padding: .5rem 1rem;
 
   > div {
-
     &:first-child {
       width: 2rem;
       height: 2rem;

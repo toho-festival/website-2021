@@ -33,7 +33,7 @@ app.prepare().then(() => {
     ));
   }
   
-  server.all('/70th/', (req, res, next) => {
+  server.all(basePath, (req, res, next) => {
     req.url = basePath.slice(0, -1);
     next();
   });
