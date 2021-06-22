@@ -97,7 +97,7 @@ const ProjectTitle = styled.div<Side>`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @media screen and (max-width: 1230px) {
-    font-size: calc(24 / 1230 * 100vw);
+    font-size: calc(28 / 1230 * 100vw);
   }
 `;
 
@@ -108,7 +108,7 @@ const ProjectComment = styled.p<Margin>`
   margin-left: ${ (props) => props.marginLeft }%;
   opacity: .8;
   @media screen and (max-width: 1230px) {
-    font-size: calc(20 / 1230 * 100vw);
+    font-size: calc(28 / 1230 * 100vw);
   }
 `;
 
