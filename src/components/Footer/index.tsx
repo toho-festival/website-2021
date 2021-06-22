@@ -5,10 +5,10 @@ import { footerRoutes } from '~/src/scripts/footerRoutes';
 
 const Footer: FC = () => <>
   <FooterContent>
-    <Theme>Toho Festival 70th</Theme>
-    <Author>製作/デザイン：桐朋高校２年プログラム委員会</Author>
+    <Theme>TOHO Festival 70th</Theme>
+    <Author>製作/デザイン：第70回桐朋祭プログラム委員会</Author>
       <CopyRight>
-        &copy; 2021 Toho70th-committee built this page.
+        &copy; 2021 TOHOFES70th-committee built this page.
       </CopyRight>
     {/* {
       footerRoutes.map(

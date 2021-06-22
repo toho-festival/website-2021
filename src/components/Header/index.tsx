@@ -31,8 +31,7 @@ const Layout = styled.header`
   align-items: stretch;
 
   z-index: 100;
-  background-color: white;
-  opacity: .7;
+  background-color: rgba(255,255,255, 0.8);
   padding: .5rem 1rem;
 
   > div {

@@ -11,6 +11,7 @@ const Main: FC = () =>{
         <h2>－DATE－</h2>
         <Dating />
       </Date>
+      <Attention>※開発中のため、どのページもまだ飛ぶことができません。ご了承ください。</Attention>
       <Categories>
         <h2>－PROJECT－</h2>
         <MainContents>
@@ -44,6 +45,15 @@ const Date = styled.div`
     text-align: center;
     font-size: 3vw;
     padding-bottom: 2vw;
+  }
+`;
+
+const Attention = styled.p`
+  margin: 0 15% 0 15%;
+  text-align: center;
+  color: white;
+  @media screen and (max-width: 1230px) {
+    font-size: calc(28 / 1230 * 100vw);
   }
 `;
 
