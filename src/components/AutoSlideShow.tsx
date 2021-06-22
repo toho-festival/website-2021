@@ -15,7 +15,7 @@ const AutoSlideShow:FC = () => {
       <div className='slide-container'>
         <SlideShow>
           <Title>
-            <div>Tohofes 70th</div>
+            <div>TOHOFES 70th</div>
           </Title>
           <Fade { ...AutoSlideShowProperties }>
             <div className='each-fade'>
