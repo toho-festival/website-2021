@@ -21,16 +21,16 @@ const AutoSlideShow:FC = () => {
             <div className='each-fade'>
               <StyledImage 
                 src={process.env.basePath + '/images/newEntrance-background-1.jpg'}
-                width={1500}
-                height={1000}
+                width={3000}
+                height={2000}
                 alt="スライドショー画像1"
               />
             </div>
             <div className='each-fade'>
               <StyledImage 
                 src={process.env.basePath + '/images/newEntrance-background-2.jpg'}
-                width={1500}
-                height={1000}
+                width={3000}
+                height={2000}
                 alt="スライドショー画像2"
               />
             </div>
