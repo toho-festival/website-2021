@@ -7,7 +7,7 @@ export const projectsComment: string[] = [
 ];
 
 export const subTitle: string[] = [
-  '委員長挨拶', '開催日時', 'プログラム', 'コロナ対策', '　ブログ'
+  '委員長挨拶', '開催日時', 'プログラム', 'コロナ対策', 'ブログ'
 ]
 
 export const subComment: string[] = [

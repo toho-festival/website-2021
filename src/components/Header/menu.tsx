@@ -4,8 +4,6 @@ import styled      from 'styled-components';
 import { routes }  from '~/src/scripts/routes';
 
 const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
-  <DownwardTriangle/>
-  <UpwardTriangle/>
   <Attention>※開発中のため、各ページに飛ぶことができません。ご了承ください。</Attention>
   
   {
@@ -35,6 +33,7 @@ const Layout = styled.nav<{ open: boolean }>`
   right: 0;
   width: 100vw;
   height: 100vh;
+  color: rgba(255,255,255, 0.8);
 
   display: flex;
   flex-flow: column wrap;
@@ -43,29 +42,9 @@ const Layout = styled.nav<{ open: boolean }>`
 
   padding-top: 1rem;
 
-  background-color: rgba(255, 198, 116, .9);
+  background-color: rgba(0,0,0, 0.7);
   transform: ${ ({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)' };
   transition: transform 0.3s ease-in-out;
-`;
-
-const DownwardTriangle = styled.div`
-  margin: 30% 0 -30% -100%;
-  width: 200%;
-  height: 4px;
-  opacity: .5;
-  z-index: -1;
-  background-color: white;
-  transform: skewY(15deg);
-`;
-
-const UpwardTriangle = styled.div`
-  margin: 50% 0 -50% -100%;
-  width: 200%;
-  height: 8px;
-  opacity: .5;
-  z-index: -1;
-  background-color: white;
-  transform: skewY(120deg);
 `;
 
 const Attention = styled.p`

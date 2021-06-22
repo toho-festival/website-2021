@@ -26,7 +26,7 @@ export const Layout = styled.button<{ open: boolean }>`
     width: 1.5rem;
     height: 0.25rem;
     border-radius: .5rem;
-    background-color: #030303;
+    background-color: ${ ({ open }) => open ? 'white' : '#030303' };
     transform-origin: center center;
     transition: all 0.3s linear;
 
