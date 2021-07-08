@@ -29,6 +29,7 @@ export const PiePlot: FC = (props) => {
 }
 
 const GraphWrapper = styled.div`
+  color: white;
 	width:20%;
 	height:20%;
 	display: inline-block;
