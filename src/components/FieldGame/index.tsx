@@ -24,16 +24,18 @@ const FieldGame = () => {
 }
 
 const Title = styled.h1`
-  ::first-letter{
-    font-size: 1.5rem;
-  }
+  color: white;
 `;
 
 const Rules = styled.div``;
 
-const RuleTitle = styled.h2``;
+const RuleTitle = styled.h2`
+  color: white;
+`;
 
-const Explain = styled.div``;
+const Explain = styled.div`
+  color: white;
+`;
 
 const Data = styled.div``;
 
