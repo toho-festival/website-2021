@@ -2,9 +2,16 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { allProjects } from '~/src/scripts/all-projects';
 import { PiePlot } from './data';
+import { firebase } from '~/firebase/client';
+import { useCollection } from 'react-firebase-hooks/firestore';
+import { fileURLToPath } from 'url';
 
+const FieldGame: FC = () => {
 
-const FieldGame = () => {
+  const [field, fieldLoading, fieldError] = useCollection(
+    firebase.firestore().collection('field-game')
+  )
+  
   return(
     <>
       <Title>総務企画　〜陣地取りゲーム〜</Title>
@@ -14,8 +21,14 @@ const FieldGame = () => {
       </Rules>
       <Data>
         {
-          allProjects.map(
-            ({ name }) => <PiePlot name={name}/>
+          field?.docs.map(( doc ) => 
+            <PiePlot  
+              key={doc.id}
+              blue={doc.data().blue} 
+              red={doc.data().red} 
+              yellow={doc.data().yellow}
+              name={doc.data().name} 
+            />
           )
         }
       </Data>
