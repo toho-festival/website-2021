@@ -2,7 +2,6 @@ import type { FC }   from 'react';
 import AutoSlideehow from '~/src/components/AutoSlideShow';
 import Main          from '~/src/components/Main';
 import Head          from 'next/head';
-import FieldGame     from '~/src/components/FieldGame/index';
 
 const Entrance: FC = () => <div>
   <Head>
@@ -21,7 +20,6 @@ const Entrance: FC = () => <div>
   </Head>
   <AutoSlideehow/>
   <Main />
-  <FieldGame />
 </div>;
 
 export default Entrance;
