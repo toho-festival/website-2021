@@ -1,21 +1,19 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-
-
 const Member:FC = () => (
   <Wrap>
     <Div>
-        <Article>
-            <H3>メンバー</H3>
-            <H4>a</H4>
-            <H4>b</H4>
-            <H4>c</H4>
-            <H4>d</H4>
-        </Article>
-        <Aside>
+        <MemberWrap>
+            <SubTitle>メンバー</SubTitle>
+            <MemberName>a</MemberName>
+            <MemberName>b</MemberName>
+            <MemberName>c</MemberName>
+            <MemberName>d</MemberName>
+        </MemberWrap>
+        <MemberPicture>
             <Img src="entrance-backgrund-1.jpg" alt="" />
-        </Aside>
+        </MemberPicture>
     </Div>
   </Wrap>
 )
@@ -32,22 +30,22 @@ const Div = styled.div`
     margin-left: 15vw;
 `;
 
-const Article = styled.article`
+const MemberWrap = styled.article`
 
 `;
 
-const H3 = styled.h3`
+const SubTitle = styled.h3`
     font-size:5vw;
     text-align:center;
     border-bottom: 2px solid black;
 `;
 
-const H4 = styled.h4`
+const MemberName = styled.h4`
     border-bottom: 2px solid black;
     padding: 5px 0 5px 0;
 `;
 
-const Aside = styled.aside`
+const MemberPicture = styled.aside`
 
 `;
 

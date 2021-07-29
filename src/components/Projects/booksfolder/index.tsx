@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import Title from './booksfolder/title';
-import Contents from './booksfolder/contents';
-import Greeting from './booksfolder/greeting';
+import Title from './title';
+import Contents from './contents';
+import Greeting from './greeting';
 
 const Books:FC = () => <Wrap>
     <Title />
