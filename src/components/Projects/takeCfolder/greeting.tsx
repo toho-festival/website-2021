@@ -1,53 +1,57 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-
-
-const Greeting:FC = () => (
+const Greeting:FC = () => 
   <Wrap>
-    <H1>TAKE C</H1>
-    <Div>
-        <Article>
-            <Img src="entrance-backgrund-1.jpg" alt="" />
-        </Article>
-        <Aside>
-            <H2first>どうも！昨年１０月位に</H2first><H2>ゆる～くできた、TAKE Cと</H2><H2>申します！音楽初心者ばかりなのに</H2><H2>最初の曲でシュガソンやったりと迷走しています。</H2><H2>ちょっとでも気になったら是非！遊びに来てください！</H2>
-        </Aside>
-    </Div>
+    <Name>TAKE C</Name>
+    <MainContents>
+      <Article>
+        <Img src="entrance-backgrund-1.jpg" alt="" />
+      </Article>
+      <Sentence>
+        <First>どうも！昨年１０月位に</First><Decoration>ゆる～くできた、TAKE Cと</Decoration><Decoration>申します！音楽初心者ばかりなのに</Decoration><Decoration>最初の曲でシュガソンやったりと迷走しています。</Decoration><Decoration>ちょっとでも気になったら是非！遊びに来てください！</Decoration>
+      </Sentence>    
+    </MainContents>
   </Wrap>
-)
+
 
 export default Greeting;
 
 
 const Wrap = styled.div`
-    background-color:#ffcc00;
+  background-color:#ffcc00;
 `;
-const H1 = styled.h1`
-    font-size:10vw;
-    text-align:center;
+
+const Name = styled.h1`
+  font-size:10vw;
+  text-align:center;
 `;
-const Div = styled.div`
-    display:flex;
+
+const MainContents = styled.div`
+  display:flex;
 `;
+
 const Article = styled.article`
-    margin-left:5vw;
-    margin-right:5vw;
+  margin-left:5vw;
+  margin-right:5vw;
 `;
+
 const Img = styled.img`
-    width:30vw;
+  width:30vw;
 `;
-const Aside = styled.aside`
-    
+
+const Sentence = styled.aside`
+
 `;
-const H2first = styled.h2`
-    border-bottom:2px solid black;
-    font-size:2vw;
-    :first-letter{
-        font-size:4vw;
-    }
+
+const First = styled.h2`
+  border-bottom:2px solid black;
+  font-size:2vw;
+  :first-letter{
+    font-size:4vw;
+  }
 `;
-const H2 = styled.h2`
-    border-bottom:2px solid black;
-    font-size:2vw;
+const Decoration = styled.h2`
+  border-bottom:2px solid black;
+  font-size:2vw;
 `;
