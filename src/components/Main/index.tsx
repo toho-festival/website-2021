@@ -2,7 +2,7 @@ import { FC }                             from 'react';
 import styled                             from 'styled-components';
 import SubContent                         from '~/src/components/Main/subContents';
 import MainContent                        from './mainContent';
-import Dating                             from '~/src/components/Main/date'
+import Dating                             from '~/src/components/Main/date';
 
 const Main: FC = () =>{
   return(
