@@ -3,27 +3,32 @@ import styled from 'styled-components';
 
 
 
-const Events:FC = () => (
+const Events:FC = () => 
   <>
-    <Div>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-    </Div>
+    <Contents>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+    </Contents>
   </>
-)
+
 export default Events;
 
-const Div = styled.div`
+const Contents = styled.div`
   margin: 0 auto;
   overflow: hidden;
   display:grid;
-  grid-template-columns:repeat(2, 1fr);
+  grid-template-columns:repeat(3, 1fr);
   gap: 1vw;
 `;
 
-const A = styled.a`
+const Project = styled.a`
   :hover{
     opacity: 0.6;
     transition-duration: 0.3s;
@@ -37,7 +42,7 @@ const Img = styled.img`
   transition-duration: 0.3s;
 `;
 
-const P = styled.p`
+const Name = styled.p`
   position: absolute;
   top: 50%;
   left: 50%;
