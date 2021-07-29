@@ -1,6 +1,6 @@
 import type { FC }       from 'react';
 import type { AppProps } from 'next/app';
-import Layout            from '~/components/App/Layout';
+import Layout            from '~/src/components/App/Layout';
 
 const App: FC<AppProps> = ({ Component, pageProps }) =>
   <Layout>

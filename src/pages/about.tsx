@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import AboutIndex from '../components/AboutTohofes/';
+import AboutIndex from '~/src/components/AboutTohofes';
 
 const About: FC = () => <>
   <AboutIndex />
