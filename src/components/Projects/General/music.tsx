@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 
-const Music:FC = () => (
+const Music:FC = () => 
   <>
     <Div1>
       <article>
@@ -29,7 +29,7 @@ const Music:FC = () => (
       <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
     </Div2>
   </>
-)
+
 export default Music;
 
 const Musicimg = styled.img`
