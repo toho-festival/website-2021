@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import Greeting from './takeCfolder/greeting';
-import List from './takeCfolder/list';
-import Member from './takeCfolder/member';
+import Greeting from './greeting';
+import List from './list';
+import Member from './member';
 
 const Takec:FC = () => <Wrap>
     <Greeting />
