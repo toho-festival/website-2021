@@ -3,21 +3,24 @@ import styled from 'styled-components';
 
 
 
-const Contents:FC = () => (
-  <Wrap>
-    <H2>何ヲカ見ル</H2>
-    <H3>A.本格ミステリーを捌く</H3>
-    <H4>　ロジック一本で勝負する「本格ミステリ」の<br/>系譜やトリックの種類をご紹介</H4>
-    <H3>B.紙製ブックカバー配布</H3>
-    <H4>　図書委員会初の試み。何ができるかは<br/>分からないが、もらっておいて損はないはず。</H4>
-  </Wrap>
-)
+const Contents:FC = () => {
+  return(  
+    <Wrap>
+      <Question>何ヲカ見ル</Question>
+      <Answer>A.本格ミステリーを捌く</Answer>
+      <Introduce>　ロジック一本で勝負する「本格ミステリ」の系譜やトリックの種類をご紹介</Introduce>
+      <Answer>B.紙製ブックカバー配布</Answer>
+      <Introduce>　図書委員会初の試み。何ができるかは分からないが、もらっておいて損はないはず。</Introduce>
+    </Wrap>
+  )
+}
+
 export default Contents; 
 
 const Wrap = styled.div`
 
 `;
-const H2 = styled.h2`
+const Question = styled.h2`
     font-size:3vw;
     margin-left:2vw;
     :first-letter{
@@ -25,7 +28,7 @@ const H2 = styled.h2`
     }
 `;
 
-const H3 = styled.h3`
+const Answer = styled.h3`
     margin-left:15vw;
     margin-top:5vw;
     font-size:4vw;
@@ -33,7 +36,7 @@ const H3 = styled.h3`
         color:red;
     }
 `;
-const H4 = styled.h4`
+const Introduce = styled.h4`
     margin-left:15vw;
     font-size:3vw;
 `;
