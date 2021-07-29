@@ -1,18 +1,25 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
+const Definition:FC = () => {
+  return(  
+    <>
+      <Title>一般参加団体とは？</Title>
+      <Discription>かくかくしかじか</Discription>
+      <Discription>かくかくしかじか</Discription>
+      <Discription>かくかくしかじか四角いムーブ</Discription>
+    </>
+  )
+}
 
-
-const Definition:FC = () => (
-  <>
-    <h1>一般参加団体</h1>
-    <h3>一般参加団体とは？</h3>
-    <h4>かくかくしかじか</h4>
-
-    <h4>かくかくしかじか</h4>
-
-    <h4>かくかくしかじか四角いムーブ</h4>
-
-  </>
-)
 export default Definition;
+
+const Title = styled.h1`
+
+`;
+
+//このしたのpは怪しいから確認してね
+//確認したらこのコメントは消してください
+const Discription = styled.p`
+
+`;
