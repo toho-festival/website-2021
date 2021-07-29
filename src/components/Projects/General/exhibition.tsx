@@ -3,59 +3,71 @@ import styled from 'styled-components';
 
 
 
-const Exhibition:FC = () => (
+const Exhibition:FC = () => 
   <>
-    <Div1>
-      <article>
-        <Exhibitimg src="exhibit.png" alt="展示企画の画像" />
-      </article>
-      <Aside>
-        <H2>　展示企画</H2>
-        <h2>　個性の爆発</h2>
-        <H4>展示企画について</H4>
-        <h4>あああああああああああああああああああああああ</h4>
-      </Aside>
-    </Div1>
-    <Div2>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-    </Div2>
+    <Title>
+      <Colmn>
+        <Exhibiting src={process.env.basePath + "/images/newExhibit.png"} alt="展示企画の画像" />
+      </Colmn>
+      <Categoly>
+        <CategolyName>　展示企画</CategolyName>
+        <OnePoint>　個性の爆発</OnePoint>
+        <CategolyDiscriptionTitle>展示企画について</CategolyDiscriptionTitle>
+        <Sentence>あああああああああああああああああああああああ</Sentence>
+      </Categoly>
+    </Title>
+    <Contents>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+    </Contents>
   </>
-)
+
 export default Exhibition;
 
-const Exhibitimg = styled.img`
+const Exhibiting = styled.img`
     width: 20vw;
     @media screen and (max-width: 767px) {
     width:30vw;
     }
 `;
 
-const Aside = styled.aside`
+const Colmn = styled.article`
+
+`;
+
+const Categoly = styled.aside`
     margin-top:5vw;
 `;
 
-const H2 = styled.h2`
+const CategolyName = styled.h2`
     color:orange;
 `;
 
-const Div1 = styled.div`
+const Title = styled.div`
     display:flex;
     margin-top: 10vw;
 `;
 
-const H4 = styled.h4`
+const OnePoint = styled.h2`
+
+`;
+
+const CategolyDiscriptionTitle = styled.h4`
     margin-top:5vw;
 `;
 
-const Div2 = styled.div`
+const Sentence = styled.div`
+
+`;
+
+const Contents = styled.div`
   margin: 0 auto;
   overflow: hidden;
   display:grid;
@@ -63,7 +75,7 @@ const Div2 = styled.div`
   gap: 1vw;
 `;
 
-const A = styled.a`
+const Project = styled.a`
   :hover{
     opacity: 0.6;
     transition-duration: 0.3s;
@@ -77,7 +89,7 @@ const Img = styled.img`
   transition-duration: 0.3s;
 `;
 
-const P = styled.p`
+const Name = styled.p`
   position: absolute;
   top: 50%;
   left: 50%;
