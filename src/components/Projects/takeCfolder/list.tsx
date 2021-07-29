@@ -1,38 +1,37 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-
-
-const List:FC = () => (
+const List:FC = () => 
   <Wrap>
-    <H2>SET　LIST</H2>
-    <Ol>
-      <Li>シュガーソングとビターステップ<br/>/UNISON SQUARE GARDEN</Li>
-      <Li>丸の内サディスティック<br/>/東京事変</Li>
-      <H3>3曲目はお楽しみ枠ということで...！？</H3>
-    </Ol>
+    <ListTitle>SET　LIST</ListTitle>
+    <MusicList>
+      <Content>シュガーソングとビターステップ/UNISON SQUARE GARDEN</Content>
+      <Content>丸の内サディスティック/東京事変</Content>
+      <Content>3曲目はお楽しみ枠ということで...！？</Content>
+    </MusicList>
   </Wrap>
-)
+
 export default List; 
 
 const Wrap = styled.div`
   background-color:black;
   color:white;
 `;
-const H2 = styled.h2`
+
+const ListTitle = styled.h2`
   font-size:5vw;
   text-align:center;
   margin-bottom:5vw;
 `;
-const Ol = styled.ol`
+
+const MusicList = styled.ol`
 
 `;
-const Li = styled.li`
+
+const Content = styled.li`
   margin-bottom:5vw;
   margin-left:5vw;
   font-size:3vw;
 `;
-const H3 = styled.h3`
-  margin-left:2vw;
-  font-size:3vw;
-`;
+
+//最後のひとつだけbottom必要ないなら条件分岐とかしてね
