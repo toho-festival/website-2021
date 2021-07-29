@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 
-const Experience:FC = () => (
+const Experience:FC = () => 
   <>
     <Div1>
       <article>
@@ -29,7 +29,7 @@ const Experience:FC = () => (
       <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
     </Div2>
   </>
-)
+
 export default Experience;
 
 const Div1 = styled.div`
