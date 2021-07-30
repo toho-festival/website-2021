@@ -25,5 +25,5 @@ const Information: FC = () => {
 export default Information;
 
 const Wrap = styled.div`
-
+  color :white;
 `;
