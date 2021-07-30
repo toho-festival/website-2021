@@ -11,4 +11,5 @@ export const routes: Route[] = [
   { key: '桐朋祭について', path: '/about' },
   { key: 'プログラム', path: '/program' },
   { key: 'コロナ対策', path: '/covid19' },
+  { key: '総務企画', path: '/field-game'},
 ];
