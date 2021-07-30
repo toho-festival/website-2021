@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Attention: FC = () => {
   return(
     <AttentionWrap>
-      <Title>諸注意</Title>
+      <Title>ご案内</Title>
       <Paragraph>「総合案内所」を高校昇降口に設置しております。目的地までの道順など各種お困りごとの対応をさせて頂きます。</Paragraph>
       <Paragraph>女子トイレ、男子トイレは各階にございます。多機能トイレは高校棟一階ホール横、教科教室棟一階にございます。</Paragraph>
       <Paragraph>桐朋祭スタッフは右図のTシャツを着ています。親身になって対応させていただきますので、お気軽にお声掛け下さい。</Paragraph>
