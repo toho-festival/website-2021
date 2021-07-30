@@ -23,8 +23,8 @@ export const PiePlot: FC<FieldProps> = (props) => {
     datasets: [
         {
             data: dataSet,
-            backgroundColor: ["#4169e1","#ff1493","#FFCE56"],
-            hoverBackgroundColor:  ["#36A2EB","#FF6384","#FFCE56"],
+            backgroundColor: ["#4f85a6","#79a7d9","#d8dbd9"],
+            hoverBackgroundColor:  ["#97cdf3","#A0C0E3","#fff8cf"],
             borderColor: ["transparent","transparent","transparent"]
         }
     ]
@@ -32,15 +32,36 @@ export const PiePlot: FC<FieldProps> = (props) => {
 
   return (
     <GraphWrapper>
-        <div>{props.name}</div>
-        <Pie key={props.key} data={data} width={200} height={200} options={options}/>
+      <Name>{props.name}</Name>
+      <Pie key={props.key} type="pie" data={data} width={200} height={200} options={options}/>
     </GraphWrapper>
     )
 }
 
 const GraphWrapper = styled.div`
-  color: white;
-	width:20%;
-	height:20%;
-	display: inline-block;
+  color: #FFE350;
+  background-color: #0a123a;
+  margin-top: 1vw;
+  margin: 0.3%;
+  width:19%;
+  height:30%;
+  display: inline-block;
+  border: 2px solid green;
+  border-image: linear-gradient(to right, green 0%, yellowgreen 100%);
+  border-image-slice: 1;
+`;
+
+const Name = styled.div`
+  width: 100%;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  border-bottom: 2px solid green;
+  border-image: linear-gradient(to right, green 0%, yellowgreen 100%);
+  border-image-slice: 1;
+  @media screen and (max-width: 1119px) {
+    font-size: 0.5px;
+  }
 `;
