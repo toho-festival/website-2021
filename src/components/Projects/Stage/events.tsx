@@ -51,5 +51,5 @@ const Name = styled.p`
   transform: translate(-50%,-50%);
   margin:0;
   padding:0;
-  color: black;
+  color: white;
 `;
