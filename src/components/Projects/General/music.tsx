@@ -5,31 +5,36 @@ import styled from 'styled-components';
 
 const Music:FC = () => 
   <>
-    <Div1>
-      <article>
-        <Musicimg src="music.png" alt="音楽企画の画像"/>
-      </article>
-      <Aside>
-        <H2>　音楽企画</H2>
-        <h2>　桐朋生の奏でる</h2>
-        <h2>　最高のMUSIC</h2>
-        <H4>音楽企画について</H4>
-        <h4>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</h4>
-      </Aside>
-    </Div1>
-    <Div2>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-      <A href=""><Img src="entrance-backgrund-1.jpg" /><P>Sample</P></A>
-    </Div2>
+    <Title>
+      <Colmn>
+        <div><Musicimg src={ process.env.basePath + "/images/newMusic.png"} alt="音楽企画の画像"/></div>
+      </Colmn>
+      <Categoly>
+        <CategolyName>　音楽企画</CategolyName>
+        <OnePoint>　桐朋生の奏でる</OnePoint>
+        <OnePoint>　最高のMUSIC</OnePoint>
+      </Categoly>
+    </Title>
+    <Description>
+      <Center><CategolyDiscriptionTitle>音楽企画について</CategolyDiscriptionTitle></Center>
+      <Arrangement>
+        <Sentence>{/*ここに文字を入れてはいけない。29文字を超えないように。*/}</Sentence>
+        <Sentence>あああああああああああああああああああああああああああああ</Sentence>
+        <Sentence>あああああああああああああああああああああああああああああ</Sentence>
+      </Arrangement>
+    </Description>
+    <Contents>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+      <Project href=""><Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} /><Name>Sample</Name></Project>
+    </Contents>
   </>
-
 export default Music;
 
 const Musicimg = styled.img`
@@ -39,24 +44,95 @@ const Musicimg = styled.img`
   }
 `;
 
-const Div1 = styled.div`
+const Title = styled.div`
   display:flex;
   margin-top: 10vw;
+  margin-right: 5vw;
+  justify-content: center;
 `;
 
-const H2 = styled.h2`
-  color:orange;
+const CategolyName = styled.h2`
+  color: #FBB03B;
+  opacity: .8;
+  background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
+  background: linear-gradient(to top, #ffffdb, #a16422);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  :hover{
+    text-shadow: 0 0 15px rgba(250, 250, 214, 0.3),
+    0 0 15px rgba(250, 250, 214, 0.3), 0 0 15px rgba(250, 250, 214, 0.3),
+    0 0 15px rgba(250, 250, 214, 0.3);
+  }
 `;
 
-const Aside = styled.aside`
+const OnePoint = styled.h2`
+  @media screen and (max-width: 767px) {
+    font-size:20px;
+  }
+`;
+
+const Arrangement = styled.div`
+  margin-bottom: 3vw;
+  display: inline-block;
+`;
+
+const Sentence = styled.div`
+  border-bottom: 1px #ddd solid;
+  padding: 10px;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    font-size:10px;
+  }
+`;
+
+const Colmn = styled.article`
+  margin-right: 2vw;
+  div{
+    transition-duration: 0.3s;
+    :hover{
+      transform: scale(1.05);
+      transition-duration: 0.3s;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin-right: 0vw;
+    div{
+      transition-duration: 0s;
+      :hover{
+        transform: scale(1);
+        transition-duration: 0s;
+      }
+    }
+  }
+`;
+
+const Categoly = styled.aside`
   margin-top:5vw;
 `;
 
-const H4 = styled.h4`
-  margin-top:2vw;
+const Description = styled.div`
+  margin-top:10vw;
+  text-align: center;
 `;
 
-const Div2 = styled.div`
+const Center = styled.div`
+  text-align: center;
+`;
+
+const CategolyDiscriptionTitle = styled.h4`
+  margin-bottom: 1.5vw;
+  border-bottom: #bf9d6d 2px solid;
+  display: inline-block;
+`;
+
+const Contents = styled.div`
   margin: 0 auto;
   overflow: hidden;
   display:grid;
@@ -64,7 +140,7 @@ const Div2 = styled.div`
   gap: 1vw;
 `;
 
-const A = styled.a`
+const Project = styled.a`
   :hover{
     opacity: 0.6;
     transition-duration: 0.3s;
@@ -78,7 +154,7 @@ const Img = styled.img`
   transition-duration: 0.3s;
 `;
 
-const P = styled.p`
+const Name = styled.p`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,5 +163,5 @@ const P = styled.p`
   transform: translate(-50%,-50%);
   margin:0;
   padding:0;
-  color: black;
+  color: white;
 `;
