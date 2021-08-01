@@ -2,6 +2,7 @@ import type { FC }   from 'react';
 import AutoSlideehow from '~/src/components/AutoSlideShow';
 import Main          from '~/src/components/Main';
 import Head          from 'next/head';
+import ProjectsEvent from '~/src/components/ProjectsEvent/index';
 
 const Entrance: FC = () => <div>
   <Head>
@@ -20,6 +21,7 @@ const Entrance: FC = () => <div>
   </Head>
   <AutoSlideehow/>
   <Main />
+  <ProjectsEvent />
 </div>;
 
 export default Entrance;
