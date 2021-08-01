@@ -24,12 +24,12 @@ const Tabs: FC= () => {
       <TabHead>
         <Tab selected={isTabOne}>
           <Link href="">
-            <a>Tab 1</a>
+            <a>一般参加団体</a>
           </Link>
         </Tab>
         <Tab selected={isTabTwo}>
           <Link href={{ pathname: "/projects", query: { tab: "2" } }}>
-            <a>Tab 2</a>
+            <a>ステージ企画</a>
           </Link>
         </Tab>
       </TabHead>
@@ -44,17 +44,26 @@ const Tabs: FC= () => {
 export default withRouter(Tabs)
 
 const TabHead = styled.div`
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid gray;
   display: flex;
   background: black;
 `;
 
 const TabContainer = styled.div`
-  width: 30em;
-  height: 30em;
+  width: 100%;
+  height: 100%;
   webkit-box-shadow: -1px 0px 5px 0px rgba(184, 184, 184, 1);
   -moz-box-shadow: -1px 0px 5px 0px rgba(184, 184, 184, 1);
   box-shadow: -1px 0px 5px 0px rgba(184, 184, 184, 1);
+
+  @keyframes border_anim {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
 `;
 
 const TabBody = styled.div`
@@ -63,9 +72,23 @@ const TabBody = styled.div`
 `;
 
 const Tab = styled.div<TabProps>`
+  width: 50%;
   padding: 1em;
-  background: ${({ selected }) => (selected ? "grey" : "black")};
-  * {
-    color: white;
-  }
+  text-align: center;
+  a {
+    display: inline-block;
+    position: relative;
+    :before{
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      transform: translateX(-50%);
+      border-bottom: solid 3px ${({ selected }) => (selected ? "#4169e1" : "none")};
+      animation: border_anim 0.9s linear forwards;
+      }
+    }
+  background: ${({ selected }) => (selected ? "white" : "#f0f0f0")};
+  color: ${({ selected }) => (selected ? "#4169e1" : "black")};
 `;

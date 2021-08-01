@@ -5,14 +5,26 @@ import Events from './events'
 
 
 const Stage:FC<{title: string}> = ({title}) => 
-  <>
-    <H1>{title}</H1>
+  <Wrap>
+    <Center><Title>{title}</Title></Center>
     <Definition />
     <Events />
-  </>
+  </Wrap>
 
 export default Stage;
 
-const H1 = styled.h1`
+const Wrap = styled.div`
+  margin-top: 10vw;
+  margin-bottom: 30vw;
+  text-align: center;
+`;
+
+const Center = styled.div`
+  text-align: center;
+`;
+
+const Title = styled.h1`
+  display: inline-block;
+  border-bottom: #bf9d6d 6px solid;
   //a
 `;
