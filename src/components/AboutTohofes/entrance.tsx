@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FC } from 'react';
-import {explain1} from "~/scripts/about"
+import {explain1} from "~/src/scripts/about"
 
 const AboutTOHO:FC = () => {
   return(
