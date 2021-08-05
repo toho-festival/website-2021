@@ -6,11 +6,13 @@ import Disaster from "./disaster";
 import Evacuation from "./evacuation";
 import LostChild from "./lostChild";
 import LostProperty from "./lostProperty";
-import SuspiciousObject from "./suspiciousObject";
+import SuspiciousObject from "./SuspiciousObject";
+import Table from "./tableContents"
 
 const Information: FC = () => {
   return(
     <Wrap>
+      <Table />
       <Attention />
       <Disaster />
       <Evacuation />
@@ -25,5 +27,6 @@ const Information: FC = () => {
 export default Information;
 
 const Wrap = styled.div`
-  color :white;
+  background-color: white;
+  border-bottom: 5px black solid;
 `;

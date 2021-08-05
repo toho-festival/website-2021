@@ -4,8 +4,12 @@ import styled from "styled-components";
 const AfterEvacution: FC = () => {
   return (
     <Wrap>
-      <Center><Title>避難後について</Title></Center>
-      <Pragraph>避難誘導の終了後は教職員が指示を出しますのでその場でお待ち下さい。</Pragraph>
+      <Center>
+        <Back>
+          <Center><Title>避難後について</Title></Center>
+          <Pragraph>避難誘導の終了後は教職員が指示を出しますのでその場でお待ち下さい。</Pragraph>
+        </Back>
+      </Center>
     </Wrap>
   );
 }
@@ -13,7 +17,16 @@ const AfterEvacution: FC = () => {
 export default AfterEvacution
 
 const Wrap = styled.div`
+  margin-top: 10vw;
+`;
 
+const Back = styled.div`
+  padding: 5px 5px 5px 5px;
+  width: 70%;
+  border: 10px solid #bf9d6d;
+  background-color: cornsilk;
+  border-radius: 20px;
+  display: inline-block;
 `;
 
 const Center = styled.div`
@@ -22,7 +35,6 @@ const Center = styled.div`
 
 const Title = styled.h1`
   margin-bottom: 2vw;
-  margin-top: 4vw;
   font-size: 50px;
   display: inline-block;
   border-bottom: 10px solid #bf9d6d;
