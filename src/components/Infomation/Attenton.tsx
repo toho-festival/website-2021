@@ -4,10 +4,10 @@ import styled from "styled-components";
 const Attention: FC = () => {
   return(
     <AttentionWrap>
-      <Title>ご案内</Title>
+      <Center><Title>ご案内</Title></Center>
       <Paragraph>「総合案内所」を高校昇降口に設置しております。目的地までの道順など各種お困りごとの対応をさせて頂きます。</Paragraph>
       <Paragraph>女子トイレ、男子トイレは各階にございます。多機能トイレは高校棟一階ホール横、教科教室棟一階にございます。</Paragraph>
-      <Paragraph>桐朋祭スタッフは右図のTシャツを着ています。親身になって対応させていただきますので、お気軽にお声掛け下さい。</Paragraph>
+      <Paragraph>桐朋祭スタッフはオリジナルのTシャツを着ています。親身になって対応させていただきますので、お気軽にお声掛け下さい。</Paragraph>
       <Paragraph>感染症対策の為、ゴミの持ち帰りをお願い致します。校外から持ち込まれたゴミは、必ずお持ち帰り下さい。</Paragraph>
       <Paragraph>ご高齢の方、お身体が不自由な方以外のエレベーターの使用はご遠慮下さい。</Paragraph>
       <Paragraph>校舎内は土足厳禁です。</Paragraph>
@@ -26,10 +26,25 @@ const AttentionWrap = styled.div`
 
 `;
 
-const Title = styled.h1`
+const Center = styled.div`
   text-align: center;
 `;
 
-const Paragraph = styled.p`
+const Title = styled.h1`
+  margin-bottom: 2vw;
+  margin-top: 4vw;
+  font-size: 50px;
+  display: inline-block;
+  border-bottom: 10px solid #bf9d6d;
+  @media screen and (max-width: 1230px) {
+    font-size: 25px;
+    border-bottom: 7px solid #bf9d6d;
+  }
+`;
 
+const Paragraph = styled.p`
+  margin: 0 5% 0 5%;
+  @media screen and (max-width: 1230px) {
+    font-size: 14px;
+  }
 `;
