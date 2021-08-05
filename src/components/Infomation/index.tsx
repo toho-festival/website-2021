@@ -1,12 +1,12 @@
 import { FC } from "react";
 import styled from "styled-components";
-import AfterEvacution from "./AfterEvacution";
-import Attention from "./Attenton";
+import AfterEvacution from "./afterEvacution";
+import Attention from "./attenton";
 import Disaster from "./disaster";
-import Evacuation from "./Evacuation";
-import LostChild from "./LostChild";
-import LostProperty from "./LostProperty";
-import SuspiciousObject from "./SuspiciousObject";
+import Evacuation from "./evacuation";
+import LostChild from "./lostChild";
+import LostProperty from "./lostProperty";
+import SuspiciousObject from "./suspiciousObject";
 
 const Information: FC = () => {
   return(
