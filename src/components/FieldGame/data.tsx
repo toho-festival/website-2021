@@ -11,8 +11,7 @@ type FieldProps = {
 }
 
 const options = {
-    maintainAspectRatio: true,
-    responsive: true,
+  responsive: true,
   };
 
 export const PiePlot: FC<FieldProps> = (props) => {
@@ -45,6 +44,10 @@ const GraphWrapper = styled.div`
   margin: 0.3%;
   width:19%;
   height:30%;
+  @media screen and (max-width: 1230px) {
+    width:38%;
+    height:60%;
+  }
   display: inline-block;
   border: 2px solid green;
   border-image: linear-gradient(to right, green 0%, yellowgreen 100%);
