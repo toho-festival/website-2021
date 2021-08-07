@@ -5,7 +5,7 @@ const Title:FC = () =>
   <>
     <Name>ー迷'sー</Name>
     <ContentsWrap>
-      <Img src="entrance-backgrund-1.jpg" alt="昔風からくり迷路の画像" />
+      <Img src={process.env.basePath + "/images/karakuri.png"} alt="昔風からくり迷路の画像" />
       <Catchphrase>江戸時代にタイムスリップ！？</Catchphrase>
     </ContentsWrap>
     <Discription>からくり迷路を体感せよ！！</Discription>
@@ -13,15 +13,16 @@ const Title:FC = () =>
 
 export default Title; 
 
+
 const Name = styled.h1`
   font-size:10vw;
-  text-align: center
+  text-align: center;
 `;
 
 const Discription = styled.h3`
   margin-top:4vw;
   font-size:7vw;
-  text-align: center
+  text-align: center;
 `;
 
 const ContentsWrap = styled.div`
@@ -30,7 +31,7 @@ const ContentsWrap = styled.div`
 
 const Img = styled.img`
   width:40vw;
-  height:25vw;
+  height:40vw;
   margin: 1vw 0vw 0vw 10vw;
 `;
 
@@ -38,10 +39,10 @@ const Catchphrase = styled.h2`
   position: relative;
   display: inline-block;
   margin: 1.5em 0 1.5em 0vw;
-  padding: 1vw 0px;
+  padding: 3.5vw 5px 0px 5px;
   width: 30vw;
   height: 15vw;
-  line-height: 6vw;
+  line-height: 4vw;
   text-align: center;
   color: #FFF;
   font-size: 3vw;
