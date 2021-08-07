@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 
 
-const Contents:FC = () => {
-  return(  
+const Contents: FC = () => {
+  return (
     <Wrap>
-      <Question>何ヲカ見ル</Question>
+      <Question><Red>何</Red>ヲカ<Red>見</Red>ル</Question>
       <Answer>A.本格ミステリーを捌く</Answer>
       <Introduce>　ロジック一本で勝負する「本格ミステリ」の系譜やトリックの種類をご紹介</Introduce>
       <Answer>B.紙製ブックカバー配布</Answer>
@@ -15,28 +15,30 @@ const Contents:FC = () => {
   )
 }
 
-export default Contents; 
+export default Contents;
 
 const Wrap = styled.div`
 
 `;
+
 const Question = styled.h2`
-    font-size:3vw;
-    margin-left:2vw;
-    :first-letter{
-        color:red;
-    }
+  font-size:3vw;
+  margin-left:2vw;
+`;
+
+const Red = styled.span`
+  color: red;
 `;
 
 const Answer = styled.h3`
-    margin-left:15vw;
-    margin-top:5vw;
-    font-size:4vw;
-    :first-letter{
-        color:red;
-    }
+  margin-left:15vw;
+  margin-top:5vw;
+  font-size:4vw;
+  :first-letter{
+    color:red;
+  }
 `;
 const Introduce = styled.h4`
-    margin-left:15vw;
-    font-size:3vw;
+  margin-left:15vw;
+  font-size:3vw;
 `;
