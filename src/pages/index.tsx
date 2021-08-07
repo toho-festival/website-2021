@@ -1,4 +1,3 @@
-import QuizClub from '~/src/components/QuizClub'
 import type { FC }   from 'react';
 import AutoSlideehow from '~/src/components/AutoSlideShow';
 import Main          from '~/src/components/Main';
@@ -21,7 +20,6 @@ const Entrance: FC = () => <div>
   </Head>
   <AutoSlideehow/>
   <Main />
-  <QuizClub />
 </div>;
 
 export default Entrance;
