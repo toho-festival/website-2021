@@ -9,7 +9,7 @@ const Tekken: FC = () => {
   return(
     <Layout>
       <Title>〜てっけん！〜</Title>
-      <Img1 src="/entrance-backgrund-1.jpg" isMain={true}></Img1>
+      <Img1 src={process.env.basePath + "/images/tekkenFirst.jpg"} isMain={true}></Img1>
       <About>鉄研とは？中高合同でジオラマ制作や研究を行っています。夏には部員たちで行き先を決めた合宿もしています。</About>
       <DisplayContents>
         <SubTitle>展示内容</SubTitle>
@@ -18,11 +18,11 @@ const Tekken: FC = () => {
         <Content>・運転シュミレーター</Content>
         <Content>・発車ベル</Content>
       </DisplayContents>
-      <Where><BigLetter>A</BigLetter>教室</Where>
-      <Img2 src="/entrance-backgrund-1.jpg" isMain={false}></Img2>
+      <Where><BigLetter>A</BigLetter><span>教室</span></Where>
+      <Img2 src={process.env.basePath + "/images/tekkenSecond.jpg"} isMain={false}></Img2>
       <Explain>巨大ジオラマを中心に発車ベル体験など何時間も楽しめる空間となっています。</Explain>
-      <Where><BigLetter>B</BigLetter>教室</Where>
-      <Img3 src="/entrance-backgrund-1.jpg" isMain={false}></Img3>
+      <Where><BigLetter>B</BigLetter><span>教室</span></Where>
+      <Img3 src={process.env.basePath + "/images/tekkenThird.jpeg"} isMain={false}></Img3>
       <Explain>運転シュミレーター、クイズなど体験できるものを用意し、研究報告として部報の配布をを行っています。</Explain>
       <Notice><SubTitle>＜皆様に言いたいこと＞</SubTitle><Top>桐朋祭にお越しの際は</Top><Bottom>是非足を運んでみてください！</Bottom></Notice>
     </Layout>
@@ -44,6 +44,7 @@ const Title = styled.h1`
 const Img1 = styled.img<IsMain>`
   float: ${(props) => props.isMain ? "right" : "left"};
   width: ${(props) => props.isMain ? 40:20}%;
+  border:${(props) => props.isMain ? null : "solid 5px #a3d8f6"};
 `;
 
 const About = styled.p`
@@ -59,6 +60,9 @@ const Content = styled.li`
 `;
 
 const Where = styled.h2`
+  > span {
+    text-decoration: underline wavy white;
+  }
   clear: both;
   font-size:1rem;
 `;
@@ -82,6 +86,8 @@ const Img3 = Img1.withComponent('img')
 
 const SubTitle = styled.h3`
   left:0;
+  text-decoration: underline;
+
 `;
 
 const Top = styled.p`
@@ -91,4 +97,3 @@ const Top = styled.p`
 const Bottom = styled.p`
   margin-left:4rem;
 `;
-
