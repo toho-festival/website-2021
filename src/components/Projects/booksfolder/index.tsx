@@ -13,5 +13,6 @@ const Books:FC = () => <Wrap>
 export default Books; 
 
 const Wrap = styled.div`
-
+  background-color: white;
+  font-family: 'MS Mincho';
 `;
