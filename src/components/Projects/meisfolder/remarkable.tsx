@@ -10,8 +10,7 @@ const Remarkable:FC = () =>
         <SubTitle>見どころ</SubTitle>
         <Discription>ただの迷路じゃない！様々なトラップもあるかも！？</Discription>
         <ImgWrap>
-            <Img src="entrance-backgrund-1.jpg" alt="" />
-            <Img src="entrance-backgrund-1.jpg" alt="" />
+            <Img src={process.env.basePath + "/images/trap.png"} alt="罠にひっかかるウサギ" />
         </ImgWrap>
       </Article>
       <Content>
@@ -29,16 +28,21 @@ const Article = styled.article`
 
 const SubTitle = styled.h2`
   margin-bottom:2vw;
-  border-bottom: 3px solid #0066cc;
-  text-align: center
+  text-decoration:underline;
+  text-decoration-color:#0066cc;
+  text-align: center;
 `;
 
 const Content = styled.aside`
-
 `;
  
 const ContentTitle = styled.h2`
-    text-align: center
+  font-weight: bold;
+  color: #6091d3;
+  background: #FFF;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+  text-align: center;
 `;
 
 const Wrap = styled.div`
