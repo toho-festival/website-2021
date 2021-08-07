@@ -20,10 +20,15 @@ const ClassByStudent = () => {
 				</Bottom>
 			</Title>
 			<SubTitle>時間割</SubTitle>
+			<Date>土曜日</Date>
 			<Schedule>
-				<li>一限・・・</li>
-				<li>二限・・・</li>
-				<li>三限・・・</li>
+				<li>一限・・・12:30~ <Indent>「ファミリーコンピューター〜古き良き時代の良作から怪作まで〜」<p>先生:佐野辰明</p></Indent></li>
+			</Schedule>
+			<Date>日曜日</Date>
+			<Schedule>
+				<li>一限・・・11:00~ <Indent>「突然ですが、鳥を語ってもいいですか？」<p>先生:西田康平</p></Indent></li>
+				<li>二限・・・14:00~ <Indent>「素数〜『素』晴らしい『数』を知ろう〜」<p>先生:小池翔大</p></Indent></li>
+				<li>三限・・・15:00~ <Indent>「成田空港と三里塚闘争」<p>先生:鈴木快晴</p></Indent></li>
 			</Schedule>
 			<Where>場所:関心ラウンジ</Where>
 			<Explain>
@@ -97,6 +102,10 @@ const NomalCircle = styled.div`
 const Top = styled.p`
 `;
 
+const Date = styled.p`
+	text-align: center;
+`;
+
 const ClassImage = styled.img`
 	margin-right:20%;
 	width:25%;
@@ -112,7 +121,7 @@ const SubTitle = styled.h2`
 
 const Schedule = styled.ul`
 	list-style:none;
-	text-align:center;
+	margin-left: 3%;
 `;
 
 const Where = styled.p`
@@ -121,4 +130,8 @@ const Where = styled.p`
 
 const Explain = styled.section`
 	margin-left:5%;
+`;
+
+const Indent = styled.div`
+	margin-left: 2%;
 `;
