@@ -1,37 +1,45 @@
 import {FC} from 'react';
 import styled           from 'styled-components';
+import {groups} from "~/src/scripts/common";
 import Image                              from 'next/image';
+import { useRouter } from 'next/router';
+import {useState} from 'react';
 
-const Common:FC = () => <>
+const Common:FC = () => {
+  
+    // const router = useRouter();
+    // const {
+    //   query: { group }
+    // } = router
+
+  return(
+  <>{
+    groups.map(
+      ({title,photo, logo, textup, textdown}) =><>
     <Flex>
-        <Symbol>
-            <Image src="/images/newExperience.png" width={20} height={20} layout='responsive' alt="シンボルロゴ"/>
-        </Symbol>
-        <Text>
-          <Center>
-            <Subject>企画の名前！！</Subject>
-          </Center>
-          <Explain></Explain>
-          <Explain>説明！！！</Explain>
-          <Explain>こんな感じで行ごとに区切ると</Explain>
-          <Explain>ボーダーが映えていい感じに見やすく</Explain>
-          <Explain>なると思います</Explain>
-        </Text>
+      <Symbol>
+        <Image src={logo} width={20} height={20} layout='responsive' alt="シンボルロゴ"/>
+      </Symbol>
+      <Text>
+        <Center>
+          <Subject>{title}</Subject>
+        </Center>
+        <Explain>{textup}</Explain>
+      </Text>
     </Flex>
 
     <SecondFlex>
-        <Picture>
-            <Image src="/images/newEntrance-background-1.jpg" width={20} height={20} layout='responsive' alt="宣材写真"/>
-        </Picture>
-        <MoreText>
-            <MoreSubject>補足・追加説明</MoreSubject>
-            <MoreExplain>名前とか</MoreExplain>
-            <MoreExplain>場所とか</MoreExplain>
-            <MoreExplain>時間とか</MoreExplain>
-            <MoreExplain>そんな感じ。</MoreExplain>
-        </MoreText>
+      <Picture>
+        <Img src={photo} width={20} height={20} layout='responsive' alt="宣材写真"/>
+      </Picture>
+      <MoreText>
+        <MoreSubject>{textdown}</MoreSubject>
+      </MoreText>
     </SecondFlex>
-</>
+</>)}
+  </>
+  );
+}
 
 const Flex = styled.div`
   background-color: black;
@@ -57,14 +65,19 @@ const SecondFlex = styled.div`
 `;
 
 const Symbol = styled.article`
-    width: 30%;
-    margin:0 auto;
+  width: 30%;
+  margin:0 auto;
+`;
+
+const Img = styled.img`
+  width: 100%;
+  height: auto;
 `;
 
 const Picture = styled.article`
-    width: 40%;
-    order: 2;
-    margin:0 auto;
+  width: 40%;
+  order: 2;
+  margin:0 auto;
 `;
 
 const Text = styled.aside`
@@ -99,13 +112,17 @@ const Subject = styled.h1`
 `;
 
 const MoreSubject = styled.h1`
-    border-bottom: 5px black solid;
-    color: black;
-    display: inline-block;
+  border-bottom: 5px black solid;
+  color: black;
+  display: inline-block;
 `;
 
 const Explain = styled.h3`
-  border-bottom: 1px white solid;
+  padding-top: 20px;
+  display: inline;
+  background: linear-gradient(#000 95%, #fff 100%) ; 
+  line-height: 2px;
+  text-decoration: none;
   color: white;
   padding: 10px;
   @media screen and (max-width: 1230px) {
@@ -114,10 +131,10 @@ const Explain = styled.h3`
 `;
 
 const MoreExplain = styled.h3`
-    border-bottom: 1px black solid;
-    color: black;
-    margin-left: 5%;
-    padding: 10px;
+  border-bottom: 1px black solid;
+  color: black;
+  margin-left: 5%;
+  padding: 10px;
 `;
 
 export default Common;
