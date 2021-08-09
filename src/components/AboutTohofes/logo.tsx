@@ -74,11 +74,16 @@ const Creater = styled.h3`
 `;
 
 const Discription = styled.h3`
+  border: 2px solid #bf9d6d;
+  border-radius: 10px;
   margin-left:5vw;
+  margin-right: 5vw;
   text-align:center;
   margin-bottom:3vw;
-  border-bottom: 1px #ddd solid;
-  border-top: 1px #ddd solid;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
   padding: 10px;
   @media screen and (max-width:767px) { 
     font-size: 12px;
