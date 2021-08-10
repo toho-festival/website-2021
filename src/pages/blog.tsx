@@ -1,21 +1,36 @@
-import {FC} from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
-import {blog, blogContent, blogTitle, writer ,date ,photo} from '../scripts/blog'
+import { useCollection } from 'react-firebase-hooks/firestore';
+import { firestore } from '~/firebase/client';
+import ReactMarkdown from 'react-markdown';
 
 const Blog:FC = () => {
-    return(
-        <>
-        <Grid>
-          <Center><Title>{blog}</Title></Center>
-        </Grid>
-        <Adjustment>
-          <Image src={process.env.basePath + {photo}} alt="blogの写真"/> {/*ここは普通の写真を入れる*/}
-        </Adjustment>
-          <SubTitle>{blogTitle}</SubTitle>
-          <Date>作成日{date[0]}/{date[1]}/{date[2]}&emsp;著者:{writer}</Date>
-          <Box>{blogContent}</Box>
-        </>
-    )
+  const [blog, blogLoading, blogError] = useCollection(
+    firestore.collection('documentClass/blog/published')
+  );
+
+  return (
+    <>
+      {blogError && <strong>Error: {JSON.stringify(blogError)}</strong>}
+      {blogLoading && <span>Document: Loading...</span>}
+      {
+        blog?.docs.map((doc) =>      
+            <div key={doc.id}>
+              <Grid>
+                <Center><Title>{doc.data().published}</Title></Center>
+              </Grid>
+              <Adjustment>
+              </Adjustment>
+              <SubTitle>{doc.data().title}</SubTitle>
+              <Date>&emsp;著者:{doc.data().author}</Date>
+              <Box>
+                <ReactMarkdown children={doc.data().content} />
+              </Box>
+            </div>
+        )
+      }
+    </>
+  )
 }
 
 const Date = styled.p`
@@ -51,7 +66,7 @@ const Image = styled.img`
   width: 50%;
 `;
 
-const Title = styled.h1 `
+const Title = styled.h1`
 display: inline-block;
 color: white;
 margin-top: 5vw;
