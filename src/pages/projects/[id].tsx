@@ -28,7 +28,10 @@ const CommonProjects = ({ postData }) => {
       </Text>
     </Flex>
     <Center>
-      <Location>{postData.building}　{postData.floor}F　{postData.location}にて</Location>
+      <Flex2>
+        <Image src={process.env.basePath +"/images/mapIcon.png"} />
+        <Location>{postData.building}　{postData.floor}F　{postData.location}にて</Location>
+      </Flex2>
     </Center>
 </Wrap>
   );
@@ -68,12 +71,28 @@ const Flex = styled.div`
   justify-content: space-between;
   padding-top: 7vw;
   padding-bottom: 10vw;
-  @media screen and (max-width: 1230px) {
+  @media screen and (max-width: 730px) {
     display: block;
   }
 `;
 
+const Flex2 = styled.div`
+  background-color: black;
+  display: flex;
+  padding-top: 7vw;
+  padding-bottom: 10vw;
+  margin-left: 40%;
+  @media screen and (max-width: 730px) {
+    margin-left: 20%;
+  }
+`;
+
 const Location = styled.div`
+`;
+
+const Image = styled.img`
+  width:40px;
+  height: 40px;
 `;
 
 const Symbol = styled.article`
@@ -88,8 +107,9 @@ const Img = styled.img`
 
 const Text = styled.aside`
   margin-top: 5vw;
+  margin-right: 60px;
   width: 60%;
-  @media screen and (max-width: 1230px) {
+  @media screen and (max-width: 730px) {
     width: 100%;
   }
 `;
@@ -104,8 +124,9 @@ const Subject = styled.h1`
   border-bottom: 5px solid #bf9d6d;
   color: white;
   display: inline-block;
-  @media screen and (max-width: 1230px) {
+  @media screen and (max-width: 730px) {
     border-bottom: 3px solid #bf9d6d;
+    font-size: 22px;
   }
 `;
 
@@ -113,7 +134,7 @@ const Explain = styled.h3`
   display: inline;
   text-decoration: underline;
   color: white;
-  @media screen and (max-width: 1230px) {
+  @media screen and (max-width: 730px) {
     font-size: 12px;
   }
 `;
