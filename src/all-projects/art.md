@@ -1,6 +1,6 @@
 ---
 title: '美術部'   
-photo: '/images/photo-of-art.jpg'
+photo: '/images/photoArt.jpg'
 logo: '/images/newExperience.png'
 textup: '美術部員それぞれ表現して、個性あふれる作品を制作し、展示しています。来てね！'
 building: '教科教室棟'

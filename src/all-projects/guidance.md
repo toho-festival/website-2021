@@ -1,6 +1,6 @@
 ---
 title: '生徒による学校ガイダンス'
-photo: '/images/photo-of-guidance.jpg'
+photo: '/images/photoGuidance.jpg'
 logo: '/images/newExperience.png'
 textup: '生徒の目線からたくさんの質問に答えられるように準備を進めていますので是非お越しください！'
 building: '高校教室棟'
