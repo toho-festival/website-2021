@@ -6,20 +6,54 @@ import { routes }  from '~/src/scripts/routes';
 const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
   <Attention>※開発中のため、各ページに飛ぶことができません。ご了承ください。</Attention>
   
+  
+  <Box>
   {
     // routes.map(
     //   ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
     // )
     routes.map(
-      ({ key }) => <span key={ key }><Anchor>{ key }</Anchor></span>,
+      ({ key, logo }) =>
+      <Align>
+        <Flex>
+          <Image src={logo} alt="メニューのロゴ"/>
+          <span key={ key }><Anchor>{ key }</Anchor></span>
+        </Flex>
+      </Align>
     )
   }
+  </Box>
 </Layout>;
 
 // const Anchor = styled.a`
 //   font-size: 1.5rem;
 //   line-height: 3rem;
 // `;
+
+const Box = styled.div`
+  margin-top: 3vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media screen and (max-width: 730px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
+const Flex = styled.div`
+  display: inline;
+  flex-flow: column wrap;
+`;
+
+const Align = styled.div`
+  text-align: center;
+  margin-top: 2vw;
+`;
+
+const Image = styled.img`
+  width: 70px;
+  height: auto;
+  border-radius: 100px;
+`;
 
 const Anchor = styled.p`
   font-size: 1.5rem;
@@ -35,7 +69,7 @@ const Layout = styled.nav<{ open: boolean }>`
   height: 100vh;
   color: rgba(255,255,255, 0.8);
 
-  display: flex;
+  display: block;
   flex-flow: column wrap;
   align-items: center;
   overflow: hidden;
@@ -48,7 +82,7 @@ const Layout = styled.nav<{ open: boolean }>`
 `;
 
 const Attention = styled.p`
-  margin-bottom: 3%;
+  text-align: center;
   margin-left:7%;
   margin-right:7%;
 `;
