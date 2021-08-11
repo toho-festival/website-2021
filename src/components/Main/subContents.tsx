@@ -55,19 +55,13 @@ const SubjectTitle = styled.h3<SubTexts>`
   margin-top: calc(30% / 10);
   float: ${ (props) => props.textside === 'right' ? 'right' : 'left' };
   width: 30%;
-  margin-right: ${ (props) => props.textside === 'right' ? null : 10 }%;
-  margin-left: ${ (props) => props.textside === 'right' ? 10 : null }%;
-  margin-right: ${ (props) => props.textside === 'left' ? null : 10 }%;
-  margin-left: ${ (props) => props.textside === 'left' ? 10 : null }%;
   color: white;
   background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
   background: linear-gradient(to top, #ffffdb, #a16422);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @media screen and (max-width: 1230px) {
-    font-size: calc(24 / 1230 * 100vw);
-    margin-right: ${ (props) => props.textside === 'left' ? null : 5 }%;
-    margin-left: ${ (props) => props.textside === 'right' ? 5 : null }%;
+    font-size: calc(28 / 1230 * 100vw);
   }
 `;
 
@@ -76,18 +70,15 @@ const SubComment = styled.p<SubTexts>`
   margin-top: calc(30% / 4);
   float: ${ (props) => props.textside === 'right' ? 'right' : 'left' };
   width: 30%;
-  margin-right: ${ (props) => props.textside === 'right' ? null : 5 }%;
-  margin-left: ${ (props) => props.textside === 'right' ? 5 : null }%;
-  margin-right: ${ (props) => props.textside === 'left' ? null : 5 }%;
-  margin-left: ${ (props) => props.textside === 'left' ? 3 : null }%;
   color: white;
   @media screen and (max-width: 1230px) {
-    font-size: calc(24 / 1230 * 100vw);
+    font-size: calc(28 / 1230 * 100vw);
   }
 `;
 
 const Wrap = styled.div`
-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
 `;
 
 const Anchor = styled.a`
