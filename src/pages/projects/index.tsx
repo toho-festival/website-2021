@@ -64,9 +64,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
             <Description>
               <Center><CategolyDiscriptionTitle>体験型企画について</CategolyDiscriptionTitle></Center>
               <Arrangement>
-                <Sentence>{/*ここに文字を入れてはいけない。29文字を超えないように。*/}</Sentence>
-                <Sentence>あああああああああああああああああああああああああああああ</Sentence>
-                <Sentence>あああああああああああああああああああああああああああああ</Sentence>
+                <Sentence>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</Sentence>
               </Arrangement>
             </Description>
             <Contents>
@@ -87,7 +85,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
             {/* <---ここから展示企画---> */}
             <Title>
               <Colmn>
-                <div><Musicimg src={ process.env.basePath + "/images/newExperience.png"} alt="体験型企画の画像" /></div>
+                <div><Musicimg src={ process.env.basePath + "/images/newExhibit.png"} alt="体験型企画の画像" /></div>
               </Colmn>
               <Categoly>
                 <CategolyName>　展示企画</CategolyName>
@@ -97,9 +95,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
             <Description>
               <Center><CategolyDiscriptionTitle>展示企画について</CategolyDiscriptionTitle></Center>
               <Arrangement>
-                <Sentence>{/*ここに文字を入れてはいけない。29文字を超えないように。*/}</Sentence>
-                <Sentence>あああああああああああああああああああああああああああああ</Sentence>
-                <Sentence>あああああああああああああああああああああああああああああ</Sentence>
+                <Sentence>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</Sentence>
               </Arrangement>
             </Description>
             <Contents>
@@ -131,9 +127,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
             <Description>
               <Center><CategolyDiscriptionTitle>音楽企画について</CategolyDiscriptionTitle></Center>
               <Arrangement>
-                <Sentence>{/*ここに文字を入れてはいけない。29文字を超えないように。*/}</Sentence>
-                <Sentence>あああああああああああああああああああああああああああああ</Sentence>
-                <Sentence>あああああああああああああああああああああああああああああ</Sentence>
+                <Sentence>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</Sentence>
               </Arrangement>
             </Description>
             <Contents>
@@ -163,10 +157,9 @@ const CommonProjects: FC = ({ allPostsData }) => {
               {allPostsData.map(({ id, title, categoly }: AllPropsDataType) => (
                 categoly == 4 ?
                   <ProjectContent key={id}>
-                    
                     <Link href={"/projects/" + id}>
                       <a>
-                        <Img src={process.env.basePath + "/images/" + id + ".jpg"} alt={title + "のアイコン"} />
+                        <Img src={process.env.basePath + "/images/photo-" + id + ".jpg"} alt={title + "のアイコン"} />
                         <Name>{title}</Name>
                       </a>
                     </Link>
@@ -191,6 +184,7 @@ export default CommonProjects;
 const Wrap = styled.div`
   color: white;
 `;
+
 const TabHead = styled.div`
   border-bottom: 1px solid gray;
   display: flex;
@@ -234,10 +228,11 @@ const Tab = styled.div<TabProps>`
       width: 0;
       transform: translateX(-50%);
       border-bottom: solid 3px ${({ selected }) => (selected ? "#4169e1" : "none")};
-      animation: border_anim 0.9s linear forwards;
+      animation: border_anim 2s linear forwards;
       }
     }
-  background: ${({ selected }) => (selected ? "white" : "#f0f0f0")};
+  background-size: cover;
+  background-image: ${({ selected }) => (selected ? "url(/images/tesukiwashi-pattern-08.jpg)" : "url(/images/tesukiwashi-pattern-04.jpg)")};
   color: ${({ selected }) => (selected ? "#4169e1" : "black")};
 `;
 
@@ -284,11 +279,16 @@ const OnePoint = styled.h2`
 
 const Arrangement = styled.div`
   margin-bottom: 3vw;
-  display: inline-block;
+  text-align: center;
 `;
 
 const Sentence = styled.div`
-  border-bottom: 1px #ddd solid;
+  width: 50%;
+  margin: 0 auto;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
   padding: 10px;
   text-align: center;
   @media screen and (max-width: 767px) {
@@ -339,36 +339,48 @@ const CategolyDiscriptionTitle = styled.h4`
 const Contents = styled.div`
   margin-top: 30%;
   margin: 0 auto;
+  margin-bottom: 50vw;
   overflow: hidden;
   display:grid;
   grid-template-columns:repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   gap: 1vw;
-`;
-
-const Project = styled.a`
-  :hover{
-    opacity: 0.6;
-    transition-duration: 0.3s;
-  }
   position: relative;
 `;
 
 const Img = styled.img`
   width: 100%;
+  height: 100%;
   cursor: pointer;
   transition-duration: 0.3s;
+  object-fit: cover;
+  :before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
 `;
 
 const Name = styled.p`
   position: absolute;
   top: 50%;
   left: 50%;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 10px;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   margin:0;
-  padding:0;
   color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
+  text-decoration-color: #bf9d6d;
+  padding: 10px;
+  @media screen and (max-width: 767px) {
+    font-size:10px;
+  }
 `;
 
 const ProjectContent = styled.div`
@@ -376,6 +388,6 @@ const ProjectContent = styled.div`
     opacity: 0.6;
     transition-duration: 0.3s;
   }
+  width: auto;
   position: relative;
-
 `;
