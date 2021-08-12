@@ -38,7 +38,9 @@ const Layout = styled.div`
 `;
 
 const Date = styled.div`
-  background-color: white;
+  background-image: url(/images/tesukiwashi-pattern-04.jpg);
+  background-size: cover;
+  color: black;
   padding-top: 5vw;
   padding-bottom: 10vw;
   h2{
