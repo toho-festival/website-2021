@@ -14,7 +14,16 @@ export const notEnd = (year:number,month:number,day:number,hour:number,minute:nu
   if (year >= 2021) {
     if (month > compareMonth) {
       return true;
+    }else if (month === compareMonth && day > compareDay) {
+      return true;
+    }else if (month === compareMonth && day === compareDay && hour > compareHour) {
+      return true;
+    }else if (month === compareMonth && day === compareDay && hour === compareHour && minute > compareMinute) {
+      return true;
+    }else{
+      return false;
     }
+
   }else{
     return false;
   }

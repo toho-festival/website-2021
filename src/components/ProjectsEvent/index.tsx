@@ -8,8 +8,7 @@ const ProjectsEvent = () => {
 
   const nowTime = new Date();
   const nowMonth = nowTime.getMonth() + 1;
-  console.log(nowTime);
-  const nowDay = nowTime.getDay();
+  const nowDay = nowTime.getDate();
   const nowHours = nowTime.getHours();
   const nowMinutes = nowTime.getMinutes();
   const nowSeconds = nowTime.getSeconds();
@@ -67,8 +66,8 @@ const ProjectsEvent = () => {
     event?.docs.map(doc => {
       const startAt:Date = doc.data().duration.begin.toDate();
       const startYear = startAt.getFullYear();
-      const startMonth = startAt.getMonth();
-      const startDay = startAt.getDay();
+      const startMonth = startAt.getMonth() + 1;
+      const startDay = startAt.getDate();
       const startHours = startAt.getHours();
       const startMinutes = startAt.getMinutes();
       const startSeconds = startAt.getSeconds();
@@ -76,12 +75,10 @@ const ProjectsEvent = () => {
 
       const endAt:Date = doc.data().duration.end.toDate();
       const endYear = endAt.getFullYear();
-      const endMonth = endAt.getMonth();
-      const endDay = endAt.getDay();
+      const endMonth = endAt.getMonth() + 1;
+      const endDay = endAt.getDate();
       const endHours = endAt.getHours();
       const endMinutes = endAt.getMinutes();
-
-      console.log(monthCount)
 
       return (
       <Wrap>
