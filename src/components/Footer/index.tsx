@@ -20,7 +20,8 @@ const Footer: FC = () => <>
 
 
 const FooterContent = styled.footer`
-  background-color: white;
+  background-image: url(/images/tesukiwashi-pattern-04.jpg);
+  background-size: cover;
   color: black;
   display: flex;
   flex-direction: column;
