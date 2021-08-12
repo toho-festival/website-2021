@@ -4,16 +4,22 @@ import styled from 'styled-components';
 import { getSortedPostsData } from '~/src/scripts/projects';
 import { useRouter } from "next/router";
 import Link from 'next/link';
-import Tabs from '~/src/components/Projects/index';
 
 type TabProps = {
   selected: boolean;
 }
 
-type AllPropsDataType = {
-  id: string
-  categoly: number;
-  title: string
+type AllProjectsPropsDataType = {
+  id: string;
+  categoly: string;
+  title: string;
+}
+
+type AllStagePropsDataType = {
+  id: string;
+  categoly: string;
+  title: string;
+  textup:string;
 }
 
 export async function getStaticProps() {
@@ -68,8 +74,8 @@ const CommonProjects: FC = ({ allPostsData }) => {
               </Arrangement>
             </Description>
             <Contents>
-            {allPostsData.map(({ id, title, categoly }: AllPropsDataType) => (
-                categoly == 1 ?
+            {allPostsData.map(({ id, title, categoly }: AllProjectsPropsDataType) => (
+                categoly == "1" ?
                   <ProjectContent key={id}>
                     
                     <Link href={"/projects/" + id}>
@@ -99,8 +105,8 @@ const CommonProjects: FC = ({ allPostsData }) => {
               </Arrangement>
             </Description>
             <Contents>
-            {allPostsData.map(({ id, title, categoly }: AllPropsDataType) => (
-                categoly == 2 ?
+            {allPostsData.map(({ id, title, categoly }: AllProjectsPropsDataType) => (
+                categoly == "2" ?
                   <ProjectContent key={id}>
                     
                     <Link href={"/projects/" + id}>
@@ -131,8 +137,8 @@ const CommonProjects: FC = ({ allPostsData }) => {
               </Arrangement>
             </Description>
             <Contents>
-              {allPostsData.map(({ id, title, categoly }: AllPropsDataType) => (
-                categoly == 3 ?
+              {allPostsData.map(({ id, title, categoly }: AllProjectsPropsDataType) => (
+                categoly == "3" ?
                   <ProjectContent key={id}>
                     
                     <Link href={"/projects/" + id}>
@@ -154,8 +160,8 @@ const CommonProjects: FC = ({ allPostsData }) => {
               </Categoly>
             </Title>
             <Contents>
-              {allPostsData.map(({ id, title, categoly }: AllPropsDataType) => (
-                categoly == 4 ?
+              {allPostsData.map(({ id, title, categoly }: AllProjectsPropsDataType) => (
+                categoly == "4" ?
                   <ProjectContent key={id}>
                     <Link href={"/projects/" + id}>
                       <a>
@@ -171,7 +177,39 @@ const CommonProjects: FC = ({ allPostsData }) => {
           </>
           }
 
-          {isTabTwo && <>あ</>}
+          {isTabTwo && <>
+            <Title>
+              <Colmn>
+                <div><Musicimg src={ process.env.basePath + "/images/newExperience.png"} alt="体験型企画の画像" /></div>
+              </Colmn>
+              <Categoly>
+                <CategolyName>　ステージ企画企画</CategolyName>
+                <OnePoint>　最高の</OnePoint>
+                <OnePoint>　エンターテイメント</OnePoint>
+              </Categoly>
+            </Title>
+            <Description>
+              <Center><CategolyDiscriptionTitle>ステージ企画企画について</CategolyDiscriptionTitle></Center>
+              <Arrangement>
+                <Sentence>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</Sentence>
+              </Arrangement>
+            </Description>
+              {allPostsData.map(({ id, title, categoly,textup }: AllStagePropsDataType) => (
+                  categoly == "1" ?
+                    <StageContents>
+                      <ProjectContent key={id}>
+                        <Link href={"/projects/" + id}>
+                          <a>
+                            <StageImg src={process.env.basePath + "/images/photo-" + id + ".jpg"} alt={title + "のアイコン"}/>
+                            <StageName>{title}</StageName>
+                          </a>
+                        </Link>
+                      </ProjectContent>
+                      {textup}
+                    </StageContents>
+                  : null
+              ))}
+          </>}
 
         </TabBody>
       </TabContainer>
@@ -390,4 +428,44 @@ const ProjectContent = styled.div`
   }
   width: auto;
   position: relative;
+`;
+
+const StageContents = styled.div`
+  margin-top: 20%;
+  overflow: hidden;
+  gap: 1vw;
+  position: relative;
+`;
+
+const StageName = styled.p`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
+  text-decoration-color: #bf9d6d;
+  padding: 10px;
+  @media screen and (max-width: 767px) {
+    font-size:10px;
+  }
+`;
+
+const StageImg = styled.img`
+  width: 33%;
+  height: 33%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  object-fit: cover;
+  :before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
 `;
