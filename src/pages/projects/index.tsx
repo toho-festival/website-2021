@@ -189,7 +189,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
               </Categoly>
             </Title>
             <Description>
-              <Center><CategolyDiscriptionTitle>ステージ企画企画について</CategolyDiscriptionTitle></Center>
+              <Center><CategolyDiscriptionTitle>ステージ企画について</CategolyDiscriptionTitle></Center>
               <Arrangement>
                 <Sentence>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</Sentence>
               </Arrangement>
@@ -205,7 +205,9 @@ const CommonProjects: FC = ({ allPostsData }) => {
                           </a>
                         </Link>
                       </ProjectContent>
-                      {textup}
+                      <Sentence>
+                        {textup}
+                      </Sentence>
                     </StageContents>
                   : null
               ))}
@@ -428,6 +430,7 @@ const ProjectContent = styled.div`
   }
   width: auto;
   position: relative;
+  text-align: center;
 `;
 
 const StageContents = styled.div`
@@ -446,6 +449,9 @@ const StageName = styled.p`
   transform: translate(-50%,-50%);
   margin:0;
   color: white;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 20px;
+  overflow: hidden;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-decoration-skip-ink: none;
