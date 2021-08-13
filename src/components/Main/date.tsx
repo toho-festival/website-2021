@@ -29,7 +29,8 @@ const Layout = styled.div`
 `;
 
 const Date = styled.span`
-  background-color: white;
+  background-image: url(/images/tesukiwashi-pattern-04.jpg);
+  background-size: cover;
   font-size: 24px;
   text-align: center;
   @media screen and (max-width: 1200px) {

@@ -1,7 +1,7 @@
 import { FC }                             from 'react';
 import styled                             from 'styled-components';
 import { projectsComment, projectsTitle } from '~/src/scripts/projects-comment';
-import SubContents                        from '~/src/components/Main/subContents';
+import Link                               from 'next/link';
 import Image                              from 'next/image';
 
 type Side = { 
@@ -27,13 +27,15 @@ type ProjectProps = {
 const MainContent: FC<ProjectProps> = (props) =>{
   return(
     <>
-      <Wrap><Anchor>
-        <Project>
-          <Categoly side={props.side} right={props.right} left={props.left}><div><Image src={process.env.basePath + props.categoly} width={20} height={20} layout='responsive' alt={"pictute of" + props.name}/></div></Categoly>
-          <ProjectTitle side={props.side}>{ projectsTitle[props.num] }</ProjectTitle>
-          <ProjectComment marginLeft={props.marginLeft}>{ projectsComment[props.num] }</ProjectComment>
-        </Project>
-      </Anchor></Wrap>
+      <Wrap>
+        <Link href="/projects/">
+          <Project>
+            <Categoly side={props.side} right={props.right} left={props.left}><div><Image src={process.env.basePath + props.categoly} width={20} height={20} layout='responsive' alt={"pictute of" + props.name}/></div></Categoly>
+            <ProjectTitle side={props.side}>{ projectsTitle[props.num] }</ProjectTitle>
+            <ProjectComment marginLeft={props.marginLeft}>{ projectsComment[props.num] }</ProjectComment>
+          </Project>
+      </Link>
+      </Wrap>
       <Reset/>
     </>
   );

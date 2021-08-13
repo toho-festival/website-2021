@@ -1,6 +1,7 @@
 import { FC, useCallback, useState } from 'react';
 import styled                        from 'styled-components';
 import Image                         from 'next/image';
+import Link                          from 'next/link';
 import Hamburger                     from '~/src/components/Header/hamburger';
 import Menu                          from '~/src/components/Header/menu';
 
@@ -11,11 +12,12 @@ const Header: FC = () => {
   
   return <Layout>
     <div>
-      <Image src={process.env.basePath + '/images/logo.png'} width={ 64 } height={ 64 }/>
+    <Link href="/"><a><Image src={process.env.basePath + '/images/logo.png'} width={ 64 } height={ 64 }/></a></Link>
     </div>
     <div>
-      <Title>桐朋祭</Title>
+    <Link href="/"><a><Title>桐朋祭</Title></a></Link>
     </div>
+    
     <div>
       <Hamburger open={ open } toggle={ toggle }/>
     </div>
