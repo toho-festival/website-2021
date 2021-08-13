@@ -195,15 +195,11 @@ const CommonProjects: FC = ({ allPostsData }) => {
               </Arrangement>
             </Description>
               {allPostsData.map(({ id, title, categoly,textup }: AllStagePropsDataType) => (
-                  categoly == "1" ?
+                  categoly == "5" ?
                     <StageContents>
                       <ProjectContent key={id}>
-                        <Link href={"/projects/" + id}>
-                          <a>
-                            <StageImg src={process.env.basePath + "/images/photo-" + id + ".jpg"} alt={title + "のアイコン"}/>
-                            <StageName>{title}</StageName>
-                          </a>
-                        </Link>
+                        <StageImg src={process.env.basePath + "/images/photo-" + id + ".png"} alt={title + "のアイコン"}/>
+                        <StageName>{title}</StageName>
                       </ProjectContent>
                       <Sentence>
                         {textup}
