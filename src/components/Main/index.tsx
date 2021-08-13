@@ -2,7 +2,7 @@ import { FC }                             from 'react';
 import styled                             from 'styled-components';
 import SubContent                         from '~/src/components/Main/subContents';
 import MainContent                        from './mainContent';
-import Dating                             from '~/src/components/Main/date'
+import Dating                             from '~/src/components/Main/date';
 
 const Main: FC = () =>{
   return(
@@ -38,7 +38,9 @@ const Layout = styled.div`
 `;
 
 const Date = styled.div`
-  background-color: white;
+  background-image: url(/images/tesukiwashi-pattern-04.jpg);
+  background-size: cover;
+  color: black;
   padding-top: 5vw;
   padding-bottom: 10vw;
   h2{
