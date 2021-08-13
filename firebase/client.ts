@@ -19,4 +19,4 @@ const credentials = {
 
 // export default firebaseClient;
 export const firebase = !fb.apps.length ? fb.initializeApp(credentials) : fb.app()
-export const firestore = firebase.firestore()
+export const firestore = firebase.firestore();
