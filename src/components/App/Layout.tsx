@@ -15,6 +15,7 @@ const Layout: FC = ({ children }) => <div>
 const GlobalStyle = createGlobalStyle`
   html {
     font-size: 16px;
+    color:white;
     @media screen and (min-width: 768px) {
       font-size: 24px;
     }
