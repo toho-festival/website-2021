@@ -14,7 +14,7 @@ const CommonProjects = ({ postData }) => {
     </Indent>
     <Flex>
       <Symbol>
-        <Img src={postData.photo} alt="宣材写真"/>
+        <Img src={process.env.basePath + "/images/photo-" + postData.id + ".jpg"} alt="宣材写真"/>
       </Symbol>
       <Text>
         <Center>
