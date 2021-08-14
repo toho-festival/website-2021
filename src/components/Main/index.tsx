@@ -22,11 +22,11 @@ const Main: FC = () =>{
 
         <SubContents>
           <h2>－SUB CONTENTS－</h2>
-          <SubContent side='left'  top={10}  subSrc="/images/newGreetings.png" num={0}/>
-          <SubContent side='right' top={-5}  subSrc="/images/newSchedule.png"  num={1}/>
-          <SubContent side='left'  top={-5}  subSrc="/images/newProgram.png"   num={2}/>
-          <SubContent side='right' top={-5}  subSrc="/images/newCovid19.png"   num={3}/> 
-          <SubContent side='left'  top={-5}  subSrc="/images/newBlog.png"      num={4}/>
+          <SubContent side='left'  top={10}  subSrc="/images/newGreetings.png" link="/info" num={0}/>
+          <SubContent side='right' top={-5}  subSrc="/images/newSchedule.png"  link="/schedule" num={1}/>
+          <SubContent side='left'  top={-5}  subSrc="/images/newProgram.png"   link="/program" num={2}/>
+          <SubContent side='right' top={-5}  subSrc="/images/newCovid19.png"   link="/covid-19" num={3}/> 
+          <SubContent side='left'  top={-5}  subSrc="/images/newBlog.png"      link="/blog" num={4}/>
         </SubContents>
       </Categories>
     </Layout>

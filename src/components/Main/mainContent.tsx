@@ -29,11 +29,13 @@ const MainContent: FC<ProjectProps> = (props) =>{
     <>
       <Wrap>
         <Link href="/projects/">
-          <Project>
-            <Categoly side={props.side} right={props.right} left={props.left}><div><Image src={process.env.basePath + props.categoly} width={20} height={20} layout='responsive' alt={"pictute of" + props.name}/></div></Categoly>
-            <ProjectTitle side={props.side}>{ projectsTitle[props.num] }</ProjectTitle>
-            <ProjectComment marginLeft={props.marginLeft}>{ projectsComment[props.num] }</ProjectComment>
-          </Project>
+          <a>
+            <Project>
+              <Categoly side={props.side} right={props.right} left={props.left}><div><Image src={process.env.basePath + props.categoly} width={20} height={20} layout='responsive' alt={"pictute of" + props.name}/></div></Categoly>
+              <ProjectTitle side={props.side}>{ projectsTitle[props.num] }</ProjectTitle>
+              <ProjectComment marginLeft={props.marginLeft}>{ projectsComment[props.num] }</ProjectComment>
+            </Project>
+          </a>
       </Link>
       </Wrap>
       <Reset/>
