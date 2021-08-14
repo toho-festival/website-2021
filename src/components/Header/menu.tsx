@@ -13,11 +13,11 @@ const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }
     //   ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
     // )
     routes.map(
-      ({ key, logo }) =>
+      ({ key, logo, path }) =>
       <Align>
         <Flex>
           <Image src={logo} alt="メニューのロゴ"/>
-          <span key={ key }><Anchor>{ key }</Anchor></span>
+          <span key={ key.toString() }><Link href={path}><a><Anchor>{ key }</Anchor></a></Link></span>
         </Flex>
       </Align>
     )
