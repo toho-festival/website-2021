@@ -2,6 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { subComment, subTitle } from '~/src/scripts/projects-comment';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type SubSideAndMarginTop = {
   side: 'right' | 'left';
@@ -17,15 +18,22 @@ type SubContentProps = {
   top:number;
   subSrc:string;
   num:number;
+  link:string;
 }
 
 const SubContent: FC<SubContentProps> = (props) =>
   <>
-    <Wrap><Anchor>
-    <SubCategoly side={props.side} top={props.top}><div><Image src={ process.env.basePath + props.subSrc } width={17} height={17} layout='responsive'/></div>
-    <SubjectTitle textside={props.side}>{ subTitle[props.num] }</SubjectTitle>
-    <SubComment textside={props.side}>{ subComment[props.num] }</SubComment>
-    </SubCategoly></Anchor></Wrap><Reset/>
+    <Wrap>
+      <Link href={props.link}>
+        <Anchor>
+        <SubCategoly side={props.side} top={props.top}><div><Image src={ process.env.basePath + props.subSrc } width={17} height={17} layout='responsive'/></div>
+        <SubjectTitle textside={props.side}>{ subTitle[props.num] }</SubjectTitle>
+        <SubComment textside={props.side}>{ subComment[props.num] }</SubComment>
+        </SubCategoly>
+        </Anchor>
+      </Link>
+    </Wrap>
+    <Reset/>
   </>;
 
 export default SubContent;
