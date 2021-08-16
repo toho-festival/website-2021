@@ -21,14 +21,15 @@ const ProjectsEvent = () => {
     <Center><Subject>開催中</Subject></Center>
     <Grid>
       { event!.docs.map(doc => {
-        const startAt: Date = doc.data().duration.begin.toDate();
-        const endAt: Date   = doc.data().duration.end.toDate();
+        const data          = doc.data();
+        const startAt: Date = data.duration.begin.toDate();
+        const endAt: Date   = data.duration.end.toDate();
         
         return <Wrap>
           { !((+startAt < +currentDate) && (+currentDate < +endAt)) ? null :
             <Held>
-              <Title>{ doc.data().title }</Title>
-              <Location>{ doc.data().location.building }{ doc.data().location.floor }階{ doc.data().location.room }にて</Location>
+              <Title>{ data.title }</Title>
+              <Location>{ data.location.building }{ data.location.floor }階{ data.location.room }にて</Location>
             </Held>
           }
         </Wrap>;
@@ -39,19 +40,20 @@ const ProjectsEvent = () => {
     <Grid>
       {
         event!.docs.map(doc => {
-          const startAt: Date  = doc.data().duration.begin.toDate();
-          const byStartSeconds = Math.floor((+startAt - +currentDate) / 1000);
+          const data             = doc.data();
+          const startAt: Date    = data.duration.begin.toDate();
+          const remainedSecconds = Math.floor((+startAt - +currentDate) / 1000);
           
-          return <Wrap>
-            { byStartSeconds <= 0 ? null :
+          return <Wrap key={ +startAt }>
+            { remainedSecconds <= 0 ? null :
               <NotHeld>
-                <Title>{ doc.data().title }</Title>
+                <Title>{ data.title }</Title>
                 <LeftTime>
-                  { Math.floor(byStartSeconds / 86400) }日
-                  { Math.floor(byStartSeconds % 86400 / 3600) }時間
-                  { Math.floor(byStartSeconds % 86400 % 3600 / 60) }分
-                  { byStartSeconds % 86400 % 3600 % 60 }秒</LeftTime>
-                <Location>{ doc.data().location.building }{ doc.data().location.floor }階{ doc.data().location.room }にて</Location>
+                  { Math.floor(remainedSecconds / 86400) }日
+                  { Math.floor(remainedSecconds % 86400 / 3600) }時間
+                  { Math.floor(remainedSecconds % 86400 % 3600 / 60) }分
+                  { remainedSecconds % 86400 % 3600 % 60 }秒</LeftTime>
+                <Location>{ data.location.building }{ data.location.floor }階{ data.location.room }にて</Location>
               </NotHeld>
             }
           </Wrap>;
