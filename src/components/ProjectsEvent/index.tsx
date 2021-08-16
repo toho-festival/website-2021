@@ -1,35 +1,30 @@
 import { useState, useEffect } from 'react';
 import styled                  from 'styled-components';
-import { useCollection }       from 'react-firebase-hooks/firestore';
-import { firestore }           from '~/firebase/client';
+import { useCurrentEvents }    from '~/src/scripts/useProjectEvents';
+import { parseTime }           from '~/src/scripts/utils';
 
 const ProjectsEvent = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  
   useEffect(() => {
     const id = setInterval(() => setCurrentDate(new Date()), 100);
     return () => clearInterval(id);
   }, []);
   
-  const [event, eventLoading, eventError] = useCollection(firestore.collection('project-event'));
-  
-  if (eventLoading) return <div>Loading...</div>;
-  
-  if (eventError) return <div>{ `Error: ${ eventError.message }` }</div>;
+  const returned = useCurrentEvents(currentDate);
+  if (returned[1]) return <div>Loading...</div>;
+  if (returned[2] != null) return <div>{ `Error: ${ returned[2].message }` }</div>;
+  const [events] = returned;
   
   return <>
     <Center><Subject>開催中</Subject></Center>
     <Grid>
-      { event!.docs.map(doc => {
-        const data          = doc.data();
-        const startAt: Date = data.duration.begin.toDate();
-        const endAt: Date   = data.duration.end.toDate();
-        
-        return <Wrap>
-          { !((+startAt < +currentDate) && (+currentDate < +endAt)) ? null :
+      { events.map(event => {
+        const { duration: { begin, end }, title, location: { building, floor, room } } = event;
+        return <Wrap key={ title + begin }>
+          { !(+begin < +currentDate && +currentDate < +end) ? null :
             <Held>
-              <Title>{ data.title }</Title>
-              <Location>{ data.location.building }{ data.location.floor }階{ data.location.room }にて</Location>
+              <Title>{ title }</Title>
+              <Location>{ building }{ floor }階{ room }にて</Location>
             </Held>
           }
         </Wrap>;
@@ -39,21 +34,18 @@ const ProjectsEvent = () => {
     <Center><Subject>開催予定</Subject></Center>
     <Grid>
       {
-        event!.docs.map(doc => {
-          const data             = doc.data();
-          const startAt: Date    = data.duration.begin.toDate();
-          const remainedSecconds = Math.floor((+startAt - +currentDate) / 1000);
+        events.map(event => {
+          const { duration: { begin }, title, location: { building, floor, room } } = event;
           
-          return <Wrap key={ +startAt }>
-            { remainedSecconds <= 0 ? null :
+          const remainedSeconds                   = +begin - +currentDate;
+          const { days, hours, minutes, seconds } = parseTime(remainedSeconds);
+          
+          return <Wrap key={ title + begin }>
+            { remainedSeconds <= 0 ? null :
               <NotHeld>
-                <Title>{ data.title }</Title>
-                <LeftTime>
-                  { Math.floor(remainedSecconds / 86400) }日
-                  { Math.floor(remainedSecconds % 86400 / 3600) }時間
-                  { Math.floor(remainedSecconds % 86400 % 3600 / 60) }分
-                  { remainedSecconds % 86400 % 3600 % 60 }秒</LeftTime>
-                <Location>{ data.location.building }{ data.location.floor }階{ data.location.room }にて</Location>
+                <Title>{ title }</Title>
+                <LeftTime>{ days }日{ hours }時間{ minutes }分{ seconds }秒</LeftTime>
+                <Location>{ building }{ floor }階{ room }にて</Location>
               </NotHeld>
             }
           </Wrap>;
