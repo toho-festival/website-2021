@@ -12,5 +12,7 @@ export const routes: Route[] = [
   { logo: '/images/menu-aboutTohofes.jpg', key: '桐朋祭について', path: '/about' },
   { logo: '/images/menu-program.jpg', key: 'プログラム', path: '/program' },
   { logo: '/images/menu-covid19.jpg', key: 'コロナ対策', path: '/covid19' },
-  { logo: '/images/menu-newestInfo.jpg', key: '総務企画', path: '/field-game'},
+  { logo: '/images/menu-newestInfo.jpg', key: '総務企画', path: '/field-game' },
 ];
+
+routes.forEach(r => r.logo = process.env.basePath + r.logo);
