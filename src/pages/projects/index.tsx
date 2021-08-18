@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { getSortedPostsData } from '~/src/scripts/projects';
 import { useRouter } from "next/router";
 import Link from 'next/link';
+import { experienceProject } from '~/src/scripts/experience';
+import { exhibitionProject } from '~/src/scripts/exhibition';
+import { musicProject } from '~/src/scripts/music';
 
 type TabProps = {
   selected: boolean;
@@ -77,7 +80,6 @@ const CommonProjects: FC = ({ allPostsData }) => {
             {allPostsData.map(({ id, title, categoly }: AllProjectsPropsDataType) => (
                 categoly == "1" ?
                   <ProjectContent key={id}>
-                    
                     <Link href={"/projects/" + id}>
                       <a>
                         <Img src={process.env.basePath + "/images/photo-" + id + ".jpg"} alt={title + "のアイコン"}/>
@@ -86,6 +88,18 @@ const CommonProjects: FC = ({ allPostsData }) => {
                     </Link>
                   </ProjectContent>
                   : null
+            ))}
+            {experienceProject.map(({name, id, url})=>(
+              <>
+                <ProjectContent>
+                  <Link href={"/projects/" + id}>
+                    <a>
+                      <Img src={process.env.basePath + "/images/" + url} alt={name + "のアイコン"}/>
+                      <Name>{name}</Name>
+                    </a>
+                  </Link>
+                </ProjectContent>
+              </>
             ))}
             </Contents>
             {/* <---ここから展示企画---> */}
@@ -108,7 +122,6 @@ const CommonProjects: FC = ({ allPostsData }) => {
             {allPostsData.map(({ id, title, categoly }: AllProjectsPropsDataType) => (
                 categoly == "2" ?
                   <ProjectContent key={id}>
-                    
                     <Link href={"/projects/" + id}>
                       <a>
                         <Img src={process.env.basePath + "/images/photo-" + id + ".jpg"} alt={title + "のアイコン"}/>
@@ -117,6 +130,18 @@ const CommonProjects: FC = ({ allPostsData }) => {
                     </Link>
                   </ProjectContent>
                   : null
+            ))}
+            {exhibitionProject.map(({name, id, url})=>(
+              <>
+                <ProjectContent>
+                  <Link href={"/projects/" + id}>
+                    <a>
+                      <Img src={process.env.basePath + "/images/" + url} alt={name + "のアイコン"}/>
+                      <Name>{name}</Name>
+                    </a>
+                  </Link>
+                </ProjectContent>
+              </>
             ))}
             </Contents>
             {/* <---ここから音響---> */}
@@ -150,6 +175,18 @@ const CommonProjects: FC = ({ allPostsData }) => {
                   </ProjectContent>
                   : null
               ))}
+            {musicProject.map(({name, id, url})=>(
+              <>
+                <ProjectContent>
+                  <Link href={"/projects/" + id}>
+                    <a>
+                      <Img src={process.env.basePath + "/images/" + url} alt={name + "のアイコン"}/>
+                      <Name>{name}</Name>
+                    </a>
+                  </Link>
+                </ProjectContent>
+              </>
+            ))}
             </Contents>
             {/* <---ここからその他---> */}
             <Title>
@@ -173,7 +210,6 @@ const CommonProjects: FC = ({ allPostsData }) => {
                   : null
               ))}
             </Contents>
-
           </>
           }
 
@@ -207,6 +243,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
                     </StageContents>
                   : null
               ))}
+              {}
           </>}
 
         </TabBody>
@@ -382,6 +419,8 @@ const Contents = styled.div`
   grid-auto-rows: 1fr;
   gap: 1vw;
   position: relative;
+  width:90%;
+  height: 90%;
 `;
 
 const Img = styled.img`
