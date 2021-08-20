@@ -11,31 +11,30 @@ const subContents = [
 
 subContents.forEach(v => v.image = process.env.basePath + v.image);
 
+const _subContents = subContents.reduce((p, cur, i) => {
+  if (i % 2) p[p.length - 1].push(cur);
+  else p.push([cur] as any);
+  return p;
+}, [] as [(typeof subContents)[number], (typeof subContents)[number]][]);
+
 const SubContent = styled(props => <div { ...props }>
   <h2>SUB CONTENTS</h2>
   <section>
-    <div>
-      { subContents
-        .filter((_, i) => !(i % 2))
-        .map(({ name, image, copy }) =>
-          <Link href="/" key={ name } passHref><a>
-            <img src={ image }/>
-            <h3>{ name }</h3>
-            <p>{ copy }</p>
-          </a></Link>)
-      }
-    </div>
-    <div>
-      { subContents
-        .filter((_, i) => i % 2)
-        .map(({ name, image, copy }) =>
-          <Link href="/" key={ name } passHref><a>
-            <img src={ image }/>
-            <h3>{ name }</h3>
-            <p>{ copy }</p>
-          </a></Link>)
-      }
-    </div>
+    { _subContents
+      .map((tup, i) =>
+        <div key={ i }>
+          {
+            tup.map(({ image, name, copy }) => <div key={ name }>
+              <a>
+                <img src={ image } alt={ name + 'のアイコン' }/>
+                <h3>{ name }</h3>
+                <p>{ copy }</p>
+              </a>
+            </div>)
+          }
+        </div>,
+      )
+    }
   </section>
 </div>)`
   padding-block: 2rem;
@@ -54,41 +53,65 @@ const SubContent = styled(props => <div { ...props }>
 
   > section {
     padding-block: 3rem;
-    text-align: center;
 
     > div {
-      display: inline-block;
-      width: min(14rem, 45%);
-      vertical-align: middle;
+      display: flex;
+      margin-inline: auto;
+      text-align: left;
+      width: min(100%, 26rem);
 
-      > a {
-        display: block;
-        padding: 1.5rem;
+      > div {
+        display: inline-block;
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 50%;
+        text-align: center;
+        vertical-align: text-top;
+
         transition: 0.3s;
 
-        > img {
-          width: 100%;
-          transition: 0.3s;
-        }
+        > a {
+          display: block;
 
-        > h3 {
-          font-size: 1rem;
-          color: transparent;
-          background: linear-gradient(to top, #ffffdb, #a16422);
-          background: -webkit-linear-gradient(to top, #ffffdb, #a16422);
-          -webkit-background-clip: text;
-        }
+          > img {
+            width: 100%;
+            transition: 0.3s;
+          }
 
-        :hover {
-          text-shadow: 0 0 15px rgba(250, 250, 214, 0.5),
+          > h3 {
+            font-size: 1rem;
+            color: transparent;
+            background: linear-gradient(to top, #ffffdb, #a16422);
+            background: -webkit-linear-gradient(to top, #ffffdb, #a16422);
+            -webkit-background-clip: text;
+          }
+
+
+          :hover {
+            text-shadow: 0 0 15px rgba(250, 250, 214, 0.5),
             0 0 15px rgba(250, 250, 214, 0.5),
             0 0 15px rgba(250, 250, 214, 0.5),
             0 0 15px rgba(250, 250, 214, 0.5);
 
-          > img {
-            transform: scale(1.05);
+            > img {
+              transform: scale(1.05);
+            }
           }
         }
+
+        :nth-child(2) {
+          position: relative;
+
+          a {
+            width: calc(100% - 2rem);
+            position: absolute;
+            top: 50%;
+          }
+        }
+      }
+
+      :last-child {
+        margin-bottom: 5rem;
       }
     }
   }
