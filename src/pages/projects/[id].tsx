@@ -1,4 +1,5 @@
 import { getAllPostIds, getPostData } from "~/src/scripts/projects";
+import { useRouter } from "next/router";
 import Link from 'next/link';
 import styled from "styled-components";
 
@@ -7,10 +8,11 @@ interface CommonData {
 }
 
 const CommonProjects = ({ postData }) => {
+  const router = useRouter();
   return (
     <Wrap>
     <Indent>
-      <Link href="/projects">＜参加団体一覧に戻る</Link>
+      <button onClick={() => router.back()}>＜元のページに戻る</button>
     </Indent>
     <Flex>
       <Symbol>
