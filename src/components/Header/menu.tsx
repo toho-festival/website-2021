@@ -3,32 +3,24 @@ import Link        from 'next/link';
 import styled      from 'styled-components';
 import { routes }  from '~/src/scripts/routes';
 
-const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
+const Menu: FC<{ display: boolean, toggle: () => void }> = ({ display, toggle }) => <Layout open={ display }>
   <Attention>※開発中のため、各ページに飛ぶことができません。ご了承ください。</Attention>
   
   
   <Box>
   {
-    // routes.map(
-    //   ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
-    // )
     routes.map(
       ({ key, logo, path }) =>
       <Align>
         <Flex>
           <Image src={logo} alt="メニューのロゴ"/>
-          <span key={ key.toString() }><Link href={path}><a><Anchor>{ key }</Anchor></a></Link></span>
+          <span key={ key.toString() }><Link href={path}><a onClick={ toggle }><Anchor>{ key }</Anchor></a></Link></span>
         </Flex>
       </Align>
     )
   }
   </Box>
 </Layout>;
-
-// const Anchor = styled.a`
-//   font-size: 1.5rem;
-//   line-height: 3rem;
-// `;
 
 const Box = styled.div`
   margin-top: 3vw;

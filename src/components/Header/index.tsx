@@ -21,7 +21,7 @@ const Header: FC = () => {
     <div>
       <Hamburger open={ open } toggle={ toggle }/>
     </div>
-    <Menu display={ open }/>
+    <Menu display={ open } toggle={ toggle }/>
   </Layout>;
 };
 
@@ -33,7 +33,7 @@ const Layout = styled.header`
   align-items: stretch;
 
   z-index: 100;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255,255,255, 1);
   padding: .5rem 1rem;
 
   > div {
