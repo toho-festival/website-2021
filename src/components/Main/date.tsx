@@ -18,7 +18,6 @@ const Dating: FC = () =>{
           <Note>
             <Annotation>※日曜日は午前と午後のⅡ部制となっています。</Annotation>
             <Annotation>※ご来場いただく際はスリッパをお持ち下さい。</Annotation>
-            {/* <Annotation>※今年度の桐朋祭は生徒と保護者のみとなります</Annotation> */}
           </Note>
       </Layout>
     );
@@ -41,7 +40,7 @@ const Date = styled.span`
 const Detail = styled.p`
 `;
 
-const Note = styled.data`
+const Note = styled.div`
   text-align: center;
   font-size: 16px;
   @media screen and (max-width: 1200px) {
