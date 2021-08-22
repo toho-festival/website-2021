@@ -6,7 +6,7 @@ const Evacuation: FC = () => {
     <Wrap>
       <Center>
         <Back>
-          <Center><Title>避難について</Title></Center>
+          <Center><Title id="evacuation">避難について</Title></Center>
           <Pragraph>避難に関しては基本的に教職員の指示に従って、迅速に避難していただくようにお願い致します。避難場所は東グラウンドです。</Pragraph>
         </Back>
       </Center>
@@ -25,6 +25,7 @@ const Center = styled.div`
 `;
 
 const Title = styled.h1`
+  padding-top: 70px;
   margin-bottom: 2vw;
   font-size: 50px;
   display: inline-block;

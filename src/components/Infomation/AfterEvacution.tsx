@@ -6,7 +6,7 @@ const AfterEvacution: FC = () => {
     <Wrap>
       <Center>
         <Back>
-          <Center><Title>避難後について</Title></Center>
+          <Center><Title id="afterEvacution">避難後について</Title></Center>
           <Pragraph>避難誘導の終了後は教職員が指示を出しますのでその場でお待ち下さい。</Pragraph>
         </Back>
       </Center>
@@ -34,6 +34,7 @@ const Center = styled.div`
 `;
 
 const Title = styled.h1`
+  padding-top: 70px;
   margin-bottom: 2vw;
   font-size: 50px;
   display: inline-block;

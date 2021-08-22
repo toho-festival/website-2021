@@ -5,7 +5,7 @@ import {greeting} from "~/src/scripts/about";
 const GreetingTOHO:FC = () => {
     return(
       <>
-        <Center><Title>委員長挨拶</Title></Center>
+        <Center><Title id="greeting">委員長挨拶</Title></Center>
         <Wrap>
           {
             greeting.map(
@@ -31,6 +31,7 @@ const Center = styled.div`
 const Title = styled.h2`
   margin-top: 10vw;
   margin-bottom: 4vw;
+  padding-top: 70px;
   color: white;
   border-bottom: solid 5px #bf9d6d;
   display: inline-block;

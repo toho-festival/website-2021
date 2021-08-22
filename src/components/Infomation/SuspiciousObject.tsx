@@ -6,7 +6,7 @@ const SuspiciousObject: FC = () => {
     <Wrap>
       <Center>
         <Back>
-          <Center><Title>不審物について</Title></Center>
+          <Center><Title id="suspiciousObject">不審物について</Title></Center>
           <Pragraph>もし校内で持ち主の不明なものや不審に思われるものがありましたら、総合案内所までご連絡下さい。</Pragraph>
         </Back>
       </Center>
@@ -34,6 +34,7 @@ const Back = styled.div`
 `;
 
 const Title = styled.h1`
+  padding-top: 70px;
   margin-bottom: 2vw;
   font-size: 50px;
   display: inline-block;

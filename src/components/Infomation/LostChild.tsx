@@ -6,7 +6,7 @@ const LostChild: FC = () => {
     <Wrap>
       <Center>
         <Back>
-          <Center><Title>迷子について</Title></Center>
+          <Center><Title id="lostChild">迷子について</Title></Center>
           <Pragraph>
             迷子については、総合案内所で対応させて頂いております。
             迷子を発見された方、お連れの方とはぐれてしまった方は総合案内所までお越し下さい。
@@ -38,6 +38,7 @@ const Center = styled.div`
 `;
 
 const Title = styled.h1`
+  padding-top: 70px;
   margin-bottom: 2vw;
   font-size: 50px;
   display: inline-block;

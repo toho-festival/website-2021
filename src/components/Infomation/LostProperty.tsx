@@ -6,7 +6,7 @@ const LostProperty: FC = () => {
     <Wrap>
       <Center>
         <Back>
-      <Center><Title>落とし物について</Title></Center>
+      <Center><Title id="lostProperty">落とし物について</Title></Center>
       <Pragraph>落とし物は総合案内所にて保管しております。お心当たりの方は総合案内所までお越し下さい。</Pragraph>
       </Back>
       </Center>
@@ -35,6 +35,7 @@ const Back = styled.div`
 `;
 
 const Title = styled.h1`
+  padding-top: 70px;
   margin-bottom: 2vw;
   font-size: 50px;
   display: inline-block;
