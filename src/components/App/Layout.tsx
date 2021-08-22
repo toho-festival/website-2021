@@ -30,14 +30,14 @@ const Layout: FC = ({ children }) => <div>
 const GlobalStyle = createGlobalStyle`
   html {
     font-size: 16px;
-    color: black;
+    color: #333333;
     @media screen and (min-width: 768px) {
       font-size: 24px;
     }
   }
 
   body {
-    background: black;
+    background: #333333;
     min-height: 100vh;
     font-family: dnp-shuei-shogomincho-std,sans-serif;
     font-weight: 700;
