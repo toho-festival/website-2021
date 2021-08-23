@@ -5,6 +5,8 @@ import Link                          from 'next/link';
 import Hamburger                     from '~/src/components/Header/hamburger';
 import Menu                          from '~/src/components/Header/menu';
 
+const backgroundImageUrl = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg"
+
 const Header: FC = () => {
   const [open, setOpen] = useState(false);
   
@@ -31,9 +33,9 @@ const Layout = styled.header`
   height: 2rem;
   display: flex;
   align-items: stretch;
-
   z-index: 100;
-  background-color: rgba(255,255,255, 1);
+  background-image: url(${backgroundImageUrl});
+  border-bottom: 2px solid #1a1a1a;
   padding: .5rem 1rem;
 
   > div {
