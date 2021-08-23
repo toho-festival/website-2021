@@ -7,9 +7,9 @@ import { useCollection } from 'react-firebase-hooks/firestore';
 
 const FieldGame: FC = () => {
 
-  const [field, fieldLoading, fieldError] = useCollection(
-    firebase.firestore().collection('field-game')
-  )
+  // const [field, fieldLoading, fieldError] = useCollection(
+  //   firebase.firestore().collection('field-game')
+  // )
   
   return(
     <>
@@ -35,7 +35,7 @@ const FieldGame: FC = () => {
       </Rules>
       <DataTitle>参加団体ごとの団体割合</DataTitle>
       <Data>
-        {
+        {/* {
           field?.docs.map(( doc ) => 
             <PiePlot  
               key={doc.id}
@@ -45,7 +45,7 @@ const FieldGame: FC = () => {
               name={doc.data().name} 
             />
           )
-        }
+        } */}
       </Data>
     </>
   )
