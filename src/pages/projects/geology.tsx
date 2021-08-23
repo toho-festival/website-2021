@@ -1,5 +1,4 @@
-import { getAllPostIds, getPostData } from "~/src/scripts/projects";
-import Link from 'next/link';
+import { useRouter } from "next/router";
 import styled from "styled-components";
 
 interface CommonData {
@@ -7,10 +6,11 @@ interface CommonData {
 }
 
 const Geology = () => {
+  const router = useRouter();
   return (
     <Wrap>
     <Indent>
-      <Link href="/projects">＜参加団体一覧に戻る</Link>
+      <Button onClick={() => router.back()}>＜元のページに戻る</Button>
     </Indent>
     <Flex>
       <Symbol>
@@ -80,8 +80,27 @@ const Indent = styled.span`
   padding-left: 3%;
 `;
 
+const Button = styled.a`
+  border: 4px solid #ffffff;
+  margin-top: 4px;
+  border-radius: 150px;
+  background: #fff;
+  color: black;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 6px;
+
+  :hover {
+    color: #fff;
+    background: #1a1a1a;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 2px;
+  }
+`;
+
 const Flex = styled.div`
-  background-color: black;
+  background-color: #1a1a1a;
   display: flex;
   justify-content: space-between;
   padding-top: 7vw;
@@ -92,7 +111,7 @@ const Flex = styled.div`
 `;
 
 const Flex2 = styled.div`
-  background-color: black;
+  background-color: #1a1a1a;
   display: flex;
   text-align: center;
   padding-top: 7vw;
