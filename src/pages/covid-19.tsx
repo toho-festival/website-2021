@@ -12,6 +12,7 @@ const Covid19 = () => {
 export default Covid19;
 
 const Wrap = styled.div`
+  color: white;
   position: absolute;
   top: 50%;
   left: 50%;
