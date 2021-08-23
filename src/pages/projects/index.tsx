@@ -33,6 +33,10 @@ export async function getStaticProps() {
     }
   }
 }
+
+const backGroundImageUrl04 = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg";
+const backGroundImageUrl08 = process.env.basePath + "/images/tesukiwashi-pattern-08.jpg";
+
 const CommonProjects: FC = ({ allPostsData }) => {
   const router = useRouter();
   const {
@@ -65,7 +69,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
                 <div><Musicimg src={ process.env.basePath + "/images/newExperience.png"} alt="体験型企画の画像" /></div>
               </Colmn>
               <Categoly>
-                <CategolyName>　体験型企画</CategolyName>
+                <CategolyName id="experience">　体験型企画</CategolyName>
                 <OnePoint>　最高の</OnePoint>
                 <OnePoint>　エンターテイメント</OnePoint>
               </Categoly>
@@ -73,7 +77,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
             <Description>
               <Center><CategolyDiscriptionTitle>体験型企画について</CategolyDiscriptionTitle></Center>
               <Arrangement>
-                <Sentence>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</Sentence>
+                <Sentence>桐朋生の作成を実際に見るのではなく、その手で体験してみませんか？感染対策に十分配慮して行われますので訪れた際はぜひ！</Sentence>
               </Arrangement>
             </Description>
             <Contents>
@@ -105,17 +109,17 @@ const CommonProjects: FC = ({ allPostsData }) => {
             {/* <---ここから展示企画---> */}
             <Title>
               <Colmn>
-                <div><Musicimg src={ process.env.basePath + "/images/newExhibit.png"} alt="体験型企画の画像" /></div>
+                <div><Musicimg src={ process.env.basePath + "/images/newExhibit.png"} alt="展示企画の画像" /></div>
               </Colmn>
               <Categoly>
-                <CategolyName>　展示企画</CategolyName>
+                <CategolyName id="exhibit">　展示企画</CategolyName>
                 <OnePoint>　個性の爆発</OnePoint>
               </Categoly>
             </Title>
             <Description>
               <Center><CategolyDiscriptionTitle>展示企画について</CategolyDiscriptionTitle></Center>
               <Arrangement>
-                <Sentence>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</Sentence>
+                <Sentence>個性豊かな桐朋生が一年間かけて創り上げてきた作品や展示物をご覧ください！</Sentence>
               </Arrangement>
             </Description>
             <Contents>
@@ -150,7 +154,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
                 <div><Musicimg src={process.env.basePath + "/images/newMusic.png"} alt="音楽企画の画像" /></div>
               </Colmn>
               <Categoly>
-                <CategolyName>　音楽企画</CategolyName>
+                <CategolyName id="music">　音楽企画</CategolyName>
                 <OnePoint>　桐朋生の奏でる</OnePoint>
                 <OnePoint>　最高のMUSIC</OnePoint>
               </Categoly>
@@ -158,7 +162,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
             <Description>
               <Center><CategolyDiscriptionTitle>音楽企画について</CategolyDiscriptionTitle></Center>
               <Arrangement>
-                <Sentence>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</Sentence>
+                <Sentence>コロナ禍で引きこもりがちなあなた！脳にロックンロールは足りていますか？表現力豊かなメンバーがあなたが聞いたことのない音楽の扉を開きます！異界の扉が開かれた！？</Sentence>
               </Arrangement>
             </Description>
             <Contents>
@@ -216,7 +220,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
           {isTabTwo && <>
             <Title>
               <Colmn>
-                <div><Musicimg src={ process.env.basePath + "/images/newExperience.png"} alt="体験型企画の画像" /></div>
+                <div><Musicimg src={ process.env.basePath + "/images/newStage.png"} alt="ステージ企画の画像" /></div>
               </Colmn>
               <Categoly>
                 <CategolyName>　ステージ企画企画</CategolyName>
@@ -227,7 +231,7 @@ const CommonProjects: FC = ({ allPostsData }) => {
             <Description>
               <Center><CategolyDiscriptionTitle>ステージ企画について</CategolyDiscriptionTitle></Center>
               <Arrangement>
-                <Sentence>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</Sentence>
+                <Sentence>ステージ企画とは最もバラエティで楽しいイベントである<p>と、エジソンは言っておりました。</p></Sentence>
               </Arrangement>
             </Description>
               {allPostsData.map(({ id, title, categoly,textup }: AllStagePropsDataType) => (
@@ -305,7 +309,7 @@ const Tab = styled.div<TabProps>`
       }
     }
   background-size: cover;
-  background-image: ${({ selected }) => (selected ? "url(/images/tesukiwashi-pattern-08.jpg)" : "url(/images/tesukiwashi-pattern-04.jpg)")};
+  background-image: url(${({ selected }) => (selected ? backGroundImageUrl08 : backGroundImageUrl04)});
   color: ${({ selected }) => (selected ? "#4169e1" : "black")};
 `;
 
@@ -326,8 +330,8 @@ const Title = styled.div`
 const CategolyName = styled.h2`
   color: #FBB03B;
   opacity: .8;
-  background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
-  background: linear-gradient(to top, #ffffdb, #a16422);
+  background: -webkit-linear-gradient(bottom, #bf9d6d, #bf9d6d);
+  background: linear-gradient(to top, #bf9d6d, #bf9d6d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
@@ -412,7 +416,7 @@ const CategolyDiscriptionTitle = styled.h4`
 const Contents = styled.div`
   margin-top: 30%;
   margin: 0 auto;
-  margin-bottom: 50vw;
+  margin-bottom: 30vw;
   overflow: hidden;
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -421,6 +425,9 @@ const Contents = styled.div`
   position: relative;
   width:90%;
   height: 90%;
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const Img = styled.img`
