@@ -12,5 +12,8 @@ module.exports = {
   },
   basePath,
   env: { basePath },
+  experimental: {
+    scrollRestoration: true
+  }
 };
 
