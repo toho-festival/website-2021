@@ -1,9 +1,12 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
 const Parallel:FC = () => {
+  const router = useRouter();
   return (
     <Wrap>
+      <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Name>~パラレルチンアナゴ~</Name>
       <Description>バンドエリアにて活動中！皆さんに楽しんで頂けるような曲を用意したので、是非来てください。事前に原曲を聞いていただいてもらうと、もっと楽しめます。</Description>
       <SubTitle>・メンバー紹介</SubTitle>
@@ -71,4 +74,23 @@ const MusicList = styled.ul`
 
 const Music = styled.li`
   margin-left: 5%;
+`;
+
+const Button = styled.a`
+  border: 4px solid #ffffff;
+  margin-top: 4px;
+  border-radius: 150px;
+  background: #fff;
+  color: black;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 6px;
+
+  :hover {
+    color: #fff;
+    background: #1a1a1a;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 2px;
+  }
 `;
