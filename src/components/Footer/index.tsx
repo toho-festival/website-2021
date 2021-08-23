@@ -3,7 +3,7 @@ import Link             from 'next/link';
 import styled           from 'styled-components';
 import { footerRoutes } from '~/src/scripts/footerRoutes';
 
-const Footer: FC = () => <>
+const Footer: FC = () => <Wrap>
   <FooterContent>
     <Theme>TOHO Festival 70th</Theme>
     <Author>製作/デザイン：第70回桐朋祭プログラム委員会</Author>
@@ -16,8 +16,11 @@ const Footer: FC = () => <>
       )
     } */}
   </FooterContent>
-</>;
+</Wrap>;
 
+const Wrap = styled.div`
+  margin-top: 6%;
+`;
 
 const FooterContent = styled.footer`
   background-image: url(/images/tesukiwashi-pattern-04.jpg);
