@@ -81,19 +81,19 @@ const Tab = styled.div`
 
 const Anchor = styled.a`
   display: block;
-  text-shadow: 0 0 15px rgba(250, 250, 214, 0.5),
+  /* text-shadow: 0 0 15px rgba(250, 250, 214, 0.5),
     0 0 15px rgba(250, 250, 214, 0.5), 0 0 15px rgba(250, 250, 214, 0.5),
-    0 0 15px rgba(250, 250, 214, 0.5);
+    0 0 15px rgba(250, 250, 214, 0.5); */
   &[color="blue"]{
-      color: #1760a0;
+      color: white;
       font-size: 250%;
   }
   &[color="red"]{
-      color: #de4d4d;
+      color: white;
       font-size: 250%;
   }
   &[color="green"]{
-      color: #499149;
+      color: white;
       font-size: 250%;
   }
   &[color="yellow"]{
@@ -106,7 +106,7 @@ const Anchor = styled.a`
       text-decoration-color: #f9e900;
   }
   &[color="orange"]{
-      color: #f0821e;
+      color: white;
       font-size: 200%;
     @media screen and (max-width:767px) { 
       font-size: 150%;
