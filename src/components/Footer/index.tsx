@@ -25,9 +25,13 @@ const FooterContent = styled.footer`
   color: black;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  bottom: 0;
   /* > nav {
     margin: 3rem 4rem
   } */
+  position: absolute;
+  bottom: 0;
 `;
 
 const Theme = styled.h2`
