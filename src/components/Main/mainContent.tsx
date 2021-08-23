@@ -2,7 +2,6 @@ import { FC }                             from 'react';
 import styled                             from 'styled-components';
 import { projectsComment, projectsTitle } from '~/src/scripts/projects-comment';
 import Link                               from 'next/link';
-import Image                              from 'next/image';
 
 type Side = { 
   side: 'right' | 'left'; 
@@ -15,6 +14,7 @@ type Margin = {
 }
 
 type ProjectProps = {
+  id:string;
   side: 'right' | 'left';
   right:number;
   left:number;
@@ -28,10 +28,10 @@ const MainContent: FC<ProjectProps> = (props) =>{
   return(
     <>
       <Wrap>
-        <Link href="/projects/">
+        <Link href={"/projects/" + props.id}>
           <a>
             <Project>
-              <Categoly side={props.side} right={props.right} left={props.left}><div><Image src={process.env.basePath + props.categoly} width={20} height={20} layout='responsive' alt={"pictute of" + props.name}/></div></Categoly>
+              <Categoly side={props.side} right={props.right} left={props.left}><div><Image src={process.env.basePath + props.categoly} width={25} height={25}  alt={"pictute of" + props.name}/></div></Categoly>
               <ProjectTitle side={props.side}>{ projectsTitle[props.num] }</ProjectTitle>
               <ProjectComment marginLeft={props.marginLeft}>{ projectsComment[props.num] }</ProjectComment>
             </Project>
@@ -57,6 +57,11 @@ const Categoly = styled.div<Side>`
   }
 `;
 
+const Image = styled.img`
+  width: 30vw;
+  height: auto;
+`;
+
 const Project = styled.section`
   position: relative;
   margin-top: 5%;
@@ -67,41 +72,19 @@ const Wrap = styled.div`
   border-radius: 0.5rem;
 `;
 
-const Anchor = styled.a`
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem;
-  :hover{
-    text-shadow: 0 0 15px rgba(250, 250, 214, 0.5),
-    0 0 15px rgba(250, 250, 214, 0.5), 0 0 15px rgba(250, 250, 214, 0.5),
-    0 0 15px rgba(250, 250, 214, 0.5);
-  }
-`;
-
-
-
 const ProjectTitle = styled.div<Side>`
+  font-size: 36px;
   position: absolute;
   margin-top: calc(30% / 4);
   color: #FBB03B;
-  margin-left: ${ (props) => props.side === 'right' ? 52 : 38 }%;
+  margin-left: ${ (props) => props.side === 'right' ? 42 : 45 }%;
   opacity: .8;
-  background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
-  background: linear-gradient(to top, #ffffdb, #a16422);
+  background: -webkit-linear-gradient(bottom, #bf9d6d, #bf9d6d);
+  background: linear-gradient(to top, #bf9d6d, #bf9d6d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @media screen and (max-width: 1230px) {
-    font-size: calc(28 / 1230 * 100vw);
+    font-size: calc(42 / 1230 * 100vw);
   }
 `;
 
@@ -112,7 +95,7 @@ const ProjectComment = styled.p<Margin>`
   margin-left: ${ (props) => props.marginLeft }%;
   opacity: .8;
   @media screen and (max-width: 1230px) {
-    font-size: calc(28 / 1230 * 100vw);
+    font-size: calc(38 / 1230 * 100vw);
   }
 `;
 

@@ -64,8 +64,8 @@ const SubjectTitle = styled.h3<SubTexts>`
   float: ${ (props) => props.textside === 'right' ? 'right' : 'left' };
   width: 30%;
   color: white;
-  background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
-  background: linear-gradient(to top, #ffffdb, #a16422);
+  background: -webkit-linear-gradient(bottom, #bf9d6d, #bf9d6d);
+  background: linear-gradient(to top, #bf9d6d, #bf9d6d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @media screen and (max-width: 1230px) {
