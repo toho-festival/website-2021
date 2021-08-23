@@ -1,13 +1,16 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useRouter } from "next/router";
 
 type IsMain = {
   isMain:boolean;
 }
 
 const Tekken: FC = () => {
+  const router = useRouter();
   return(
     <Layout>
+      <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Title>〜てっけん！〜</Title>
       <Img1 src={process.env.basePath + "/images/tekkenFirst.jpg"} isMain={true}></Img1>
       <About>鉄研とは？中高合同でジオラマ制作や研究を行っています。夏には部員たちで行き先を決めた合宿もしています。</About>
@@ -96,4 +99,23 @@ const Top = styled.p`
 
 const Bottom = styled.p`
   margin-left:4rem;
+`;
+
+const Button = styled.a`
+  border: 4px solid #ffffff;
+  margin-top: 4px;
+  border-radius: 150px;
+  background: #fff;
+  color: black;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 6px;
+
+  :hover {
+    color: #fff;
+    background: #1a1a1a;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 2px;
+  }
 `;
