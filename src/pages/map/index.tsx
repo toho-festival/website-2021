@@ -23,7 +23,7 @@ const Map = ({ allPostsData }) => {
   return (
     <Wrap>
       <Tab>
-      <div><Link href="/map/special"><Anchor color="orange">特棟</Anchor></Link></div>
+      <div><Link href="/map/special"><Anchor color="orange">特域</Anchor></Link></div>
       <div><Link href="/map/f4"><Anchor color="yellow">4F</Anchor></Link></div>
       <div><Link href="/map/f3"><Anchor color="green">3F</Anchor></Link></div>
       <div><Link href="/map/f2"><Anchor color="red">2F</Anchor></Link></div>
@@ -134,6 +134,7 @@ const FloorProject = styled.div`
 `;
 
 const Title = styled.h2`
+  color: white;
   padding: 0px 8px 8px;
   border-bottom: 5px solid #bf9d6d;
 `;

@@ -10,7 +10,7 @@ type AllPropsDataType = {
   building: string;
 }
 
-export const getStaticProps = async() =>{
+export const getStaticProps = async () => {
   const allPostsData = getSortedPostsData()
   return {
     props: {
@@ -23,7 +23,7 @@ const Map = ({ allPostsData }) => {
   return (
     <Wrap>
       <Tab>
-        <div><Link href="/map/special"><Anchor color="orange">特棟</Anchor></Link></div>
+        <div><Link href="/map/special"><Anchor color="orange">特域</Anchor></Link></div>
         <div><Link href="/map/f4"><Anchor color="yellow">4F</Anchor></Link></div>
         <div><Link href="/map/f3"><Anchor color="green">3F</Anchor></Link></div>
         <div><Link href="/map/f2"><Anchor color="red">2F</Anchor></Link></div>
@@ -32,21 +32,63 @@ const Map = ({ allPostsData }) => {
       <Flex>
         <MapImg src={process.env.basePath + "/images/f2.png"} />
         <FloorProject>
-        <Title>２階　参加団体</Title>
-        {allPostsData.map(({ id, floor, title, building }:AllPropsDataType) => (
-            floor === "2" && building != "特別教室棟"? 
-            <Link href={"/projects/" + id}>
-              <Align>
-              <a>
-                {/* <ProjectImg src={process.env.basePath + "/images/photo-" + id + ".png"} /> */}
-                <Project key={id}>{title}</Project>
-              </a>
-              </Align>
-            </Link>
-            : null
+          <Title>２階　参加団体</Title>
+          {allPostsData.map(({ id, floor, title, building }: AllPropsDataType) => (
+            floor === "2" && building != "特別教室棟" ?
+              <Link href={"/projects/" + id}>
+                <Align>
+                  <a>
+                    {/* <ProjectImg src={process.env.basePath + "/images/photo-" + id + ".png"} /> */}
+                    <Project key={id}>{title}</Project>
+                  </a>
+                </Align>
+              </Link>
+              : null
           ))
-        }
-      </FloorProject>
+          }
+          <Link href="/projects/quiz">
+            <Align>
+              <a>
+                <Project>クイズ研究会</Project>
+              </a>
+            </Align>
+          </Link>
+          <Link href="/projects/music-club">
+            <Align>
+              <a>
+                <Project>音楽部</Project>
+              </a>
+            </Align>
+          </Link>
+          <Link href="/projects/tekken">
+            <Align>
+              <a>
+                <Project>てっけん！</Project>
+              </a>
+            </Align>
+          </Link>
+          <Link href="/projects/books">
+            <Align>
+              <a>
+                <Project>図書委員会</Project>
+              </a>
+            </Align>
+          </Link>
+          <Link href="/projects/meis">
+            <Align>
+              <a>
+                <Project>迷’s</Project>
+              </a>
+            </Align>
+          </Link>
+          <Link href="/projects/kurineo">
+            <Align>
+              <a>
+                <Project>クリネオ</Project>
+              </a>
+            </Align>
+          </Link>
+        </FloorProject>
       </Flex>
     </Wrap>
   );
@@ -60,6 +102,7 @@ const Wrap = styled.div`
 
 const MapImg = styled.img`
   width: 65%;
+  height: 50%;
   @media screen and (max-width:767px) { 
     width: 100%;
   }
@@ -124,6 +167,7 @@ const Flex = styled.div`
   @media screen and (max-width:767px) { 
     display: block;
   }
+  width: 100%;
 `;
 
 const FloorProject = styled.div`
@@ -137,6 +181,7 @@ const FloorProject = styled.div`
 `;
 
 const Title = styled.h2`
+  color: white;
   padding: 0px 8px 8px;
   border-bottom: 5px solid #bf9d6d;
 `;
