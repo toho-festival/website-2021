@@ -40,6 +40,7 @@ const Title = styled.h1`
   display: inline-block;
   border-bottom: 10px solid #bf9d6d;
   @media screen and (max-width: 1230px) {
+    padding-top: 37zpx;
     font-size: 25px;
     border-bottom: 7px solid #bf9d6d;
   }

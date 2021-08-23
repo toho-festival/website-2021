@@ -23,6 +23,9 @@ export default Attention;
 
 const AttentionWrap = styled.div`
   padding-top: 70px;
+  @media screen and (max-width: 1230px) {
+    padding-top: 37px;
+  }
 `;
 
 const Paragraph = styled.p`

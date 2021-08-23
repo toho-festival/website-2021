@@ -42,6 +42,7 @@ const Title = styled.h1`
   @media screen and (max-width: 1230px) {
     font-size: 25px;
     border-bottom: 7px solid #bf9d6d;
+    padding-top: 37px;
   }
 `;
 

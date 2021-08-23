@@ -43,6 +43,7 @@ const Title = styled.h1`
   border-bottom: 10px solid #bf9d6d;
   text-align: initial;
   @media screen and (max-width: 1230px) {
+    padding-top: 37px;
     font-size: 25px;
     border-bottom: 7px solid #bf9d6d;
   }
