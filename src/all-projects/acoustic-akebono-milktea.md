@@ -1,6 +1,6 @@
 ---
 title: 'あけぼのミルクティー'
-photo: '/images/photoAkebonoMilktea.jpg'
+photo: '/images/acoustic-akebono-milktea.jpg'
 logo: '/images/newMusic.png'
 textup: '・ー・・・ ・・ー・・ ・・ ーーー ーー・・ ・・ ・ー・ー・ ー・ーー ・ーー・ ・・ ・ー・ー・ ーー・ー・'
 building: '1-D'

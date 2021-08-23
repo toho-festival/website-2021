@@ -1,6 +1,6 @@
 ---
 title: 'じこまん。'
-photo: '/images/acostic-zikoman.png'
+photo: '/images/acoustic-zikoman.jpg'
 logo: '/images/newMusic.png'
 textup: '受験生です。がんばります。'
 building: '1-D'

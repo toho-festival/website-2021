@@ -1,6 +1,6 @@
 ---
 title: 'かんねつしくん'
-photo: '/images/acostic-kannnetushi.jpg'
+photo: '/images/acoustic-kannnetushi.jpg'
 logo: '/images/newMusic.png'
 textup: 'マクドナルドで待ってます'
 building: '1-D'

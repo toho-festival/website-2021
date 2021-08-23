@@ -1,6 +1,6 @@
 ---
 title: '塩ラーメンの音楽隊'
-photo: '/images/photoSioRamen.jpg'
+photo: '/images/acoustic-sioRamen.jpg'
 logo: '/images/newMusic.png'
 textup: 'ぼくは塩ラーメンの音楽隊です！'
 building: '1-D'
