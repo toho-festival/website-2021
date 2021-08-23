@@ -1,6 +1,5 @@
 import { getAllPostIds, getPostData } from "~/src/scripts/projects";
 import { useRouter } from "next/router";
-import Link from 'next/link';
 import styled from "styled-components";
 
 interface CommonData {
@@ -16,7 +15,12 @@ const CommonProjects = ({ postData }) => {
     </Indent>
     <Flex>
       <Symbol>
-        <Img src={process.env.basePath + "/images/photo-" + postData.id + ".jpg"} alt="宣材写真"/>
+        {postData.categoly != 3 ? 
+          <Img src={process.env.basePath + "/images/photo-" + postData.id + ".jpg"} alt="宣材写真"/>
+          :
+          <Img src={process.env.basePath + postData.photo} alt="宣材写真"/>
+        }
+        
       </Symbol>
       <Text>
         <Center>
