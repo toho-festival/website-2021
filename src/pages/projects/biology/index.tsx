@@ -1,9 +1,14 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { useRouter } from "next/router";
+
 
 const BiologyClub: FC = () => {
+  const router = useRouter();
+
   return (
     <Wrap>
+      <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Main>
         <Title>生物部</Title>
         <Description>
@@ -134,4 +139,23 @@ const Comment = styled.h1`
   font-family: 'ＭＳ 明朝','ヒラギノ明朝 ProN W5';
   font-weight: bold;
   text-align: center;
+`;
+
+const Button = styled.a`
+  border: 4px solid #ffffff;
+  margin-top: 4px;
+  border-radius: 150px;
+  background: #fff;
+  color: black;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 6px;
+
+  :hover {
+    color: #fff;
+    background: #1a1a1a;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 2px;
+  }
 `;
