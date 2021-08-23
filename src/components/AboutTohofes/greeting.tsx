@@ -41,6 +41,9 @@ const Wrap = styled.div`
   display:grid;
   gap:3vw;
   grid-template-columns: 1fr 1fr 1fr;
+  @media screen and (max-width:767px) { 
+    grid-template-columns: 1fr 1fr ;
+  }
 `;
 const Greeting = styled.div`
   margin-left:1vw;
@@ -89,6 +92,7 @@ const Greeting = styled.div`
 `;
 
 const Role = styled.h3`
+  color: black;
   margin-top: 0.5vw;
   font-size:20px;
   border-bottom: 2px solid white;
@@ -98,6 +102,7 @@ const Role = styled.h3`
   }
 `;
 const Name = styled.h3`
+  color: black;
   margin-top: 0.5vw;
   margin-bottom: 0.5vw;
   font-size:40px;
@@ -115,6 +120,7 @@ const Img = styled.img`
 `;
 const Greet = styled.h3`
   margin-bottom:1vw;
+  color: black;
   @media screen and (max-width:767px) { 
     font-size: 12px;
   }
