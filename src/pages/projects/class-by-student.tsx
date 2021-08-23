@@ -1,9 +1,12 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useRouter } from "next/router";
 
 const ClassByStudent = () => {
+	const router = useRouter();
   return(
 		<Layout>
+			<Button onClick={() => router.back()}>＜元のページに戻る</Button>
 			<Organizer><p>主催:高校総務委員会企画部門</p></Organizer>
 			<Title>
 				<Top>
@@ -134,4 +137,23 @@ const Explain = styled.section`
 
 const Indent = styled.div`
 	margin-left: 2%;
+`;
+
+const Button = styled.a`
+  border: 4px solid #ffffff;
+  margin-top: 4px;
+  border-radius: 150px;
+  background: #fff;
+  color: black;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 6px;
+
+  :hover {
+    color: #fff;
+    background: #1a1a1a;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 2px;
+  }
 `;
