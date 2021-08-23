@@ -18,7 +18,7 @@ export type SubProps = {
 }
 
 export const imageAlignMain: MainProps[] = [
-  {id:'#experience',side:'left',right:0,left:10,categoly:"/images/newExperience.png",name:"ExperienceProject",num:0,marginLeft:42},
+  {id:'',side:'left',right:0,left:10,categoly:"/images/newExperience.png",name:"ExperienceProject",num:0,marginLeft:42},
   {id:'#exhibit',side:'right',right:10 ,left:0  ,categoly:"/images/newExhibit.png",name:"ExhibitProject",num:1,marginLeft:42},
   {id:'#music',side:'left',right:0,left:10,categoly:"/images/newMusic.png",name:"MusicProject",num:2,marginLeft:42},
 ]
