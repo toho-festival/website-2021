@@ -10,7 +10,7 @@ type Props = {
   title: string,
  }
 
-const Blog: FC<Props> = (props) => {
+const News: FC<Props> = (props) => {
   return (
     <Wrap>
       {/* <Grid>
@@ -97,4 +97,4 @@ const Creating = styled.div`
   transform: translateX(-50%)translateY(-50%);
 `;
 
-export default Blog;
+export default News;
