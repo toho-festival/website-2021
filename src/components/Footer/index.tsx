@@ -3,6 +3,8 @@ import Link             from 'next/link';
 import styled           from 'styled-components';
 import { footerRoutes } from '~/src/scripts/footerRoutes';
 
+const backGroundImageUrl = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg"
+
 const Footer: FC = () => <Wrap>
   <FooterContent>
     <Theme>TOHO Festival 70th</Theme>
@@ -23,7 +25,7 @@ const Wrap = styled.div`
 `;
 
 const FooterContent = styled.footer`
-  background-image: url(/images/tesukiwashi-pattern-04.jpg);
+  background-image: url(${backGroundImageUrl});
   background-size: cover;
   color: black;
   display: flex;

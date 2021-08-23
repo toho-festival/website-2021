@@ -1,6 +1,8 @@
 import { FC }                             from 'react';
 import styled                             from 'styled-components';
 
+const backGroundImageUrl = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg"
+
 const Dating: FC = () =>{
     return(
       <Layout>
@@ -28,7 +30,7 @@ const Layout = styled.div`
 `;
 
 const Date = styled.span`
-  background-image: url(/images/tesukiwashi-pattern-04.jpg);
+  background-image: url(${backGroundImageUrl});
   background-size: cover;
   font-size: 24px;
   text-align: center;
