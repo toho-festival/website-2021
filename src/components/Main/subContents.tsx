@@ -2,6 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { subComment, subTitle } from '~/src/scripts/projects-comment';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type SubSideAndMarginTop = {
   side: 'right' | 'left';
@@ -17,15 +18,22 @@ type SubContentProps = {
   top:number;
   subSrc:string;
   num:number;
+  link:string;
 }
 
 const SubContent: FC<SubContentProps> = (props) =>
   <>
-    <Wrap><Anchor>
-    <SubCategoly side={props.side} top={props.top}><div><Image src={ process.env.basePath + props.subSrc } width={17} height={17} layout='responsive'/></div>
-    <SubjectTitle textside={props.side}>{ subTitle[props.num] }</SubjectTitle>
-    <SubComment textside={props.side}>{ subComment[props.num] }</SubComment>
-    </SubCategoly></Anchor></Wrap><Reset/>
+    <Wrap>
+      <Link href={props.link}>
+        <Anchor>
+        <SubCategoly side={props.side} top={props.top}><div><Image src={ process.env.basePath + props.subSrc } width={17} height={17} layout='responsive'/></div>
+        <SubjectTitle textside={props.side}>{ subTitle[props.num] }</SubjectTitle>
+        <SubComment textside={props.side}>{ subComment[props.num] }</SubComment>
+        </SubCategoly>
+        </Anchor>
+      </Link>
+    </Wrap>
+    <Reset/>
   </>;
 
 export default SubContent;
@@ -56,8 +64,8 @@ const SubjectTitle = styled.h3<SubTexts>`
   float: ${ (props) => props.textside === 'right' ? 'right' : 'left' };
   width: 30%;
   color: white;
-  background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
-  background: linear-gradient(to top, #ffffdb, #a16422);
+  background: -webkit-linear-gradient(bottom, #bf9d6d, #bf9d6d);
+  background: linear-gradient(to top, #bf9d6d, #bf9d6d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @media screen and (max-width: 1230px) {

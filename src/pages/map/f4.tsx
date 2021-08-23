@@ -10,7 +10,7 @@ type AllPropsDataType = {
   building: string;
 }
 
-export const getStaticProps = async() =>{
+export const getStaticProps = async () => {
   const allPostsData = getSortedPostsData()
   return {
     props: {
@@ -23,30 +23,44 @@ const Map = ({ allPostsData }) => {
   return (
     <Wrap>
       <Tab>
-        <div><Link href="/map/special"><Anchor color="orange">特棟</Anchor></Link></div>
+        <div><Link href="/map/special"><Anchor color="orange">特域</Anchor></Link></div>
         <div><Link href="/map/f4"><Anchor color="yellow">4F</Anchor></Link></div>
         <div><Link href="/map/f3"><Anchor color="green">3F</Anchor></Link></div>
         <div><Link href="/map/f2"><Anchor color="red">2F</Anchor></Link></div>
         <div><Link href="/map"><Anchor color="blue">1F</Anchor></Link></div>
       </Tab>
       <Flex>
-      <MapImg src={process.env.basePath + "/images/f1.png"} />
-      <FloorProject>
-      <Title>４階　参加団体</Title>
-      {allPostsData.map(({ id, floor, title, building }:AllPropsDataType) => (
-          floor === "4" && building != "特別教室棟"? 
-          <Link href={"/projects/" + id}>
+        <MapImg src={process.env.basePath + "/images/f1.png"} />
+        <FloorProject>
+          <Title>４階　参加団体</Title>
+          {allPostsData.map(({ id, floor, title, building }: AllPropsDataType) => (
+            floor === "4" && building != "特別教室棟" ?
+              <Link href={"/projects/" + id}>
+                <Align>
+                  <a>
+                    {/* <ProjectImg src={process.env.basePath + "/images/photo-" + id + ".png"} /> */}
+                    <Project key={id}>{title}</Project>
+                  </a>
+                </Align>
+              </Link>
+              : null
+          ))
+          }
+          <Link href="/projects/biology">
             <Align>
-            <a>
-              {/* <ProjectImg src={process.env.basePath + "/images/photo-" + id + ".png"} /> */}
-              <Project key={id}>{title}</Project>
-            </a>
+              <a>
+                <Project>生物部</Project>
+              </a>
             </Align>
           </Link>
-          : null
-        ))
-      }
-      </FloorProject>
+          <Link href="/projects/geology">
+            <Align>
+              <a>
+                <Project>地学部</Project>
+              </a>
+            </Align>
+          </Link>
+        </FloorProject>
       </Flex>
     </Wrap>
   );
@@ -60,6 +74,7 @@ const Wrap = styled.div`
 
 const MapImg = styled.img`
   width: 65%;
+  height: 50%;
   @media screen and (max-width:767px) { 
     width: 100%;
   }
@@ -145,6 +160,7 @@ const Project = styled.div`
 `;
 
 const Title = styled.h2`
+  color: white;
   padding: 0px 8px 8px;
   border-bottom: 5px solid #bf9d6d;
 `;

@@ -1,6 +1,8 @@
 import { FC }                             from 'react';
 import styled                             from 'styled-components';
 
+const backGroundImageUrl = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg"
+
 const Dating: FC = () =>{
     return(
       <Layout>
@@ -18,7 +20,6 @@ const Dating: FC = () =>{
           <Note>
             <Annotation>※日曜日は午前と午後のⅡ部制となっています。</Annotation>
             <Annotation>※ご来場いただく際はスリッパをお持ち下さい。</Annotation>
-            {/* <Annotation>※今年度の桐朋祭は生徒と保護者のみとなります</Annotation> */}
           </Note>
       </Layout>
     );
@@ -29,7 +30,7 @@ const Layout = styled.div`
 `;
 
 const Date = styled.span`
-  background-image: url(/images/tesukiwashi-pattern-04.jpg);
+  background-image: url(${backGroundImageUrl});
   background-size: cover;
   font-size: 24px;
   text-align: center;
@@ -41,7 +42,7 @@ const Date = styled.span`
 const Detail = styled.p`
 `;
 
-const Note = styled.data`
+const Note = styled.div`
   text-align: center;
   font-size: 16px;
   @media screen and (max-width: 1200px) {

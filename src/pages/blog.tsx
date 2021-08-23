@@ -1,43 +1,41 @@
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { useCollection } from 'react-firebase-hooks/firestore';
 import { firestore } from '~/firebase/client';
 import ReactMarkdown from 'react-markdown';
 
-const Blog:FC = () => {
-  const [blog, blogLoading, blogError] = useCollection(
-    firestore.collection('documentClass/blog/published')
-  );
+type Props = {
+  author: string,
+  content: string,
+  release: Date,
+  title: string,
+ }
 
+const Blog: FC<Props> = (props) => {
   return (
-    <>
-      {blogError && <strong>Error: {JSON.stringify(blogError)}</strong>}
-      {blogLoading && <span>Document: Loading...</span>}
-      {
-        blog?.docs.map((doc) =>      
-            <div key={doc.id}>
-              <Grid>
-                <Center><Title>{doc.data().published}</Title></Center>
-              </Grid>
-              <Adjustment>
-              </Adjustment>
-              <SubTitle>{doc.data().title}</SubTitle>
-              <Date>&emsp;著者:{doc.data().author}</Date>
-              <Box>
-                <ReactMarkdown children={doc.data().content} />
-              </Box>
-            </div>
-        )
-      }
-    </>
+    <Wrap>
+      {/* <Grid>
+        <Center><Title>{props.title}</Title></Center>
+      </Grid>
+      <Adjustment>
+      </Adjustment>
+      <Author>&emsp;著者:{props.author}</Author>
+      <Box>
+        <ReactMarkdown children={props.content} />
+      </Box> */}
+      <Creating>現在記事を作成中です！</Creating>
+    </Wrap>
   )
 }
 
-const Date = styled.p`
-color: white;
-margin-left: 70px;
-margin-top: 1vw;
-margin-bottom: 1vw;
+const Wrap = styled.div`
+  color:white;
+`;
+
+const Author = styled.p`
+  color: white;
+  margin-left: 70px;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
 `;
 
 const Center = styled.div`
@@ -90,6 +88,13 @@ background-color: white;
 margin: 0 50px 10vw 70px;
 padding: 3px 3px 3px 3px;
 word-wrap: break-word;
+`;
+
+const Creating = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%)translateY(-50%);
 `;
 
 export default Blog;

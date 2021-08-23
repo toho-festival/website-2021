@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
+import Link from 'next/link';
 
 const Table: FC = () => {
   return(
@@ -15,13 +16,13 @@ const Table: FC = () => {
         <Center>
           <TableTitle>目次</TableTitle>
           <Column>
-            <Verse><Anchor>各種総合ご案内</Anchor></Verse>
-            <Verse><Anchor>もし災害が発生したら</Anchor></Verse>
-            <Verse><Anchor>避難について</Anchor></Verse>
-            <Verse><Anchor>避難後について</Anchor></Verse>
-            <Verse><Anchor>迷子について</Anchor></Verse>
-            <Verse><Anchor>不審物について</Anchor></Verse>
-            <Verse><Anchor>落とし物について</Anchor></Verse>
+            <Verse><Link href="#attention"><Anchor>各種総合ご案内</Anchor></Link></Verse>
+            <Verse><Link href="#disaster"><Anchor>もし災害が発生したら</Anchor></Link></Verse>
+            <Verse><Link href="#evacuation"><Anchor>避難について</Anchor></Link></Verse>
+            <Verse><Link href="#afterEvacution"><Anchor>避難後について</Anchor></Link></Verse>
+            <Verse><Link href="#lostChild"><Anchor>迷子について</Anchor></Link></Verse>
+            <Verse><Link href="#suspiciousObject"><Anchor>不審物について</Anchor></Link></Verse>
+            <Verse><Link href="#lostProperty"><Anchor>落とし物について</Anchor></Link></Verse>
           </Column>
         </Center>
       </Wrap>

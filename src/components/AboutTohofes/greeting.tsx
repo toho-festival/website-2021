@@ -5,7 +5,7 @@ import {greeting} from "~/src/scripts/about";
 const GreetingTOHO:FC = () => {
     return(
       <>
-        <Center><Title>委員長挨拶</Title></Center>
+        <Center><Title id="greeting">委員長挨拶</Title></Center>
         <Wrap>
           {
             greeting.map(
@@ -31,6 +31,7 @@ const Center = styled.div`
 const Title = styled.h2`
   margin-top: 10vw;
   margin-bottom: 4vw;
+  padding-top: 70px;
   color: white;
   border-bottom: solid 5px #bf9d6d;
   display: inline-block;
@@ -40,6 +41,9 @@ const Wrap = styled.div`
   display:grid;
   gap:3vw;
   grid-template-columns: 1fr 1fr 1fr;
+  @media screen and (max-width:767px) { 
+    grid-template-columns: 1fr 1fr ;
+  }
 `;
 const Greeting = styled.div`
   margin-left:1vw;
@@ -88,6 +92,7 @@ const Greeting = styled.div`
 `;
 
 const Role = styled.h3`
+  color: black;
   margin-top: 0.5vw;
   font-size:20px;
   border-bottom: 2px solid white;
@@ -97,6 +102,7 @@ const Role = styled.h3`
   }
 `;
 const Name = styled.h3`
+  color: black;
   margin-top: 0.5vw;
   margin-bottom: 0.5vw;
   font-size:40px;
@@ -114,6 +120,7 @@ const Img = styled.img`
 `;
 const Greet = styled.h3`
   margin-bottom:1vw;
+  color: black;
   @media screen and (max-width:767px) { 
     font-size: 12px;
   }

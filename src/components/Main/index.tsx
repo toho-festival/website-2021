@@ -3,6 +3,9 @@ import styled                             from 'styled-components';
 import SubContent                         from '~/src/components/Main/subContents';
 import MainContent                        from './mainContent';
 import Dating                             from '~/src/components/Main/date';
+import {imageAlignMain ,imageAlignSub}    from '~/src/scripts/projectCategoly';
+
+const backGroundImageUrl = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg";
 
 const Main: FC = () =>{
   return(
@@ -11,22 +14,19 @@ const Main: FC = () =>{
         <h2>－DATE－</h2>
         <Dating />
       </Date>
-      <Attention>※開発中のため、どのページもまだ飛ぶことができません。ご了承ください。</Attention>
       <Categories>
         <h2>－PROJECT－</h2>
         <MainContents>
-          <MainContent side='left'  right={0}  left={10} categoly="/images/newExperience.png" name="ExperienceProject" num={0} marginLeft={42} />
-          <MainContent side='right' right={10} left={0}  categoly="/images/newExhibit.png"    name="ExhibitProject"    num={1} marginLeft={44} />
-          <MainContent side='left'  right={0}  left={10} categoly="/images/newMusic.png"      name="MusicProject"      num={2} marginLeft={42} />
+          {imageAlignMain.map(({id,side,right,left,categoly,name,num,marginLeft}) => 
+            <MainContent id={id} side={side} right={right} left={left} categoly={categoly} name={name} num={num} marginLeft={marginLeft} />
+          )}
         </MainContents>
 
         <SubContents>
           <h2>－SUB CONTENTS－</h2>
-          <SubContent side='left'  top={10}  subSrc="/images/newGreetings.png" num={0}/>
-          <SubContent side='right' top={-5}  subSrc="/images/newSchedule.png"  num={1}/>
-          <SubContent side='left'  top={-5}  subSrc="/images/newProgram.png"   num={2}/>
-          <SubContent side='right' top={-5}  subSrc="/images/newCovid19.png"   num={3}/> 
-          <SubContent side='left'  top={-5}  subSrc="/images/newBlog.png"      num={4}/>
+          {imageAlignSub.map(({side,top,subSrc,link,num}) => 
+            <SubContent side={side}  top={top}  subSrc={subSrc} link={link} num={num}/>
+          )}
         </SubContents>
       </Categories>
     </Layout>
@@ -38,9 +38,9 @@ const Layout = styled.div`
 `;
 
 const Date = styled.div`
-  background-image: url(/images/tesukiwashi-pattern-04.jpg);
+  background-image: url(${backGroundImageUrl});
   background-size: cover;
-  color: black;
+  color: #1a1a1a;
   padding-top: 5vw;
   padding-bottom: 10vw;
   h2{
@@ -50,17 +50,8 @@ const Date = styled.div`
   }
 `;
 
-const Attention = styled.p`
-  margin: 0 15% 0 15%;
-  text-align: center;
-  color: white;
-  @media screen and (max-width: 1230px) {
-    font-size: calc(28 / 1230 * 100vw);
-  }
-`;
-
 const Categories = styled.div`
-  background-color: black;
+  background-color: #1a1a1a;
   padding-top: 2vw;
   padding-bottom: 25vw;
   h2{

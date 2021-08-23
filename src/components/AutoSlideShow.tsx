@@ -42,10 +42,10 @@ const AutoSlideShow:FC = () => {
 };
 
 const SlideShow = styled.div`
-  z-index: 3;
-  top: 0;
-  position: relative;
-  background-color:black;
+  /* z-index: 3;
+  top: 0; */
+  /* position: relative; */
+  background-color: #1a1a1a;
 `;
 
 const Title = styled.h1`

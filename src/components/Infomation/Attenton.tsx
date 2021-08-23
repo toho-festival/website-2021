@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Attention: FC = () => {
   return(
-    <AttentionWrap>
+    <AttentionWrap id="attention">
       <Paragraph color="1">「総合案内所」を高校昇降口に設置しております。目的地までの道順など各種お困りごとの対応をさせて頂きます。</Paragraph>
       <Paragraph color="2">女子トイレ、男子トイレは各階にございます。多機能トイレは高校棟一階ホール横、教科教室棟一階にございます。</Paragraph>
       <Paragraph color="3">桐朋祭スタッフはオリジナルのTシャツを着ています。親身になって対応させていただきますので、お気軽にお声掛け下さい。</Paragraph>
@@ -22,7 +22,10 @@ const Attention: FC = () => {
 export default Attention;
 
 const AttentionWrap = styled.div`
-
+  padding-top: 70px;
+  @media screen and (max-width: 1230px) {
+    padding-top: 37px;
+  }
 `;
 
 const Paragraph = styled.p`

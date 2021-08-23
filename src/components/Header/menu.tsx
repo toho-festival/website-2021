@@ -1,42 +1,32 @@
 import type { FC } from 'react';
-import Link        from 'next/link';
-import styled      from 'styled-components';
-import { routes }  from '~/src/scripts/routes';
+import Link from 'next/link';
+import styled from 'styled-components';
+import { routes } from '~/src/scripts/routes';
 
-const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
-  <Attention>※開発中のため、各ページに飛ぶことができません。ご了承ください。</Attention>
-  
-  
+const Menu: FC<{ display: boolean, toggle: () => void }> = ({ display, toggle }) => <Layout open={display}>
   <Box>
-  {
-    // routes.map(
-    //   ({ key, path }) => <span key={ key }><Link href={ path } passHref><Anchor>{ key }</Anchor></Link></span>,
-    // )
-    routes.map(
-      ({ key, logo }) =>
-      <Align>
-        <Flex>
-          <Image src={logo} alt="メニューのロゴ"/>
-          <span key={ key }><Anchor>{ key }</Anchor></span>
-        </Flex>
-      </Align>
-    )
-  }
+    {
+      routes.map(
+        ({ key, logo, path }) =>
+          <Align>
+            <Link href={path}>
+              <a>
+                <Flex>
+                  <Image src={logo} alt="メニューのロゴ" />
+                  <span key={key.toString()}><a onClick={toggle}><Anchor>{key}</Anchor></a></span>
+                </Flex>
+              </a>
+            </Link>
+          </Align>
+      )
+    }
   </Box>
 </Layout>;
-
-// const Anchor = styled.a`
-//   font-size: 1.5rem;
-//   line-height: 3rem;
-// `;
 
 const Box = styled.div`
   margin-top: 3vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  @media screen and (max-width: 730px) {
-    grid-template-columns: 1fr 1fr;
-  }
 `;
 
 const Flex = styled.div`
@@ -58,6 +48,9 @@ const Image = styled.img`
 const Anchor = styled.p`
   font-size: 1.5rem;
   line-height: 3rem;
+  @media screen and (max-width: 730px) {
+    font-size: 0.8rem;
+  }
 `;
 
 
@@ -77,7 +70,7 @@ const Layout = styled.nav<{ open: boolean }>`
   padding-top: 1rem;
 
   background-color: rgba(0,0,0, 0.7);
-  transform: ${ ({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)' };
+  transform: ${({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)'};
   transition: transform 0.3s ease-in-out;
 `;
 
