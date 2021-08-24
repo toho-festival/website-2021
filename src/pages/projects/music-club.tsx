@@ -1,9 +1,12 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useRouter } from "next/router";
 
 const MusicClub = () => {
+  const router = useRouter();
   return(
     <Wrap>
+      <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Title>〜桐朋学園男子部吹奏楽団〜</Title>
       <SubTitle>アンサンブル</SubTitle>
       <Explain>アンサンブルとは、少人数で行う演奏のことで、パート毎のアンサンブルや、学年毎のアンサンブルなど、様々なアンサンブルがあります。土曜日は全日、日曜日は午前に教科教室棟2階の音楽室で行っております。途中の出入りは自由です。是非お越しください！</Explain>
@@ -59,4 +62,23 @@ const Access = styled.ul`
 
 const Url = styled.a`
 
+`;
+
+const Button = styled.a`
+  border: 4px solid #ffffff;
+  margin-top: 4px;
+  border-radius: 150px;
+  background: #fff;
+  color: black;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 6px;
+
+  :hover {
+    color: #fff;
+    background: #1a1a1a;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 2px;
+  }
 `;

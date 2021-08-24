@@ -1,8 +1,11 @@
 import styled from 'styled-components';
+import { useRouter } from "next/router";
 
 const QuizClub = () => {
+  const router = useRouter();
   return(
     <>
+      <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Name>クイズ研究会</Name>
       <Theme>桐朋祭での活動</Theme>
       <Info>
@@ -84,6 +87,25 @@ const QuestionText = styled.p`
 
 const Img = styled.img`
   width: 30%;
+`;
+
+const Button = styled.a`
+  border: 4px solid #ffffff;
+  margin-top: 4px;
+  border-radius: 150px;
+  background: #fff;
+  color: black;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 6px;
+
+  :hover {
+    color: #fff;
+    background: #1a1a1a;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 2px;
+  }
 `;
 
 export default QuizClub;

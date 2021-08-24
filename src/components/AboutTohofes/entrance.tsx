@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FC } from 'react';
-import {explain1} from "~/src/scripts/about"
 
 const AboutTOHO:FC = () => {
   return(
@@ -9,19 +8,14 @@ const AboutTOHO:FC = () => {
       <Center><ContentTitleAbout>桐朋祭とは</ContentTitleAbout></Center>
       <Constraction>
       <SubTitle>
-        <Img src={ process.env.basePath + "/images/newEntrance-background-1.jpg"} />
+        <Img src={ process.env.basePath + "/images/aboutTohoBackground.jpg"} />
       </SubTitle>
       <Content>
-        {
-          explain1.map(
-            ({ title }) => <ContentTitle key={ title }>{ title }</ContentTitle>,
-          )
-        }
-        {
-          explain1.map(
-            ({ info }) => <ContentInfo key={ info }>{ info }</ContentInfo>,
-          )
-        }
+        <ContentTitle></ContentTitle>
+        <ContentInfo>
+          第70回桐朋祭委員はこのコロナ禍という状況の中でできることを模索して、内部の生徒や保護者だけでなく、外部からのお客様にも楽しんでもらえるような学園祭を目指しました。
+          今年度は新たなことにも挑戦し、新しい桐朋祭をめざしました。各々の委員が協力して創り上げた桐朋祭をお楽しみください。
+        </ContentInfo>
       </Content>
       </Constraction>
     </>
@@ -68,11 +62,11 @@ const Title = styled.h1`
 const Constraction = styled.div`
   @media screen and (min-width:768px) {
     display: flex;
-    margin-bottom:50vw;
+    margin-bottom:10vw;
     margin-top: 5vw;
   }
   @media screen and (max-width:767px) { 
-    margin-bottom:50vw;
+    margin-bottom:10vw;
     margin-top: 5vw;
   }
 `;

@@ -6,10 +6,12 @@ const Member:FC = () => (
     <Div>
         <MemberWrap>
             <SubTitle>メンバー</SubTitle>
-            <MemberName>a</MemberName>
-            <MemberName>b</MemberName>
-            <MemberName>c</MemberName>
-            <MemberName>d</MemberName>
+            <Flex>
+                <MemberName>大森琢磨</MemberName>
+                <MemberName>水木峻</MemberName>
+                <MemberName>渋谷遥人</MemberName>
+                <MemberName>林潤一</MemberName>
+            </Flex>
         </MemberWrap>
         <MemberPicture>
             <Img src="entrance-backgrund-1.jpg" alt="" />
@@ -38,6 +40,11 @@ const SubTitle = styled.h3`
     font-size:5vw;
     text-align:center;
     border-bottom: 2px solid black;
+`;
+
+const Flex = styled.div`
+    /* display: flex; */
+    padding-bottom: 60px;
 `;
 
 const MemberName = styled.h4`

@@ -1,5 +1,5 @@
 import { getAllPostIds, getPostData } from "~/src/scripts/projects";
-import Link from 'next/link';
+import { useRouter } from "next/router";
 import styled from "styled-components";
 
 interface CommonData {
@@ -7,14 +7,20 @@ interface CommonData {
 }
 
 const CommonProjects = ({ postData }) => {
+  const router = useRouter();
   return (
     <Wrap>
     <Indent>
-      <Link href="/projects">＜参加団体一覧に戻る</Link>
+      <Button onClick={() => router.back()}>＜元のページに戻る</Button>
     </Indent>
     <Flex>
       <Symbol>
-        <Img src={process.env.basePath + "/images/photo-" + postData.id + ".jpg"} alt="宣材写真"/>
+        {postData.categoly != 3 ? 
+          <Img src={process.env.basePath + "/images/photo-" + postData.id + ".jpg"} alt="宣材写真"/>
+          :
+          <Img src={process.env.basePath + postData.photo} alt="宣材写真"/>
+        }
+        
       </Symbol>
       <Text>
         <Center>
@@ -30,7 +36,7 @@ const CommonProjects = ({ postData }) => {
     <Center>
       <Flex2>
         <Image src={process.env.basePath +"/images/mapIcon.png"} />
-        <Location>{postData.building}　{postData.floor}F　{postData.location}にて</Location>
+        <Location>{postData.building} {postData.floor}階 {postData.location}にて</Location>
       </Flex2>
     </Center>
 </Wrap>
@@ -65,8 +71,26 @@ const Indent = styled.span`
   padding-left: 3%;
 `;
 
+const Button = styled.a`
+  border: 4px solid #ffffff;
+  margin-top: 4px;
+  border-radius: 150px;
+  background: #fff;
+  color: black;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 6px;
+
+  :hover {
+    color: #fff;
+    background: #1a1a1a;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 2px;
+  }
+`;
+
 const Flex = styled.div`
-  background-color: black;
   display: flex;
   justify-content: space-between;
   padding-top: 7vw;
@@ -77,22 +101,34 @@ const Flex = styled.div`
 `;
 
 const Flex2 = styled.div`
-  background-color: black;
   display: flex;
   padding-top: 7vw;
   padding-bottom: 10vw;
-  margin-left: 40%;
+  position: relative;
   @media screen and (max-width: 730px) {
-    margin-left: 20%;
+    
   }
 `;
 
 const Location = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%)translateX(-50%);
+  -webkit-transform: translateY(-50%)translateX(-50%);
 `;
 
 const Image = styled.img`
   width:40px;
   height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%)translateX(-50%);
+  -webkit-transform: translateY(-50%)translateX(-50%);
+  @media screen and (max-width: 730px) {
+    left:10%;
+  }
 `;
 
 const Symbol = styled.article`

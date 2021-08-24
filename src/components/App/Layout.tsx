@@ -1,10 +1,11 @@
 import type { FC }           from 'react';
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import Header                from '~/src/components/Header';
 import Footer                from '~/src/components/Footer';
 import Head          from 'next/head';
 
-const Layout: FC = ({ children }) => <div>
+const Layout: FC = ({ children }) => <AllWrap>
     <Head>
     <link rel='icon' href={process.env.basePath + '/favicon70th.ico'} type='image/x-icon'/>
     <title>第70回桐朋祭</title>
@@ -25,19 +26,19 @@ const Layout: FC = ({ children }) => <div>
   </div>
   <Footer/>
   <GlobalStyle/>
-</div>;
+</AllWrap>;
 
 const GlobalStyle = createGlobalStyle`
   html {
     font-size: 16px;
-    color: black;
+    color: #1a1a1a;
     @media screen and (min-width: 768px) {
       font-size: 24px;
     }
   }
 
   body {
-    background: black;
+    background: #1a1a1a;
     min-height: 100vh;
     font-family: dnp-shuei-shogomincho-std,sans-serif;
     font-weight: 700;
@@ -56,6 +57,14 @@ const GlobalStyle = createGlobalStyle`
   .page-root {
     padding-top: 3rem;
   }
+`;
+
+const AllWrap = styled.div`
+  min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+  position: relative;/* ←相対位置 */
+  padding-bottom: 100px; /* ←フッターの高さを指定 */
+  box-sizing: border-box;
+  /* ↑ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */ 
 `;
 
 export default Layout;

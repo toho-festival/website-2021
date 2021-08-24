@@ -1,5 +1,8 @@
-import { FC }                from 'react';
-import styled, { keyframes } from 'styled-components';
+import { FC }    from 'react';
+import { Fade } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+import styled   from 'styled-components';
+import Image from 'next/image'
 
 const AutoSlideShow: FC = () => {
   return <Layout>
@@ -42,6 +45,7 @@ const bgSlideShow = keyframes`
 const Layout = styled.div`
   position: relative;
   width: 100%;
+  background-color: #1a1a1a;
 
   ::before {
     content: '';

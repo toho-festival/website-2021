@@ -3,7 +3,9 @@ import Link             from 'next/link';
 import styled           from 'styled-components';
 import { footerRoutes } from '~/src/scripts/footerRoutes';
 
-const Footer: FC = () => <>
+const backGroundImageUrl = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg"
+
+const Footer: FC = () => <Wrap>
   <FooterContent>
     <Theme>TOHO Festival 70th</Theme>
     <Author>製作/デザイン：第70回桐朋祭プログラム委員会</Author>
@@ -16,18 +18,25 @@ const Footer: FC = () => <>
       )
     } */}
   </FooterContent>
-</>;
+</Wrap>;
 
+const Wrap = styled.div`
+  margin-top: 6%;
+`;
 
 const FooterContent = styled.footer`
-  background-image: url(/images/tesukiwashi-pattern-04.jpg);
+  background-image: url(${backGroundImageUrl});
   background-size: cover;
   color: black;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  bottom: 0;
   /* > nav {
     margin: 3rem 4rem
   } */
+  position: absolute;
+  bottom: 0;
 `;
 
 const Theme = styled.h2`

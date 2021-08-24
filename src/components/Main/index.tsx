@@ -7,7 +7,6 @@ import SubContent  from '~/src/components/Main/sub-content';
 const Main: FC = () =>
   <Layout>
     <Date/>
-    <Attention>※開発中のため、どのページもまだ飛ぶことができません。ご了承ください。</Attention>
     <Project/>
     <SubContent/>
   </Layout>;

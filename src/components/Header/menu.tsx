@@ -4,7 +4,6 @@ import styled      from 'styled-components';
 import { routes }  from '~/src/scripts/routes';
 
 const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
-  <Attention>※開発中のため、各ページに飛ぶことができません。ご了承ください。</Attention>
   <LinkList>
     { routes.map(({ key, logo, path }) =>
       <Link href={path} passHref key={ path }><a>

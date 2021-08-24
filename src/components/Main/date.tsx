@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+const backGroundImageUrl = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg"
+
 const Date = styled(props => <section { ...props }>
   <h2>DATE</h2>
   <div>
@@ -32,7 +34,7 @@ const Date = styled(props => <section { ...props }>
   padding-block: 2rem;
   text-align: center;
   color: black;
-  background-image: url(${ process.env.basePath + '/images/tesukiwashi-pattern-04.jpg' });
+  background-image: url(${ backGroundImageUrl });
   background-size: cover;
 
   > h2 {

@@ -1,15 +1,21 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useRouter } from "next/router";
 
-const Title:FC = () =>
-  <>
-    <Name>ー迷'sー</Name>
-    <ContentsWrap>
-      <Img src={process.env.basePath + "/images/karakuri.png"} alt="昔風からくり迷路の画像" />
-      <Catchphrase>江戸時代にタイムスリップ！？</Catchphrase>
-    </ContentsWrap>
-    <Discription>からくり迷路を体感せよ！！</Discription>
-  </>
+const Title:FC = () => {
+  const router = useRouter();
+  return (
+    <>
+      <Button onClick={() => router.back()}>＜元のページに戻る</Button>
+      <Name>ー迷'sー</Name>
+      <ContentsWrap>
+        <Img src={process.env.basePath + "/images/karakuri.png"} alt="昔風からくり迷路の画像" />
+        <Catchphrase>江戸時代にタイムスリップ！？</Catchphrase>
+      </ContentsWrap>
+      <Discription>からくり迷路を体感せよ！！</Discription>
+    </>
+  );
+}
 
 export default Title; 
 
@@ -59,5 +65,24 @@ const Catchphrase = styled.h2`
     border: 15px solid transparent;
     border-right: 15px solid #ffcc75;
     z-index: 0;
+  }
+`;
+
+const Button = styled.a`
+  border: 4px solid #ffffff;
+  margin-top: 4px;
+  border-radius: 150px;
+  background: #fff;
+  color: black;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 6px;
+
+  :hover {
+    color: #fff;
+    background: #1a1a1a;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 2px;
   }
 `;
