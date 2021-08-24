@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import Link   from 'next/link';
 
 const subContents = [
-  { image: '/images/newGreetings.png', name: '委員長挨拶', copy: '委員長たちの面白い挨拶を掲載' },
-  { image: '/images/newSchedule.png', name: '開催日時', copy: '最高の３日間のスケジュール' },
-  { image: '/images/newProgram.png', name: 'プログラム', copy: 'デジタルで見れるこだわりの一冊' },
-  { image: '/images/newCovid19.png', name: 'コロナ対策', copy: '感染症対策を徹底します' },
-  { image: '/images/newBlog.png', name: 'ブログ', copy: '事前の準備やイベントなどを配信' },
+  { image: '/images/newGreetings.png', name: '委員長挨拶', copy: '委員長たちの面白い挨拶を掲載', link: '/about#greeting' },
+  { image: '/images/newSchedule.png', name: '開催日時', copy: '最高の３日間のスケジュール', link: '/schedule' },
+  { image: '/images/newProgram.png', name: 'プログラム', copy: 'デジタルで見れるこだわりの一冊', link: '/program' },
+  { image: '/images/newCovid19.png', name: 'コロナ対策', copy: '感染症対策を徹底します', link: '/covid-19' },
+  { image: '/images/newBlog.png', name: 'ブログ', copy: '事前の準備やイベントなどを配信', link: '/blog' },
 ];
 
 subContents.forEach(v => v.image = process.env.basePath + v.image);
@@ -24,12 +24,12 @@ const SubContent = styled(props => <div { ...props }>
       .map((tup, i) =>
         <div key={ i }>
           {
-            tup.map(({ image, name, copy }) => <div key={ name }>
-              <a>
+            tup.map(({ image, name, copy, link }) => <div key={ name }>
+              <Link href={ link } passHref><a>
                 <img src={ image } alt={ name + 'のアイコン' }/>
                 <h3>{ name }</h3>
                 <p>{ copy }</p>
-              </a>
+              </a></Link>
             </div>)
           }
         </div>,
@@ -39,7 +39,7 @@ const SubContent = styled(props => <div { ...props }>
 </div>)`
   padding-block: 2rem;
   text-align: center;
-  background: black;
+  background: #1a1a1a;
   color: white;
 
   > h2 {

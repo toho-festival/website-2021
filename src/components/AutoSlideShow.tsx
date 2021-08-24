@@ -1,8 +1,6 @@
-import { FC }    from 'react';
-import { Fade } from 'react-slideshow-image';
+import { FC }                from 'react';
 import 'react-slideshow-image/dist/styles.css';
-import styled   from 'styled-components';
-import Image from 'next/image'
+import styled, { keyframes } from 'styled-components';
 
 const AutoSlideShow: FC = () => {
   return <Layout>

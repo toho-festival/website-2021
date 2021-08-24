@@ -3,10 +3,10 @@ import Link        from 'next/link';
 import styled      from 'styled-components';
 import { routes }  from '~/src/scripts/routes';
 
-const Menu: FC<{ display: boolean }> = ({ display }) => <Layout open={ display }>
+const Menu: FC<{ display: boolean, close: () => void }> = ({ display, close }) => <Layout open={ display }>
   <LinkList>
     { routes.map(({ key, logo, path }) =>
-      <Link href={path} passHref key={ path }><a>
+      <Link href={ path } passHref key={ path }><a onClick={() => close()}>
         <img src={ logo } alt="メニューのロゴ"/>
         <span>{ key }</span>
       </a></Link>)
@@ -21,7 +21,7 @@ const LinkList = styled.div`
   align-content: center;
 
   height: 100%;
-  
+
   overflow-y: auto;
 
   > a {
