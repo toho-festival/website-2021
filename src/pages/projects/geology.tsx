@@ -62,7 +62,7 @@ const Geology = () => {
     <Center>
       <Flex2>
         <Image src={process.env.basePath +"/images/mapIcon.png"} />
-        <Location>強化教室等　4F　地学教室　国語教室　太陽観測所にて</Location>
+        <Location>教科教室棟　4F　地学教室　国語教室　太陽観測所にて</Location>
       </Flex2>
     </Center>
 </Wrap>

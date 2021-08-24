@@ -12,6 +12,7 @@
   "license": "BSD-3-Clause",
   "private": false,
   "dependencies": {
+    "@babel/runtime": "^7.15.3",
     "@types/react-responsive": "^8.0.2",
     "babel-plugin-styled-components": "^1.13.2",
     "chart.js": "^3.4.1",
