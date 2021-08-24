@@ -16,3 +16,5 @@ export const routes: Route[] = [
   { logo: '/images/menu-schedule.jpg', key: 'ブログ', path: '/blog' },
   { logo: '/images/menu-schedule.jpg', key: '開催日時', path: '/schedule' },
 ];
+
+routes.forEach(r => r.logo = process.env.basePath + r.logo);
