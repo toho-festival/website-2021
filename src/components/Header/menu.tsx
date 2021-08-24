@@ -1,55 +1,50 @@
 import type { FC } from 'react';
-import Link from 'next/link';
-import styled from 'styled-components';
-import { routes } from '~/src/scripts/routes';
+import Link        from 'next/link';
+import styled      from 'styled-components';
+import { routes }  from '~/src/scripts/routes';
 
-const Menu: FC<{ display: boolean, toggle: () => void }> = ({ display, toggle }) => <Layout open={display}>
-  <Box>
-    {
-      routes.map(
-        ({ key, logo, path }) =>
-          <Align>
-            <Link href={path}>
-              <a>
-                <Flex>
-                  <Image src={logo} alt="メニューのロゴ" />
-                  <span key={key.toString()}><a onClick={toggle}><Anchor>{key}</Anchor></a></span>
-                </Flex>
-              </a>
-            </Link>
-          </Align>
-      )
+const Menu: FC<{ display: boolean, close: () => void }> = ({ display, close }) => <Layout open={ display }>
+  <LinkList>
+    { routes.map(({ key, logo, path }) =>
+      <Link href={ path } passHref key={ path }><a onClick={() => close()}>
+        <img src={ logo } alt="メニューのロゴ"/>
+        <span>{ key }</span>
+      </a></Link>)
     }
-  </Box>
+  </LinkList>
 </Layout>;
 
-const Box = styled.div`
-  margin-top: 3vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-`;
+const LinkList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 
-const Flex = styled.div`
-  display: inline;
-  flex-flow: column wrap;
-`;
+  height: 100%;
 
-const Align = styled.div`
-  text-align: center;
-  margin-top: 2vw;
-`;
+  overflow-y: auto;
 
-const Image = styled.img`
-  width: 70px;
-  height: auto;
-  border-radius: 100px;
-`;
+  > a {
+    display: block;
+    width: 9rem;
+    text-align: center;
+    padding: 1rem;
+    flex-shrink: 0;
+    min-height: 0;
 
-const Anchor = styled.p`
-  font-size: 1.5rem;
-  line-height: 3rem;
-  @media screen and (max-width: 730px) {
-    font-size: 0.8rem;
+    > img {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      margin-inline: auto;
+      object-fit: cover;
+      border-radius: 100px;
+    }
+
+    > span {
+      font-size: 1.25rem;
+      line-height: 2;
+    }
   }
 `;
 
@@ -58,26 +53,19 @@ const Layout = styled.nav<{ open: boolean }>`
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  color: rgba(255,255,255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 
-  display: block;
-  flex-flow: column wrap;
-  align-items: center;
-  overflow: hidden;
-
-  padding-top: 1rem;
-
-  background-color: rgba(0,0,0, 0.7);
-  transform: ${({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)'};
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: ${ ({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)' };
   transition: transform 0.3s ease-in-out;
 `;
 
 const Attention = styled.p`
+  position: absolute;
   text-align: center;
-  margin-left:7%;
-  margin-right:7%;
+  padding-inline: 3rem;
 `;
 
 export default Menu;
