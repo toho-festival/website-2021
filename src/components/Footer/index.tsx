@@ -1,24 +1,31 @@
-import type { FC }      from 'react';
-import Link             from 'next/link';
-import styled           from 'styled-components';
+import type { FC } from 'react';
+import Link from 'next/link';
+import styled from 'styled-components';
 import { footerRoutes } from '~/src/scripts/footerRoutes';
 
 const backGroundImageUrl = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg"
 
-const Footer: FC = () => <Wrap>
-  <FooterContent>
-    <Theme>TOHO Festival 70th</Theme>
-    <Author>製作/デザイン：第70回桐朋祭プログラム委員会</Author>
-      <CopyRight>
-        &copy; 2021 TOHOFES70th-committee built this page.
-      </CopyRight>
-    {/* {
+const Footer: FC = () => {
+
+  return (
+    <Wrap>
+      <FooterContent>
+        <Theme>TOHO Festival 70th</Theme>
+        <Author>製作/デザイン：第70回桐朋祭プログラム委員会</Author>
+        <CopyRight>
+          &copy; 2021 TOHOFES70th-committee built this page.
+        </CopyRight>
+        {/* {
       footerRoutes.map(
         (sitemap) => <Sitemap key={ sitemap.toString() }>{ sitemap }</Sitemap>,
       )
     } */}
-  </FooterContent>
-</Wrap>;
+      </FooterContent>
+    </Wrap>
+  );
+}
+
+export default Footer;
 
 const Wrap = styled.div`
   margin-top: 6%;
@@ -58,5 +65,4 @@ const CopyRight = styled.small`
   font-size: 0.5rem;
   margin-bottom: 1%;
 `;
-export default Footer;
 
