@@ -7,7 +7,7 @@ const Kurineo = () => {
   return (
     <>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
-      <Center href="https://urutoragood.wixsite.com/cryneo">クリネオ公式のホームページ</Center>
+      <Center href="https://urutoragood.wixsite.com/cryneo">＞クリネオ公式のホームページ</Center>
     </>
   );
 }

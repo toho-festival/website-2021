@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useRouter } from "next/router";
 
 const Computer:FC = () => {
+  const router = useRouter();
   return (
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
@@ -24,7 +25,7 @@ const Computer:FC = () => {
       <Comment>それでは、数学教室でお待ちしています！</Comment>
       <SubTitle>部員が製作した絵</SubTitle>
       <CreateImage src={process.env.basePath + "/images/tcc2.jpg"} alt="生徒が作成した絵" />
-    </Wrap>;
+    </Wrap>
   );
 }
 
