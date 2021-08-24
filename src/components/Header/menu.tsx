@@ -10,10 +10,10 @@ const Menu: FC<{ display: boolean, toggle: () => void }> = ({ display, toggle })
         ({ key, logo, path }) =>
           <Align>
             <Link href={path}>
-              <a>
+              <a onClick={toggle}>
                 <Flex>
                   <Image src={logo} alt="メニューのロゴ" />
-                  <span key={key.toString()}><a onClick={toggle}><Anchor>{key}</Anchor></a></span>
+                  <span key={key.toString()}><Anchor>{key}</Anchor></span>
                 </Flex>
               </a>
             </Link>
