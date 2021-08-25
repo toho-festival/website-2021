@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
   }
 }
 
-const Map = ({ allPostsData }) => {
+const Map = ({ allPostsData }:{allPostsData:AllPropsDataType[]}) => {
   return (
     <Wrap>
       <Tab>
