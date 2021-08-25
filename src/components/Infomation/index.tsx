@@ -1,11 +1,11 @@
 import { FC } from "react";
 import styled from "styled-components";
-import AfterEvacution from "./afterEvacution";
-import Attention from "./attenton";
+import AfterEvacution from "./AfterEvacution";
+import Attention from "./Attenton";
 import Disaster from "./disaster";
-import Evacuation from "./evacuation";
-import LostChild from "./lostChild";
-import LostProperty from "./lostProperty";
+import Evacuation from "./Evacuation";
+import LostChild from "./LostChild";
+import LostProperty from "./LostChild";
 import SuspiciousObject from "./SuspiciousObject";
 import Table from "./tableContents"
 
