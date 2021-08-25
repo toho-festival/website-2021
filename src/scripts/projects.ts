@@ -20,7 +20,7 @@ export const getSortedPostsData = () => {
     }
   })
 
-  return allPostsData.sort(({ categoly: a }, { categoly: b }) => {
+  return allPostsData.sort(({ id: a }, { id: b }) => {
     if (a < b) {
       return 1
     } else if (a > b) {
