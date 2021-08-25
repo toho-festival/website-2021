@@ -2,11 +2,24 @@ import { getAllPostIds, getPostData } from "~/src/scripts/projects";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 
-interface CommonData {
+type CommonData = {
+  categoly:string;
+  id:string;
+  photo:string;
+  title:string;
+  textup:string;
+  schedule1:string;
+  schedule2:string;
+  building:string;
+  floor:string;
+  location:string;
+}
+
+type ParamsType = {
   id:string;
 }
 
-const CommonProjects = ({ postData }) => {
+const CommonProjects = ({ postData }:{postData:CommonData}) => {
   const router = useRouter();
   return (
     <Wrap>
@@ -15,7 +28,7 @@ const CommonProjects = ({ postData }) => {
     </Indent>
     <Flex>
       <Symbol>
-        {postData.categoly != 3 ? 
+        {postData.categoly != "3" ? 
           <Img src={process.env.basePath + "/images/photo-" + postData.id + ".jpg"} alt="宣材写真"/>
           :
           <Img src={process.env.basePath + postData.photo} alt="宣材写真"/>
@@ -51,8 +64,8 @@ export const getStaticPaths = async() => {
   }
 }
 
-export const getStaticProps = async({ params }) => {
-  const postData: CommonData = getPostData(params.id)
+export const getStaticProps = async({ params }:{params:ParamsType}) => {
+  const postData = getPostData(params.id)
   return {
     props: {
       postData

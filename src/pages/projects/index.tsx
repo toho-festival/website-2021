@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import React from "react";
 import styled from 'styled-components';
 import { getSortedPostsData } from '~/src/scripts/projects';
@@ -37,7 +36,7 @@ export async function getStaticProps() {
 const backGroundImageUrl04 = process.env.basePath + "/images/tesukiwashi-pattern-04.jpg";
 const backGroundImageUrl08 = process.env.basePath + "/images/tesukiwashi-pattern-08.jpg";
 
-const CommonProjects: FC = ({ allPostsData }) => {
+const CommonProjects = ({ allPostsData }:{allPostsData:AllStagePropsDataType[]}) => {
   const router = useRouter();
   const {
     query: { tab }
