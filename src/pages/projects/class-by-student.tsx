@@ -17,7 +17,7 @@ const ClassByStudent = () => {
 					<NomalCircle>る</NomalCircle>
 				</Top>
 				<Bottom>
-					<ClassImage src="/classByStudents.png" />
+					<ClassImage src={ process.env.basePath + "/images/classByStudents.png" } />
 					<BigCircle>授</BigCircle>
 					<NomalCircle>業</NomalCircle>
 				</Bottom>
