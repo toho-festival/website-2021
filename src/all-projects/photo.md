@@ -5,6 +5,6 @@ logo: '/images/newExperience.png'
 textup: '今年四月に新しくできた写真同好会です！鳥や鉄道、マクロなどを中心に素晴らしい写真を展示していますので是非お越しください！'
 building: '高校棟'
 floor: '3' 
-location: '化学講義室 化学実験室A,B'
+location: '2-E'
 categoly: '2'
 ---

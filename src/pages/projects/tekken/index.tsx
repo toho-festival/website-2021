@@ -28,6 +28,7 @@ const Tekken: FC = () => {
       <Img3 src={process.env.basePath + "/images/tekkenThird.jpeg"} isMain={false}></Img3>
       <Explain>運転シュミレーター、クイズなど体験できるものを用意し、研究報告として部報の配布をを行っています。</Explain>
       <Notice><SubTitle>＜皆様に言いたいこと＞</SubTitle><Top>桐朋祭にお越しの際は</Top><Bottom>是非足を運んでみてください！</Bottom></Notice>
+      <Location>高校棟 2階 3-A 3-Bにて</Location>
     </Layout>
   );
 }
@@ -38,6 +39,7 @@ const Layout = styled.article`
   background-color:#000000;
   color:white;
   font-family: "ヒラギノ角ゴシック";
+  padding-top: 3%;
 `;
 
 const Title = styled.h1`
@@ -118,4 +120,8 @@ const Button = styled.a`
   @media screen and (max-width: 767px) {
     padding: 2px;
   }
+`;
+
+const Location = styled.div`
+  text-align: center;
 `;
