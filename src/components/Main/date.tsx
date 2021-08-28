@@ -28,7 +28,7 @@ const Date = styled(props => <section { ...props }>
   <p>
     <span>※日曜日は午前と午後のⅡ部制となっています。</span>
     <span>※ご来場いただく際はスリッパをお持ち下さい。</span>
-    <span>※今年度の桐朋祭は生徒と保護者のみとなります</span>
+    <span>※今年度の桐朋祭は生徒のみとなります</span>
   </p>
 </section>)`
   padding-block: 2rem;
