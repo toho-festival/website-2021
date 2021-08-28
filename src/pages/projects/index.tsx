@@ -50,7 +50,7 @@ const CommonProjects = ({ allPostsData }:{allPostsData:AllStagePropsDataType[]})
       <TabContainer>
         <TabHead>
           <Tab selected={isTabOne}>
-            <Link href="">
+            <Link href="/projects">
               <a>一般参加団体</a>
             </Link>
           </Tab>
