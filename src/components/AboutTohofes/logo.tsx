@@ -6,8 +6,8 @@ const LogoTOHO:FC = () => {
     <>
       <Center><CategolyTitle>今年の大垂幕・ロゴのデザイン</CategolyTitle></Center>
       <ImgWrap>
-        <Img1 src="/95839.png" />
-        <Img2 src={ process.env.basePath + "/images/logo.png"} alt="" />
+        <Img1 src={ process.env.basePath + "/images/95839.png"} alt="大垂幕のデザイン" />
+        <Img2 src={ process.env.basePath + "/images/logo.png"} alt="桐朋祭のロゴ" />
       </ImgWrap>
       <Creater>デザイン考案者：　装飾委員会委員長　内山麗央</Creater>
       <Flex>
@@ -59,8 +59,7 @@ const Img2 = styled.img`
 `;
 
 const Img1 = styled.img`
-  width:35vw;
-  margin-left:-7vw;
+  max-width:25vw;
 `;
 
 const Creater = styled.h3`
