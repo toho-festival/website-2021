@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FC } from 'react';
-import {greeting} from "~/src/scripts/about";
+import { greeting } from "~/src/scripts/about";
 
 const GreetingTOHO:FC = () => {
     return(
