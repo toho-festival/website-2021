@@ -5,7 +5,7 @@ import Attention from "./Attenton";
 import Disaster from "./disaster";
 import Evacuation from "./Evacuation";
 import LostChild from "./LostChild";
-import LostProperty from "./LostChild";
+import LostProperty from "./LostProperty";
 import SuspiciousObject from "./SuspiciousObject";
 import Table from "./tableContents"
 
