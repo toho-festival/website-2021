@@ -26,6 +26,8 @@ export default Greeting;
 
 const Wrap = styled.div`
   background-color:#ffcc00;
+  padding-top: 3%;
+  padding-left: 3%;
 `;
 
 const Name = styled.h1`

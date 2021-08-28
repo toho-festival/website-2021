@@ -37,6 +37,7 @@ const Wrap = styled.div`
   background-image: url(${backGroundUrl});
   color: white;
   padding-left: 5%;
+  padding-top: 3%;
 `;
 
 const ClubName = styled.h1`

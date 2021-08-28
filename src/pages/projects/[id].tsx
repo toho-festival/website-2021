@@ -80,13 +80,14 @@ const Wrap = styled.div`
   color: white;
 `;
 
-const Indent = styled.span`
+const Indent = styled.div`
+  padding-top: 3%;
   padding-left: 3%;
 `;
 
 const Button = styled.a`
   border: 4px solid #ffffff;
-  margin-top: 4px;
+  margin-top: 10px;
   border-radius: 150px;
   background: #fff;
   color: black;
