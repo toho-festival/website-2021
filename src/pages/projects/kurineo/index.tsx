@@ -5,14 +5,18 @@ import { useRouter } from "next/router";
 const Kurineo = () => {
   const router = useRouter();
   return (
-    <>
+    <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Center href="https://urutoragood.wixsite.com/cryneo">＞クリネオ公式のホームページ</Center>
-    </>
+    </Wrap>
   );
 }
 
 export default Kurineo;
+
+const Wrap = styled.div`
+  padding: 3%;
+`;
 
 const Center = styled.a`
   position: absolute;

@@ -32,7 +32,7 @@ const Nihutei:FC = () => {
       </Conversation>
       <Title>◎部員よりひとこと</Title>
       <Comment>
-        二歩亭に興味を持っていただきありがとうございます。二歩亭では幅広い戦術・気力の部員んを揃えていますので、ご希望があれば受付時に仰っていただれば対応します。また、喚起を行っているため室内が冷えることが予想されますゆえ、暖かい格好でご来場ください。わたしたちは　自信をもって将棋を指しています。皆さんもぜひ、大きな自信を携えてご来場ください！
+        二歩亭に興味を持っていただきありがとうございます。二歩亭では幅広い戦術・棋力の部員を揃えていますので、ご希望があれば受付時に仰っていただれば対応します。また、換気を行っているため室内が冷えることが予想されますゆえ、暖かい格好でご来場ください。わたしたちは自信をもって将棋を指しています。皆さんもぜひ、大きな自信を携えてご来場ください！
       </Comment>
     </Wrap>
   );
@@ -42,6 +42,8 @@ export default Nihutei;
 
 const Wrap = styled.div`
   background-color: white;
+  padding-top: 3%;
+  padding-left: 3%;
 `;
 
 const Main = styled.div`
@@ -83,6 +85,9 @@ const Conversation = styled.div`
 `;
 
 const Right = styled.div`
+  float: right;
+  margin-left: 62px;
+  background: white;
   position: relative;
   display: inline-block;
   max-width: 192px;
@@ -92,7 +97,6 @@ const Right = styled.div`
   overflow-wrap: break-word;
   clear: both;
   box-sizing: content-box;
-  float: right;
   margin-right: 12px;
   background: #7adc40;
   ::after {
@@ -117,8 +121,8 @@ const Left = styled.div`
   overflow-wrap: break-word;
   clear: both;
   box-sizing: content-box;
-  float: left;
   margin-left: 62px;
+  float: left;
   background: white;
   ::after {
     position: absolute;
@@ -143,22 +147,24 @@ const Icon = styled.img`
 `;
 
 const Comment = styled.div`
-
+  padding-left: 3%;
+  padding-right: 3%;
 `;
 
 const Button = styled.a`
-  border: 4px solid #ffffff;
+  border: 4px solid #1a1a1a;
   margin-top: 4px;
   border-radius: 150px;
   background: #fff;
-  color: black;
+  background: #1a1a1a;
+  color: #fff;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   padding: 6px;
-
+  
   :hover {
-    color: #fff;
-    background: #1a1a1a;
+    color: #1a1a1a;
+    background: #fff;
   }
   @media screen and (max-width: 767px) {
     padding: 2px;

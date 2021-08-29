@@ -34,6 +34,7 @@ export default MusicClub;
 const Wrap = styled.div`
   background-color: white;
   padding-left: 2%;
+  padding-top: 3%;
 `;
 
 const Title = styled.h1`
@@ -65,18 +66,18 @@ const Url = styled.a`
 `;
 
 const Button = styled.a`
-  border: 4px solid #ffffff;
+  border: 4px solid #1a1a1a;
   margin-top: 4px;
   border-radius: 150px;
-  background: #fff;
-  color: black;
+  background: #1a1a1a;
+  color: #fff;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   padding: 6px;
 
   :hover {
-    color: #fff;
-    background: #1a1a1a;
+    color: #1a1a1a;
+    background: #fff;
   }
   @media screen and (max-width: 767px) {
     padding: 2px;

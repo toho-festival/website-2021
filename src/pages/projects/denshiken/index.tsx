@@ -10,6 +10,7 @@ const Denshiken = () => {
       <Img src={process.env.basePath + "/images/denshiken1.jpg"} alt="電子研の個別ページ1" />
       <Img src={process.env.basePath + "/images/denshiken2.jpg"} alt="電子研の個別ページ2" />
       <Img src={process.env.basePath + "/images/denshiken3.jpg"} alt="電子研の個別ページ3" />
+      <Location>高校教室棟 3階 2-Gにて</Location>
     </>
   );
 }
@@ -37,4 +38,9 @@ const Button = styled.a`
   @media screen and (max-width: 767px) {
     padding: 2px;
   }
+`;
+
+const Location = styled.div`
+  text-align: center;
+  color: white;
 `;

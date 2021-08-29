@@ -48,6 +48,7 @@ const Theme = styled.h2`
 const Info = styled.div`
   display: flex;
   list-style: none;
+  padding: 3%;
 `;
 
 const Box = styled.span`
@@ -66,6 +67,7 @@ const Content = styled.span`
 
 const Text = styled.p`
   color: white;
+  padding: 3%;
 `;
 
 const Drive = styled.h2`

@@ -30,7 +30,7 @@ const Map = ({ allPostsData }:{allPostsData:AllPropsDataType[]}) => {
         <div><Link href="/map"><Anchor color="blue">1F</Anchor></Link></div>
       </Tab>
       <Flex>
-        <MapImg src={process.env.basePath + "/images/f1.png"} />
+        <MapImg src={process.env.basePath + "/images/f4.png"} />
         <FloorProject>
           <Title>４階　参加団体</Title>
           {allPostsData.map(({ id, floor, title, building }: AllPropsDataType) => (

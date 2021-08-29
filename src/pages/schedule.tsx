@@ -2,34 +2,35 @@ import { FC } from 'react';
 import styled from 'styled-components';
 
 const Schedule: FC = () => {
-    return(
-      <Wrap>
+  return (
+    <Wrap>
+      <Center>
+        <Title>開催日時</Title>
+      </Center>
+      <Contents>
+        <Detail>今年度の桐朋祭はコロナウイルス蔓延防止のため<Important>開催日時が例年と異なって</Important>います。<p>具体的な日時は以下の通りです。よくご確認の上でご来場ください</p></Detail>
         <Center>
-          <Title>開催日時</Title>
+          <Date>
+            <Frame>
+              <p>９<Weaken>月</Weaken>１１<Weaken>日</Weaken>(<Color color="blue">土</Color>) 13:00~17:00</p>
+              <p>９<Weaken>月</Weaken>１２<Weaken>日</Weaken>(<Color color="red">日</Color>) 09:30～12:00　13:00～17:00</p>
+              <p>９<Weaken>月</Weaken>１３<Weaken>日</Weaken>(<Color color="black">月</Color>) 09:30～13:00</p>
+            </Frame>
+          </Date>
         </Center>
-              <Contents>
-                  <Detail>今年度の桐朋祭はコロナウイルス蔓延防止のため<Important>開催日時が例年と異なって</Important>います。<p>具体的な日時は以下の通りです。よくご確認の上でご来場ください</p></Detail>
-                  <Center>
-            <Date>
-              <Frame>
-                <p>９<Weaken>月</Weaken>１１<Weaken>日</Weaken>(<Color color="blue">土</Color>) 13:00~17:00</p>
-                <p>９<Weaken>月</Weaken>１２<Weaken>日</Weaken>(<Color color="red">日</Color>) 09:30～12:00　13:00～17:00</p>
-                <p>９<Weaken>月</Weaken>１３<Weaken>日</Weaken>(<Color color="black">月</Color>) 09:30～13:00</p>
-              </Frame>
-            </Date>
-          </Center>
-          <Center>
-            <Attentions>
-              <p>※日曜日は午前と午後のⅡ部制です</p>
-              <p>※ご来場いただく際はスリッパをお持ち下さい。</p>
-            </Attentions>
-          </Center>
-              </Contents>
         <Center>
-          <Image  src={process.env.basePath + "/images/rainy-cool-guy.png"}/>
+          <Attentions>
+            <p>※日曜日は午前と午後のⅡ部制となっています。</p>
+            <p>※ご来場いただく際はスリッパをお持ち下さい。</p>
+            <p>※今年度の桐朋祭は生徒のみとなります</p>
+          </Attentions>
         </Center>
-      </Wrap>
-    );
+      </Contents>
+      <Center>
+        <Image src={process.env.basePath + "/images/rainy-cool-guy.png"} />
+      </Center>
+    </Wrap>
+  );
 }
 
 export default Schedule;
@@ -85,7 +86,7 @@ const Frame = styled.div`
   text-align: initial;
 `;
 
-const Weaken  = styled.strong`
+const Weaken = styled.strong`
   font-size: 25px;
   @media screen and (max-width: 1230px) {
     font-size: 10px;

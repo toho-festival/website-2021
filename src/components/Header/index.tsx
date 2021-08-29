@@ -33,9 +33,9 @@ const Header = styled(props => {
   align-items: stretch;
 
   z-index: 100;
-  background-image: url(${ backgroundImageUrl });
   border-bottom: 2px solid #1a1a1a;
   padding: .5rem 1rem;
+  background-color: white;
 
   > div {
     &:first-child {
