@@ -73,8 +73,8 @@ const Project = styled(props => <div { ...props }>
         > h3 {
           font-size: 1rem;
           color: transparent;
-          background: linear-gradient(to top, #ffffdb, #a16422);
-          background: -webkit-linear-gradient(to top, #ffffdb, #a16422);
+          background: linear-gradient(to top, #bf9d6d, #bf9d6d);
+          background: -webkit-linear-gradient(to top, #bf9d6d, #bf9d6d);
           -webkit-background-clip: text;
         }
 
