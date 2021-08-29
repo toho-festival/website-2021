@@ -1,31 +1,35 @@
-import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { firestore } from '~/firebase/client';
 import ReactMarkdown from 'react-markdown';
+// import { useBlogCollection } from '~/src/scripts/blog'
 
-type Props = {
-  author: string,
-  content: string,
-  release: Date,
-  title: string,
- }
-
-const Blog: FC<Props> = (props) => {
-  return (
+const Blog = () => {
+  // const returned = useBlogCollection();
+  // if (returned[1]) return <Wrap>Loading...</Wrap>;
+  // if (returned[2] != null) return <Wrap>{ `Error: ${ returned[2].message }` }</Wrap>;
+  // const [events] = returned;
+  
+  return<>
     <Wrap>
-      {/* <Grid>
-        <Center><Title>{props.title}</Title></Center>
-      </Grid>
-      <Adjustment>
-      </Adjustment>
-      <Author>&emsp;著者:{props.author}</Author>
-      <Box>
-        <ReactMarkdown children={props.content} />
-      </Box> */}
+      {/* {events.map(event => {
+        const { author, title, content } = event;
+        return <Wrap key={title}>
+          <Grid>
+            <Center><Title>{title}</Title></Center>
+          </Grid>
+          <Adjustment>
+          </Adjustment>
+          <Author>&emsp;著者:{author}</Author>
+          <Box>
+            <ReactMarkdown children={content} />
+          </Box>
+        </Wrap>
+      })} */}
       <Creating>現在記事を作成中です！</Creating>
     </Wrap>
-  )
+  </>
 }
+  
+export default Blog;
 
 const Wrap = styled.div`
   color:white;
@@ -47,47 +51,35 @@ const Adjustment = styled.div`
   width: 100%;
 `;
 
-const SubTitle = styled.h2`
-color: white;
-font-size:60px;
-margin-left: 70px;
-display: inline-block;
-border-bottom: 3px solid #bf9d6d;
-`;
 
 const Grid = styled.div`
   text-align: center;
 `;
 
-const Image = styled.img`
-  text-align: center;
-  width: 50%;
-`;
-
 const Title = styled.h1`
-display: inline-block;
-color: white;
-margin-top: 5vw;
-margin-bottom: 10vw;
-border-bottom: 8px solid #bf9d6d;
-display: center;
-&::after {
+  display: inline-block;
+  color: white;
+  margin-top: 5vw;
+  margin-bottom: 10vw;
+  border-bottom: 8px solid #bf9d6d;
+  display: center;
+  &::after {
     content: "";
-    /* display: block; */
-    margin-top: -10px;
-    margin:left;
-    width: 400px; 
-    /* border-bottom: 10px solid #85d1d0;  */
-}
+  /* display: block; */
+  margin-top: -10px;
+  margin:left;
+  width: 400px;
+  /* border-bottom: 10px solid #85d1d0;  */
+  }
 `;
 
 const Box = styled.p`
-border-radius:20px;
-border: solid 10px white;
-background-color: white;
-margin: 0 50px 10vw 70px;
-padding: 3px 3px 3px 3px;
-word-wrap: break-word;
+  border-radius:20px;
+  border: solid 10px white;
+  background-color: white;
+  margin: 0 50px 10vw 70px;
+  padding: 3px 3px 3px 3px;
+  word-wrap: break-word;
 `;
 
 const Creating = styled.div`
@@ -97,4 +89,3 @@ const Creating = styled.div`
   transform: translateX(-50%)translateY(-50%);
 `;
 
-export default Blog;

@@ -13,7 +13,6 @@ export default Greeting;
 
 const Wrap = styled.div`
   margin-top: 8vw;
-  margin-bottom: 8vw;
 `;
 
 const Title = styled.h2`
@@ -28,4 +27,5 @@ const Red = styled.span`
 const Greetings = styled.h3`
   font-size:2vw;
   margin-left:7vw;
+  padding-bottom: 5%;
 `;

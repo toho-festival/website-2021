@@ -30,6 +30,7 @@ export default Mmt
 const Wrap = styled.div`
   background-color: white;
   padding-left: 5%;
+  padding-top: 3%;
 `;
 
 const GroupName = styled.h1`
@@ -82,18 +83,18 @@ const Music = styled.div`
 `;
 
 const Button = styled.a`
-  border: 4px solid #ffffff;
+  border: 4px solid #1a1a1a;
   margin-top: 4px;
   border-radius: 150px;
-  background: #fff;
-  color: black;
+  background: #1a1a1a;
+  color: #fff;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   padding: 6px;
 
   :hover {
-    color: #fff;
-    background: #1a1a1a;
+    color: #1a1a1a;
+    background: #fff;
   }
   @media screen and (max-width: 767px) {
     padding: 2px;

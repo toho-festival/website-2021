@@ -7,7 +7,9 @@ const BiologyClub: FC = () => {
 
   return (
     <Wrap>
-      <Button onClick={() => router.back()}>＜元のページに戻る</Button>
+      <ButtonWrap>
+        <Button onClick={() => router.back()}>＜元のページに戻る</Button>
+      </ButtonWrap>
       <Main>
         <Title>生物部</Title>
         <Description>
@@ -47,6 +49,7 @@ const BiologyClub: FC = () => {
           </ImgContent>
         </MainContent>
       <Comment>全力で準備するので是非来て下さい</Comment>
+      <Location>教科教室棟 4階 生物実験室A・Bにて</Location>
     </Wrap>
   );
 }
@@ -111,7 +114,7 @@ const Legend = styled.p`
 `;
 
 const DisplayContent = styled.li`
-
+  padding-bottom: 2%;
 `;
 
 const ImgContent = styled.div`
@@ -141,20 +144,29 @@ const Comment = styled.h1`
 `;
 
 const Button = styled.a`
-  border: 4px solid #ffffff;
+  border: 4px solid #1a1a1a;
   margin-top: 4px;
   border-radius: 150px;
-  background: #fff;
-  color: black;
+  background: #1a1a1a;
+  color: #fff;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   padding: 6px;
 
   :hover {
-    color: #fff;
-    background: #1a1a1a;
+    color: #1a1a1a;
+    background: #fff;
   }
   @media screen and (max-width: 767px) {
     padding: 2px;
   }
+`;
+
+const ButtonWrap = styled.div`
+  padding-top: 3%;
+  padding-bottom: 3%;
+`;
+
+const Location = styled.div`
+  text-align: center;
 `;

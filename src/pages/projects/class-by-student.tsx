@@ -17,7 +17,7 @@ const ClassByStudent = () => {
 					<NomalCircle>る</NomalCircle>
 				</Top>
 				<Bottom>
-					<ClassImage src="/classByStudents.png" />
+					<ClassImage src={ process.env.basePath + "/images/classByStudents.png" } />
 					<BigCircle>授</BigCircle>
 					<NomalCircle>業</NomalCircle>
 				</Bottom>
@@ -49,6 +49,8 @@ export default ClassByStudent;
 const Layout = styled.div`
 	background-color:white;
 	background: linear-gradient(140deg, white, white 10%, yellow 10%, yellow 12%, white 12%,  white 20%, yellow 20%, yellow 22%, white 22%, white );
+	padding-left: 3%;
+	padding-top: 3%;
 `;
 
 const Organizer = styled.div`
@@ -140,18 +142,18 @@ const Indent = styled.div`
 `;
 
 const Button = styled.a`
-  border: 4px solid #ffffff;
+  border: 4px solid #1a1a1a;
   margin-top: 4px;
   border-radius: 150px;
-  background: #fff;
-  color: black;
+  background: #1a1a1a;
+  color: #fff;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   padding: 6px;
 
   :hover {
-    color: #fff;
-    background: #1a1a1a;
+    color: #1a1a1a;
+    background: #fff;
   }
   @media screen and (max-width: 767px) {
     padding: 2px;

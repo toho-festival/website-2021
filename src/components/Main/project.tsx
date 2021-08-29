@@ -5,6 +5,7 @@ const projects = [
   { id  : 'ExperienceProject', icon: '/images/newExperience.png', name: '体験型企画', copy: '体験で刻み込む最高の思い出', link: '/projects' },
   { id: 'ExhibitProject', icon: '/images/newExhibit.png', name: '展示企画', copy: '個性の爆発', link: '/projects#exhibit' },
   { id: 'MusicProject', icon: '/images/newMusic.png', name: '音響企画', copy: '桐朋生の奏でる最高のMUSIC', link: '/projects#music' },
+  { id: 'StageProject', icon: '/images/newStage.png', name: 'ステージ企画', copy: '最高のエンターテイメント', link: '/projects?tab=2' },
 ];
 
 projects.forEach(v => v.icon = process.env.basePath + v.icon);
@@ -15,7 +16,7 @@ const Project = styled(props => <div { ...props }>
     {
       projects.map(({ id, icon, name, copy, link }) => <Link href={ link } passHref key={ id }><a>
           <div>
-            <img src={ process.env.basePath + icon } alt={ name + 'のアイコン' }/>
+            <img src={ icon } alt={ name + 'のアイコン' }/>
           </div>
           <div>
             <h3>{ name }</h3>
@@ -72,8 +73,8 @@ const Project = styled(props => <div { ...props }>
         > h3 {
           font-size: 1rem;
           color: transparent;
-          background: linear-gradient(to top, #ffffdb, #a16422);
-          background: -webkit-linear-gradient(to top, #ffffdb, #a16422);
+          background: linear-gradient(to top, #bf9d6d, #bf9d6d);
+          background: -webkit-linear-gradient(to top, #bf9d6d, #bf9d6d);
           -webkit-background-clip: text;
         }
 

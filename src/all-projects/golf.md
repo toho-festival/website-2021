@@ -1,5 +1,5 @@
 ---
-title: '帰ってきたPutt×2'    
+title: '帰ってきたPutt×2ゴルフ'    
 photo: '/images/photoGolf.jpg'
 logo: '/images/newExperience.png'
 textup: 'いつの間にか無くなっていた桐朋祭名物パターゴルフがついに復活！！最初で最後の復活を君は目にする。' 

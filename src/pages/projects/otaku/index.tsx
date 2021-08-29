@@ -27,6 +27,7 @@ export default Otaku;
 
 const Wrap = styled.div`
   padding-left: 3%;
+  padding-top: 3%;
   color: white;
 `;
 
