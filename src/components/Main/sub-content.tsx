@@ -5,7 +5,6 @@ const subContents = [
   { image: '/images/newGreetings.png', name: '委員長挨拶', copy: '委員長たちの面白い挨拶を掲載', link: '/about#greeting' },
   { image: '/images/newSchedule.png', name: '開催日時', copy: '最高の３日間のスケジュール', link: '/schedule' },
   { image: '/images/newProgram.png', name: 'プログラム', copy: 'デジタルで見れるこだわりの一冊', link: '/program' },
-  { image: '/images/newCovid19.png', name: 'コロナ対策', copy: '感染症対策を徹底します', link: '/covid-19' },
   { image: '/images/newBlog.png', name: 'ブログ', copy: '事前の準備やイベントなどを配信', link: '/blog' },
 ];
 
