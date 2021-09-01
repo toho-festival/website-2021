@@ -29,8 +29,8 @@ const ClassByStudent = () => {
 			</Schedule>
 			<Date>日曜日</Date>
 			<Schedule>
-				<li>一限・・・11:00~ <Indent>「突然ですが、鳥を語ってもいいですか？」<p>先生:西田康平</p></Indent></li>
-				<li>二限・・・14:00~ <Indent>「素数〜『素』晴らしい『数』を知ろう〜」<p>先生:小池翔大</p></Indent></li>
+				{/* <li>一限・・・11:00~ <Indent>「突然ですが、鳥を語ってもいいですか？」<p>先生:西田康平</p></Indent></li>
+				<li>二限・・・14:00~ <Indent>「素数〜『素』晴らしい『数』を知ろう〜」<p>先生:小池翔大</p></Indent></li> */}
 				<li>三限・・・15:00~ <Indent>「成田空港と三里塚闘争」<p>先生:鈴木快晴</p></Indent></li>
 			</Schedule>
 			<Where>場所:関心ラウンジ</Where>
