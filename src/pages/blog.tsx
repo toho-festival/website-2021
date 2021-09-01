@@ -24,7 +24,7 @@ const Blog = () => {
           </Box>
         </Wrap>
       })} */}
-      <Creating>現在記事を作成中です！</Creating>
+      <Center>現在記事を作成中です！</Center>
     </Wrap>
   </>
 }
@@ -82,10 +82,10 @@ const Box = styled.p`
   word-wrap: break-word;
 `;
 
-const Creating = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%)translateY(-50%);
-`;
+// const Creating = styled.div`
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translateX(-50%)translateY(-50%);
+// `;
 
