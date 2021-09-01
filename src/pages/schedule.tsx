@@ -21,7 +21,6 @@ const Schedule: FC = () => {
         <Center>
           <Attentions>
             <p>※日曜日は午前と午後のⅡ部制となっています。</p>
-            <p>※ご来場いただく際はスリッパをお持ち下さい。</p>
             <p>※今年度の桐朋祭は生徒のみとなります</p>
           </Attentions>
         </Center>
@@ -117,4 +116,7 @@ const Attentions = styled.section`
   font-size:0.8rem;
   display: inline-block;
   text-align: initial;
+  :nth-child(2n) {
+    font-size:1rem;
+  }
 `;
