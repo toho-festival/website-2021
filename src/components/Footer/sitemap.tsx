@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link   from 'next/link';
 
 const projects = [
-  { id  : 'Projects', icon: '/images/newExperience.png', name: 'ステージ企画', link: '/projects?tab=2'},
+    { id  : 'Projects', icon: '/images/newExperience.png', name: 'ステージ企画', link: '/projects?tab=2'},
     { id  : 'Projects', icon: '/images/newExperience.png', name: '一般参加団体', link: '/projects'},
     { id  : 'ExperienceProject', icon: '/images/newExperience.png', name: '　>体験型企画', link: '/projects' },
     { id: 'ExhibitProject', icon: '/images/newExhibit.png', name: '　>展示企画', link: '/projects#exhibit' },
@@ -16,7 +16,6 @@ const information = [
   { id: 'newestInfo', icon: '/images/menu-news.jpg', name: '最新情報', link: '/news' },
   { id: 'map', icon: '/images/menu-map.jpg', name: 'マップ', link: '/map' },
   { id: 'program', icon: '/images/menu-program.jpg', name: 'プログラム', link: '/program' },
-  { id: 'covid19', icon: '/images/menu-covid19.jpg', name: 'コロナ対策', link: '/covid19' },
   { id: 'blog', icon: '/images/menu-schedule.jpg', name: 'ブログ', link: '/blog' },
   { id: 'schedule', icon: '/images/menu-schedule.jpg', name: '開催日時', link: '/schedule' },
 ];

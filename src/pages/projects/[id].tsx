@@ -49,7 +49,7 @@ const CommonProjects = ({ postData }:{postData:CommonData}) => {
     <Center>
       <Flex2>
         <Image src={process.env.basePath +"/images/mapIcon.png"} />
-        <Location>{postData.building} {postData.floor}階 {postData.location}にて</Location>
+        <Location>{postData.building} {postData.floor}階 {postData.location}</Location>
       </Flex2>
     </Center>
 </Wrap>

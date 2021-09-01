@@ -236,10 +236,10 @@ const CommonProjects = ({ allPostsData }:{allPostsData:AllStagePropsDataType[]})
               {allPostsData.map(({ id, title, categoly,textup }: AllStagePropsDataType) => (
                   categoly == "5" ?
                     <StageContents>
-                      <ProjectContent key={id}>
+                      <StageContent key={id}>
                         <StageImg src={process.env.basePath + "/images/photo-" + id + ".png"} alt={title + "のアイコン"}/>
                         <StageName>{title}</StageName>
-                      </ProjectContent>
+                      </StageContent>
                       <Sentence>
                         {textup}
                       </Sentence>
@@ -507,7 +507,7 @@ const StageName = styled.p`
 const StageImg = styled.img`
   width: 33%;
   height: 33%;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition-duration: 0.3s;
   object-fit: cover;
   :before{
@@ -516,3 +516,10 @@ const StageImg = styled.img`
     padding-top: 100%;
   }
 `;
+
+const StageContent = styled.div`
+  width: auto;
+  position: relative;
+  text-align: center;
+`;
+
