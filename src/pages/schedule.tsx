@@ -20,7 +20,7 @@ const Schedule: FC = () => {
         </Center>
         <Center>
           <Attentions>
-            <p>※日曜日は午前と午後のⅡ部制となっています。</p>
+            {/* <p>※日曜日は午前と午後のⅡ部制となっています。</p> */}
             <p>※今年度の桐朋祭は生徒のみとなります</p>
           </Attentions>
         </Center>
