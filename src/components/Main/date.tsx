@@ -9,19 +9,17 @@ const Date = styled(props => <section { ...props }>
       <tbody>
       <tr>
         <td>9月11日(土)</td>
-        <td/>
-        <td>13:00〜17:00</td>
+        <td>9月12日(日)</td>        
+        <td>9月13日(月)</td>
       </tr>
-      <tr>
-        <td>9月12日(日)</td>
+      {/* <tr>
         <td>9:30～12:00</td>
         <td>13:00〜17:00</td>
       </tr>
       <tr>
-        <td>9月13日(月)</td>
         <td>9:30～13:00</td>
         <td/>
-      </tr>
+      </tr> */}
       </tbody>
     </table>
   </div>
@@ -53,9 +51,9 @@ const Date = styled(props => <section { ...props }>
       margin-block: .5rem;
       font-size: 1rem;
 
-      > tbody > tr > td:first-child {
-        padding-inline-end: .5rem;
-      }
+      // > tbody > tr > td:first-child {
+      //   padding-inline-end: .5rem;
+      // }
     }
   }
 
