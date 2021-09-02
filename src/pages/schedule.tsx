@@ -12,9 +12,9 @@ const Schedule: FC = () => {
         <Center>
           <Date>
             <Frame>
-              <p>９<Weaken>月</Weaken>１１<Weaken>日</Weaken>(<Color color="blue">土</Color>) 13:00~17:00</p>
-              <p>９<Weaken>月</Weaken>１２<Weaken>日</Weaken>(<Color color="red">日</Color>) 09:30～12:00　13:00～17:00</p>
-              <p>９<Weaken>月</Weaken>１３<Weaken>日</Weaken>(<Color color="black">月</Color>) 09:30～13:00</p>
+              <p>９<Weaken>月</Weaken>11<Weaken>日</Weaken>(<Color color="blue">土</Color>) {/*13:00~17:00*/}
+              ９<Weaken>月</Weaken>12<Weaken>日</Weaken>(<Color color="red">日</Color>) {/*09:30～12:00　13:00～17:00*/}
+              ９<Weaken>月</Weaken>13<Weaken>日</Weaken>(<Color color="black">月</Color>) {/*09:30～13:00*/}</p>
             </Frame>
           </Date>
         </Center>

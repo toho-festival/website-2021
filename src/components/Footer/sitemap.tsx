@@ -50,42 +50,43 @@ const Sitemap:FC = () =>
     </aside>
   </Layout>;
 
-  const Layout = styled.div`
-    margin: 0 15%;
-    display: flex;
-    justify-content: space-around;
-  `;
+const Layout = styled.div`
+  margin: 0 15%;
+  display: flex;
+  justify-content: space-around;
+`;
 
-  const Title = styled.h4`
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-decoration-skip-ink: none;
-    text-underline-offset: 4px;
-    padding: 10px;
-  `;
 
-  const Anchor = styled.a`
-    :hover{
-      color: #0bd;
-    }
-  `;
+const Title = styled.h4`
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
+  padding: 10px;
+  font-size: 1rem;
 
-  const Flex = styled.div`
-    display: flex;
-  `;
+`;
 
-  const Img = styled.img`
-    height: 20px;
-    width: auto;
-    border-radius: 100px;
-    top:-50%;
-    transform: translateY(50%);
-  `;
+const Anchor = styled.a`
+  :hover{
+    color: #0bd;
+  }
+`;
 
-  const Name = styled.p`
-    @media screen and (max-width:767px) { 
-      font-size: 10px;
-    }
-  `;
+const Flex = styled.div`
+  display: flex;
+`;
+
+const Img = styled.img`
+  height: 20px;
+  width: auto;
+  border-radius: 100px;
+  top:-50%;
+  transform: translateY(50%);
+`;
+
+const Name = styled.p`
+  font-size: 0.8rem;
+`;
 
 export default Sitemap;

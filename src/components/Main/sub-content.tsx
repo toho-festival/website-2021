@@ -51,7 +51,7 @@ const SubContent = styled(props => <div { ...props }>
   }
 
   > section {
-    padding-block: 3rem;
+    display: inline-block;
 
     > div {
       display: flex;
