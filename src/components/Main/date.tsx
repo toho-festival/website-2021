@@ -24,7 +24,7 @@ const Date = styled(props => <section { ...props }>
     </table>
   </div>
   <p>
-    <span>※日曜日は午前と午後のⅡ部制となっています。</span>
+    {/* <span>※日曜日は午前と午後のⅡ部制となっています。</span> */}
     <span>※今年度の桐朋祭は生徒のみとなります</span>
   </p>
 </section>)`
