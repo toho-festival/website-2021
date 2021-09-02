@@ -12,6 +12,7 @@ const Program:FC = ()  => {
 export default Program;
 
 const Box = styled.div`
-  width:100vw;
+  width:100vw; 
   height:100vh;
 `;
+
