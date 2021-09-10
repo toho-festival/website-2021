@@ -52,7 +52,7 @@ const SubContent = styled(props => <div { ...props }>
 
   > section {
     display: inline-block;
-
+    margin-bottom: 3%;
     > div {
       display: flex;
       margin-inline: auto;
