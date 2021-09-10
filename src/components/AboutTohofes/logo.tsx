@@ -9,7 +9,7 @@ const LogoTOHO:FC = () => {
         <Img1 src={ process.env.basePath + "/images/95839.png"} alt="大垂幕のデザイン" />
         <Img2 src={ process.env.basePath + "/images/logo.png"} alt="桐朋祭のロゴ" />
       </ImgWrap>
-      <Creater>デザイン考案者：　装飾委員会委員長　内山麗央</Creater>
+      <Creater>デザイン考案者：　装飾委員会副委員長　内山麗央</Creater>
       <Flex>
         <ContentArticle>
           <Discription>
