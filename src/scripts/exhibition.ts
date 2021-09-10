@@ -6,5 +6,5 @@ export type project ={
 
 export const exhibitionProject:project[] = [
   {name:"生物部",id:"biology",url:"biologyClub2.jpg"},{name:"図書委員会",id:"books",url:"bookLogo.jpg"},{name:"てっけん！",id:"tekken",url:"tekkenLogo.jpg"},{name:"地学部",id:"geology",url:"geology1.jpg"},
-  {name:"スマホ系オタク",id:"otaku",url:"otakuIcon.png"},
+  {name:"スマホ系オタク",id:"otaku",url:"otakuIcon-min.png"},
 ]
