@@ -18,7 +18,7 @@ export type greet = {
 export const greeting: greet[] = [
     {order:"1",
     role:"実行委員長",
-    name:"髙倉総一郎",
+    name:"髙倉聡一郎",
     img:"/images/95943.jpg",
     greet:"第７０回桐朋祭にお越し下さりありがとうございます。桐朋生の努力の結晶を御覧ください！"},
 

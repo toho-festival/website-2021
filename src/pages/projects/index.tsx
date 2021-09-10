@@ -222,7 +222,7 @@ const CommonProjects = ({ allPostsData }:{allPostsData:AllStagePropsDataType[]})
                 <div><Musicimg src={ process.env.basePath + "/images/newStage.png"} alt="ステージ企画の画像" /></div>
               </Colmn>
               <Categoly>
-                <CategolyName>　ステージ企画企画</CategolyName>
+                <CategolyName>　ステージ企画</CategolyName>
                 <OnePoint>　最高の</OnePoint>
                 <OnePoint>　エンターテイメント</OnePoint>
               </Categoly>
