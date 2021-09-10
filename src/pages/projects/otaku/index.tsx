@@ -259,7 +259,7 @@ const Otaku: FC = () => {
       <p>
         今のスマホの元となった機種
       </p>
-      <Img src={process.env.basePath + "/images/otakuAncientSmapho-min.png"} />
+      <img src={process.env.basePath + "/images/otakuAncientSmapho-min.png"} />
       <p>
         IBM Simon のイメージ図
       </p>
@@ -296,73 +296,60 @@ const Otaku: FC = () => {
       <Img src={process.env.basePath + "/images/otakuHT03A-min.png"} />
       <p>docomo公式サイトより</p>
       <p>歴代iPhone一覧表作ってみました。是非見てください。</p>
-      <Graph src={process.env.basePath + "/images/otakuGraph-min.png"}/>
+      <BigGraph src={process.env.basePath + "/images/otakuGraph-min.png"}/>
       <p>参考文献</p>
       <div>
-        ITmedia Mobile <a href="https://www.itmedia.co.jp/mobile/">https://www.itmedia.co.jp/mobile/</a>
-
+        ITmedia Mobile <Link href="https://www.itmedia.co.jp/mobile/">https://www.itmedia.co.jp/mobile/</Link>
       </div>
       <div>
-        BCN+R <a href="https://www.bcnretail.com/">https://www.bcnretail.com/</a>
-
+        BCN+R <Link href="https://www.bcnretail.com/">https://www.bcnretail.com/</Link>
       </div>
       <div>
-        Apple <a href="https://apple.com/">https://apple.com/</a>
-
+        Apple <Link href="https://apple.com/">https://apple.com/</Link>
       </div>
       <div>
-        Xperia <a href="https://xperia.sony.jp/">https://xperia.sony.jp/</a>
-
+        Xperia <Link href="https://xperia.sony.jp/">https://xperia.sony.jp/</Link>
       </div>
       <div>
-        ケータイWatch <a href="https://k-tai.watch.impress.co.jp/">https://k-tai.watch.impress.co.jp/</a>
-
+        ケータイWatch <Link href="https://k-tai.watch.impress.co.jp/">https://k-tai.watch.impress.co.jp/</Link>
       </div>
       <div>
-        SoftBank <a href="https://www.Softbank.jp/corp/">https://www.Softbank.jp/corp/</a>
-
+        SoftBank <Link href="https://www.Softbank.jp/corp/">https://www.Softbank.jp/corp/</Link>
       </div>
       <div>
-        docomo <a href="https://www.nttdocomo.co.jp/">https://www.nttdocomo.co.jp/</a>
-
+        docomo <Link href="https://www.nttdocomo.co.jp/">https://www.nttdocomo.co.jp/</Link>
       </div>
       <div>
-        KDDI <a href="https://kddi.com/">https://kddi.com/</a>
-
+        KDDI <Link href="https://kddi.com/">https://kddi.com/</Link>
       </div>
       <div>
-        Rakuten Mobile <a href="https://network.mobile.rakuten.co.jp/">https://network.mobile.rakuten.co.jp/</a>
-
+        Rakuten Mobile <Link href="https://network.mobile.rakuten.co.jp/">https://network.mobile.rakuten.co.jp/</Link>
       </div>
       <div>
-        DIME <a href="https://dime.jp">https://dime.jp</a>
-
+        DIME <Link href="https://dime.jp">https://dime.jp</Link>
       </div>
       <div>
-        価格ドットコム <a href="https://kakaku.com">https://kakaku.com</a>
-
+        価格ドットコム <Link href="https://kakaku.com">https://kakaku.com</Link>
       </div>
       <div>
-        ASCIIデジタル辞典 <a href="https://yougo.ascii.jp/">https://yougo.ascii.jp/</a>
-
+        ASCIIデジタル辞典 <Link href="https://yougo.ascii.jp/">https://yougo.ascii.jp/</Link>
       </div>
       <div>
-        知恵蔵 <a href="https://kotobank.jp/dictionary/chiezo/">https://kotobank.jp/dictionary/chiezo/</a>
-
+        知恵蔵 <Link href="https://kotobank.jp/dictionary/chiezo/">https://kotobank.jp/dictionary/chiezo/</Link>
       </div>
       <div>
-        CNET <a href="https://www.cnet.com/">https://www.cnet.com/</a>
-
+        CNET <Link href="https://www.cnet.com/">https://www.cnet.com/</Link>
       </div>
       <div>
-        いらすとや <a href="https://www.irasutoya.com">https://www.irasutoya.com</a>
+        いらすとや <Link href="https://www.irasutoya.com">https://www.irasutoya.com</Link>
       </div>
       <div>
-        アンケートのお願い
+        <p>アンケートのお願い</p>
         <HumanImg src={process.env.basePath + "/images/otakuhuman-min.png"} />
        <p> ／どうか、どうかよろしくお願いします＼</p>
-        <p>スマホについてのアンケートへのご協力お願いします！！</p>
-        <a href="https://forms.gle/2Vgtp5nUWeDvGegi6">https://forms.gle/2Vgtp5nUWeDvGegi6</a>
+        <div>スマホについてのアンケートへのご協力お願いします！！
+          <Link href="https://forms.gle/2Vgtp5nUWeDvGegi6">https://forms.gle/2Vgtp5nUWeDvGegi6</Link>
+        </div>
         来年は、みんなのスマホの機種を調べ、最適な機種を提案する自由研究をやり、来年の桐朋祭で発表します。そこで、5分ほどのアンケートへのご協力をお願いします！
         内容は、スマホの機種などについてです。
       </div>
@@ -398,7 +385,7 @@ const Center = styled.div`
 `;
 
 const Img = styled.img`
-
+  width: 30%;
 `;
 
 const Icon = styled.img`
@@ -421,15 +408,25 @@ const SubTitle = styled.h2`
 `;
 
 const Small = styled.p`
-  font-size: 10px;
+  font-size: 0.5rem;
 `;
 
 const Graph = styled.img`
+  width: 50%;
+  @media screen and (max-width: 767px) {
+  width: 80%;
+  }
+`;
 
+const BigGraph = styled.img`
+  width: 50%;
+  @media screen and (max-width: 767px) {
+  width: 80%;
+  }
 `;
 
 const HumanImg = styled.img`
-
+  width: 60%;
 `;
 
 const Button = styled.a`
@@ -449,4 +446,21 @@ const Button = styled.a`
   @media screen and (max-width: 767px) {
     padding: 2px;
   }
+`;
+
+const Link = styled.a`
+ color: #7070FF;
+ text-decoration: underline;
+
+:visited {
+ color: #A05CDF;
+ text-decoration: underline;
+}
+
+:hover {}
+
+:active {
+ color: #FF0000;
+ text-decoration: underline;
+}
 `;
