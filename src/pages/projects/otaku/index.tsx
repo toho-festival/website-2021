@@ -7,17 +7,23 @@ const Otaku: FC = () => {
   return (
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
-      <Icon src={process.env.basePath + ""} />
-      <h2>展示内容</h2>
-      <p>
-        スマートフォンの歴史や、新製品の傾向など、スマートフォンに関してのレポートを個
-        別展示教室で展示しています。また、展示内容とは関係ありませんが、スマートフォン
-        に関してのアンケートを行なっています。なお、作ったレポートは桐朋祭の期間中に
-        Webサイトで公開しています！この下にありますので、ぜひ見てください！
-      </p>
-      <h2>場所</h2>
-      場所: 個別展示教室 (中学棟 3階 2-5教室)
-      <h2>レポート本文</h2>
+      <Center>
+      <Icon src={process.env.basePath + "/images/otakuicon-min.png"} />
+      </Center>
+      <div>
+        <h2>展示内容</h2>
+        <p>
+          スマートフォンの歴史や、新製品の傾向など、スマートフォンに関してのレポートを個
+          別展示教室で展示しています。また、展示内容とは関係ありませんが、スマートフォン
+          に関してのアンケートを行なっています。なお、作ったレポートは桐朋祭の期間中に
+          Webサイトで公開しています！この下にありますので、ぜひ見てください！
+        </p>
+        <h2>場所</h2>
+        <p>
+        場所: 個別展示教室 (中学棟 3階 2-5教室)
+        </p>
+        <h2>レポート本文</h2>
+      </div>
       <SubTitle>1.はじめに</SubTitle>
       <p>
         年々新製品が発売されるスマホ。スマホの発売には、それぞれのメーカーの戦略が
@@ -26,7 +32,7 @@ const Otaku: FC = () => {
         元にどのような戦略でスマホを発売しているか、どのような傾向で新製品が出ている
         のかを考えました。
       </p>
-      <Graph src={process.env.basePath + ""}/>
+      <Graph src={process.env.basePath + "/images/otakuGreenGraph-min.png"}/>
       <p>MMD研究所、メインとして使っているスマホについての調査(2019年)</p>
       <SubTitle>2. スマホの分析【iPhone編】</SubTitle>
       <p>
@@ -50,7 +56,7 @@ const Otaku: FC = () => {
       <p>
         iPhoneのモデル構成:
       </p>
-      <Graph src={process.env.basePath + ""}/>
+      <Graph src={process.env.basePath + "/images/otakuiPhone-min.png"}/>
       <Small>
         ※2 SIMフリー・・・端末単体で売っているスマホのこと
       </Small>
@@ -120,7 +126,7 @@ const Otaku: FC = () => {
       <p>
         Xperiaのモデル構成:
       </p>
-      <Graph src={process.env.basePath + ""}/>
+      <Graph src={process.env.basePath + "/images/otakuXperia-min.png"}/>
       <p>
         SONYの戦略:
       </p>
@@ -166,7 +172,7 @@ const Otaku: FC = () => {
       <p>
         AQUOSのモデル構成:
       </p>
-      <Graph src={process.env.basePath + ""}/>
+      <Graph src={process.env.basePath + "/images/otakuAQUOS-min.png"}/>
       <p>
         SHARPの戦略:
       </p>
@@ -209,7 +215,7 @@ const Otaku: FC = () => {
       <p>
         Samsungのスマホのモデル構成:
       </p>
-      <Graph src={process.env.basePath + ""}/>
+      <Graph src={process.env.basePath + "/images/otakuSamsung-min.png"}/>
       <p>
         Samsungの戦略:
       </p>
@@ -253,7 +259,7 @@ const Otaku: FC = () => {
       <p>
         今のスマホの元となった機種
       </p>
-      <Img src={process.env.basePath + ""} />
+      <Img src={process.env.basePath + "/images/otakuAncientSmapho-min.png"} />
       <p>
         IBM Simon のイメージ図
       </p>
@@ -267,7 +273,7 @@ const Otaku: FC = () => {
       <p>
         初代iPhone
       </p>
-      <Img src={process.env.basePath + ""} />
+      <Img src={process.env.basePath + "/images/otakuFirstiphone-min.png"} />
       <p>
         Apple 公式サイトより
       </p>
@@ -287,10 +293,10 @@ const Otaku: FC = () => {
         最初です。また、同じ年の2009年には、docomoからT-Mobile MyTouch 3Gとよく似た
         、HT-03Aというスマホが発売されました。
       </p>
-      <Img src={process.env.basePath + ""} />
+      <Img src={process.env.basePath + "/images/otakuHT03A-min.png"} />
       <p>docomo公式サイトより</p>
       <p>歴代iPhone一覧表作ってみました。是非見てください。</p>
-      <Graph src={process.env.basePath + ""}/>
+      <Graph src={process.env.basePath + "/images/otakuGraph-min.png"}/>
       <p>参考文献</p>
       <div>
         ITmedia Mobile <a href="https://www.itmedia.co.jp/mobile/">https://www.itmedia.co.jp/mobile/</a>
@@ -353,7 +359,7 @@ const Otaku: FC = () => {
       </div>
       <div>
         アンケートのお願い
-        <HumanImg src={process.env.basePath + ""} />
+        <HumanImg src={process.env.basePath + "/images/otakuhuman-min.png"} />
        <p> ／どうか、どうかよろしくお願いします＼</p>
         <p>スマホについてのアンケートへのご協力お願いします！！</p>
         <a href="https://forms.gle/2Vgtp5nUWeDvGegi6">https://forms.gle/2Vgtp5nUWeDvGegi6</a>
@@ -370,6 +376,21 @@ const Wrap = styled.div`
   padding-left: 3%;
   padding-top: 3%;
   color: white;
+  div{
+    h2{
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-thickness: 8px;
+      text-decoration-skip-ink: none;
+      text-underline-offset: 4px;
+      text-decoration-color: #bf9d6d;
+      padding: 10px;
+    }
+    p{
+      text-align: center;
+      margin-top: 3vw;
+    }
+  }
 `;
 
 const Center = styled.div`
@@ -381,7 +402,7 @@ const Img = styled.img`
 `;
 
 const Icon = styled.img`
-
+  text-align: center;
 `;
 
 const Name = styled.h1`
@@ -389,11 +410,18 @@ const Name = styled.h1`
 `;
 
 const SubTitle = styled.h2`
-
+  margin-top: 5vw;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
+  text-decoration-color: #bf9d6d;
+  padding: 10px;
 `;
 
 const Small = styled.p`
-
+  font-size: 10px;
 `;
 
 const Graph = styled.img`
