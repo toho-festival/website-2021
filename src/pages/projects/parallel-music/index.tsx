@@ -12,7 +12,7 @@ const Parallel:FC = () => {
       <SubTitle>・メンバー紹介</SubTitle>
       <MemberImage src={process.env.basePath + "/images/parallelMusicMember.jpg"} />
       <MemberList>
-        <Member><Strong>加藤啓介（key.Vo.）</Strong></Member>
+        <Member><Strong>加藤啓佑（key.Vo.）</Strong></Member>
         <Member><Strong>北野𣳾地（Gt.Vo.）</Strong></Member>
         <Member><Strong>村越亮太郎（Gt.）</Strong></Member>
         <Member><Strong>石坂和英（Ba.）</Strong></Member>
@@ -23,7 +23,7 @@ const Parallel:FC = () => {
         <Music><a href="https://www.youtube.com/watch?v=j7CDb610Bg0" target="_blank" rel="noopener noreferrer"><Strong>天体観測</Strong>　（BUMP OF CHICKEN）</a></Music>
         <Music><a href="https://www.youtube.com/watch?v=9aJVr5tTTWk" target="_blank" rel="noopener noreferrer"><Strong>ピースサイン</Strong>　（米津玄師）</a></Music>
         <Music><a href="https://www.youtube.com/watch?v=by4SYYWlhEs" target="_blank" rel="noopener noreferrer"><Strong>夜に駆ける</Strong>　（YOASOBI）</a></Music>
-        <Music><a href="https://www.youtube.com/watch?v=Nxwt_s1lM04" target="_blank" rel="noopener noreferrer"><Strong>Tomorrow never knouws</Strong>　（Mr.Children）</a></Music>
+        <Music><a href="https://www.youtube.com/watch?v=Nxwt_s1lM04" target="_blank" rel="noopener noreferrer"><Strong>Tomorrow never knows</Strong>　（Mr.Children）</a></Music>
       </MusicList>
     </Wrap>
   );
