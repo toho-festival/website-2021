@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 // import { useBlogCollection } from '~/src/scripts/blog'
 
 const Blog = () => {
@@ -65,11 +65,9 @@ const Title = styled.h1`
   display: center;
   &::after {
     content: "";
-  /* display: block; */
   margin-top: -10px;
   margin:left;
   width: 400px;
-  /* border-bottom: 10px solid #85d1d0;  */
   }
 `;
 
@@ -81,11 +79,4 @@ const Box = styled.p`
   padding: 3px 3px 3px 3px;
   word-wrap: break-word;
 `;
-
-// const Creating = styled.div`
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translateX(-50%)translateY(-50%);
-// `;
 

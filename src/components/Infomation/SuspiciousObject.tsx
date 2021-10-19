@@ -4,12 +4,10 @@ import styled from "styled-components";
 const SuspiciousObject: FC = () => {
   return (
     <Wrap>
-      <Center>
-        <Back>
-          <Center><Title id="suspiciousObject">不審物について</Title></Center>
-          <Pragraph>もし校内で持ち主の不明なものや不審に思われるものがありましたら、総合案内所までご連絡下さい。</Pragraph>
-        </Back>
-      </Center>
+      <Back>
+        <Center><Title id="suspiciousObject">不審物について</Title></Center>
+        <Center><p>もし校内で持ち主の不明なものや不審に思われるものがありましたら、総合案内所までご連絡下さい。</p></Center>
+      </Back>
     </Wrap>
   );
 }
@@ -44,8 +42,4 @@ const Title = styled.h1`
     font-size: 25px;
     border-bottom: 7px solid #bf9d6d;
   }
-`;
-
-const Pragraph = styled.p`
-  text-align: center;
 `;
