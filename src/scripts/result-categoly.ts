@@ -16,7 +16,7 @@ export type Categoly = {
 export const resultCategoly:Categoly[] = [
   { id:"ステージ",
     contents: [
-      { img: "/images/95839.png", com1: "あ", com2: "い", com3: "", com4: "", com5: "", com6: "" },
+      { img: "/images/95839.png", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
       { img: "/images/95941.jpg", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
       { img: "/images/95942.jpg", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
     ],
@@ -24,7 +24,7 @@ export const resultCategoly:Categoly[] = [
 
   { id:"一般参加団体",
     contents: [
-      { img: "/images/95839.png", com1: "あ", com2: "い", com3: "", com4: "", com5: "", com6: "" },
+      { img: "/images/95839.png", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
       { img: "/images/95941.jpg", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
       { img: "/images/95942.jpg", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
     ],
@@ -32,7 +32,7 @@ export const resultCategoly:Categoly[] = [
 
   { id:"音響団体",
     contents: [
-      { img: "/images/95839.png", com1: "あ", com2: "い", com3: "", com4: "", com5: "", com6: "" },
+      { img: "/images/95839.png", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
       { img: "/images/95941.jpg", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
       { img: "/images/95942.jpg", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
     ],
@@ -40,7 +40,7 @@ export const resultCategoly:Categoly[] = [
 
   { id:"桐朋祭委員会",
     contents: [
-      { img: "/images/95839.png", com1: "あ", com2: "い", com3: "", com4: "", com5: "", com6: "" },
+      { img: "/images/95839.png", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
       { img: "/images/95941.jpg", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
       { img: "/images/95942.jpg", com1: "", com2: "", com3: "", com4: "", com5: "", com6: "" },
     ],
