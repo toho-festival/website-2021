@@ -88,6 +88,7 @@ const AfterTohofes = styled( props => <div {...props}>
       display: inline-block;
       @media screen and (max-width: 1230px) {
         width: 50%;
+        margin: 5% 25%;
       }
       > h2{
         padding: 0 8px 8px;
