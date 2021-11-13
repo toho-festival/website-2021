@@ -14,13 +14,13 @@ const Tekken: FC = () => {
       <Title>〜てっけん！〜</Title>
       <Img1 src={process.env.basePath + "/images/tekkenFirst.jpg"} isMain={true}></Img1>
       <About>鉄研とは？中高合同でジオラマ制作や研究を行っています。夏には部員たちで行き先を決めた合宿もしています。</About>
-      <DisplayContents>
+      <ul>
         <SubTitle>展示内容</SubTitle>
         <Content>・クイズ</Content>
         <Content>・巨大ジオラマ</Content>
         <Content>・運転シュミレーター</Content>
         <Content>・発車ベル</Content>
-      </DisplayContents>
+      </ul>
       <Where><BigLetter>A</BigLetter><span>教室</span></Where>
       <Img2 src={process.env.basePath + "/images/tekkenSecond.jpg"} isMain={false}></Img2>
       <Explain>巨大ジオラマを中心に発車ベル体験など何時間も楽しめる空間となっています。</Explain>
@@ -54,9 +54,6 @@ const Img1 = styled.img<IsMain>`
 
 const About = styled.p`
   text-decoration: underline;
-`;
-
-const DisplayContents = styled.ul`
 `;
 
 const Content = styled.li`

@@ -19,12 +19,12 @@ const Parallel:FC = () => {
         <Member><Strong>渡部瑛遥（Dr.）</Strong></Member>
       </MemberList>
       <SubTitle>・曲（曲名をタップすると曲が聞けます！）</SubTitle>
-      <MusicList>
+      <ul>
         <Music><a href="https://www.youtube.com/watch?v=j7CDb610Bg0" target="_blank" rel="noopener noreferrer"><Strong>天体観測</Strong>　（BUMP OF CHICKEN）</a></Music>
         <Music><a href="https://www.youtube.com/watch?v=9aJVr5tTTWk" target="_blank" rel="noopener noreferrer"><Strong>ピースサイン</Strong>　（米津玄師）</a></Music>
         <Music><a href="https://www.youtube.com/watch?v=by4SYYWlhEs" target="_blank" rel="noopener noreferrer"><Strong>夜に駆ける</Strong>　（YOASOBI）</a></Music>
         <Music><a href="https://www.youtube.com/watch?v=Nxwt_s1lM04" target="_blank" rel="noopener noreferrer"><Strong>Tomorrow never knows</Strong>　（Mr.Children）</a></Music>
-      </MusicList>
+      </ul>
     </Wrap>
   );
 }
@@ -67,10 +67,6 @@ const MemberList = styled.ul`
 
 const Member = styled.li`
   color: black;
-`;
-
-const MusicList = styled.ul`
-
 `;
 
 const Music = styled.li`

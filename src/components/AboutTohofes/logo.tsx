@@ -11,7 +11,7 @@ const LogoTOHO:FC = () => {
       </ImgWrap>
       <Creater>デザイン考案者：　装飾委員会副委員長　内山麗央</Creater>
       <Flex>
-        <ContentArticle>
+        <article>
           <Discription>
             第 70 回桐朋祭の大垂れ幕のモチーフは錦鯉です。登竜門をイメージし
             て、龍のように巨大で鮮やかな天を翔ける鯉を描きました。錦鯉には住
@@ -19,8 +19,8 @@ const LogoTOHO:FC = () => {
             桐朋生の個性の豊かさを表しています。また、鯉には生命力という意味
             があり、諦めずに粘り強く食らいついていく強い意志を表現しました。
           </Discription>
-        </ContentArticle>
-        <ContentAside>
+        </article>
+        <aside>
           <Discription>
             今年の桐朋祭のテーマは ｢ 織 ｣ です。この漢字には ｢ 機織り ｣ や ｢ 織物
             ｣ と言った意味の他に ｢ 組み立てる ｣ という意味があります。みんなで一
@@ -29,7 +29,7 @@ const LogoTOHO:FC = () => {
             の ｢ 織 ｣ という字、そして、多様な色を用いて十人十色な桐朋生らしさを
             表現しました。
           </Discription>
-        </ContentAside>
+        </aside>
       </Flex>
     </>
   )
@@ -92,12 +92,4 @@ const Discription = styled.h3`
 const Flex = styled.div`
   display:flex;
   color: white;
-`;
-
-const ContentArticle = styled.article`
-
-`;
-
-const ContentAside = styled.aside`
-
 `;

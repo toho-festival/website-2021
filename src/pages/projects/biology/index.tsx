@@ -20,10 +20,10 @@ const BiologyClub: FC = () => {
         </Description>
         <Space>　</Space>
       </Main>
-        <SubTitle>展示内容</SubTitle>
+        <h2>展示内容</h2>
         <MainContent>
           <Content>
-            <DisplayList>
+            <ul>
               <Legend>例年通り</Legend>
               <DisplayContent>両生類・爬虫類の生体</DisplayContent>
               <DisplayContent>淡水魚の生体</DisplayContent>
@@ -34,7 +34,7 @@ const BiologyClub: FC = () => {
               <Legend>例年と異なる点</Legend>
               <DisplayContent>クイズがありません。</DisplayContent>
               {/* <DisplayContent>入場制限があります。</DisplayContent> */}
-            </DisplayList>
+            </ul>
           </Content>
           <ImgContent>
             <ImgLegend>昨年の様子</ImgLegend>
@@ -99,14 +99,6 @@ const MainContent = styled.div`
 
 const Content = styled.div`
   width:100%;
-`;
-
-const SubTitle = styled.h2`
-
-`;
-
-const DisplayList = styled.ul`
-
 `;
 
 const Legend = styled.p`

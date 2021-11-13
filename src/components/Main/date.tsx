@@ -7,24 +7,15 @@ const Date = styled(props => <section { ...props }>
   <div>
     <table>
       <tbody>
-      <tr>
-        <td>9月11日(土)</td>
-        <td>9月12日(日)</td>        
-        <td>9月13日(月)</td>
-      </tr>
-      {/* <tr>
-        <td>9:30～12:00</td>
-        <td>13:00〜17:00</td>
-      </tr>
-      <tr>
-        <td>9:30～13:00</td>
-        <td/>
-      </tr> */}
+        <tr>
+          <td>9月11日(土)</td>
+          <td>9月12日(日)</td>        
+          <td>9月13日(月)</td>
+        </tr>
       </tbody>
     </table>
   </div>
   <p>
-    {/* <span>※日曜日は午前と午後のⅡ部制となっています。</span> */}
     <span>※今年度の桐朋祭は生徒のみとなります</span>
   </p>
 </section>)`
@@ -50,10 +41,6 @@ const Date = styled(props => <section { ...props }>
       display: inline-block;
       margin-block: .5rem;
       font-size: 1rem;
-
-      // > tbody > tr > td:first-child {
-      //   padding-inline-end: .5rem;
-      // }
     }
   }
 

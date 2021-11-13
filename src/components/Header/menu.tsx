@@ -62,10 +62,4 @@ const Layout = styled.nav<{ open: boolean }>`
   transition: transform 0.3s ease-in-out;
 `;
 
-const Attention = styled.p`
-  position: absolute;
-  text-align: center;
-  padding-inline: 3rem;
-`;
-
 export default Menu;

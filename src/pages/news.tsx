@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { firestore } from '~/firebase/client';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 
 type Props = {
   author: string,
@@ -73,11 +73,9 @@ border-bottom: 8px solid #bf9d6d;
 display: center;
 &::after {
     content: "";
-    /* display: block; */
     margin-top: -10px;
     margin:left;
     width: 400px; 
-    /* border-bottom: 10px solid #85d1d0;  */
 }
 `;
 

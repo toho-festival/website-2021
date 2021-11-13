@@ -4,16 +4,16 @@ import styled from "styled-components";
 const LostChild: FC = () => {
   return (
     <Wrap>
-      <Center>
-        <Back>
-          <Center><Title id="lostChild">迷子について</Title></Center>
-          <Pragraph>
+      <Back>
+        <Center><Title id="lostChild">迷子について</Title></Center>
+        <Center>
+          <p>
             迷子については、総合案内所で対応させて頂いております。
             迷子を発見された方、お連れの方とはぐれてしまった方は総合案内所までお越し下さい。
             校内放送にて迷子の方の情報を放送致します。
-          </Pragraph>
-        </Back>
-      </Center>
+          </p>
+        </Center>
+      </Back>
     </Wrap>
   );
 }
@@ -48,7 +48,4 @@ const Title = styled.h1`
     font-size: 25px;
     border-bottom: 7px solid #bf9d6d;
   }
-`;
-const Pragraph = styled.p`
-  text-align: center;
 `;

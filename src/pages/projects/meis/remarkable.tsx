@@ -9,14 +9,14 @@ const Remarkable:FC = () =>
       <Article>
         <SubTitle>見どころ</SubTitle>
         <Discription>ただの迷路じゃない！様々なトラップもあるかも！？</Discription>
-        <ImgWrap>
+        <div>
             <Img src={process.env.basePath + "/images/trap.png"} alt="罠にひっかかるウサギ" />
-        </ImgWrap>
+        </div>
       </Article>
-      <Content>
+      <aside>
         <ContentTitle>企画内容</ContentTitle>
         <Discription>からくり仕掛けの要素がたっぷり詰め込まれた迷路！！</Discription>
-      </Content>
+      </aside>
     </Wrap>
   </>
   
@@ -31,9 +31,6 @@ const SubTitle = styled.h2`
   text-decoration:underline;
   text-decoration-color:#0066cc;
   text-align: center;
-`;
-
-const Content = styled.aside`
 `;
  
 const ContentTitle = styled.h2`
@@ -57,8 +54,4 @@ const Img = styled.img`
 
 const Discription = styled.h3`
   text-align: center
-`;
-
-const ImgWrap = styled.div`
-
 `;
