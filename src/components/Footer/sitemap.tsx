@@ -16,7 +16,7 @@ const information = [
   { id: 'newestInfo', icon: '/images/menu-news.jpg', name: '最新情報', link: '/news' },
   { id: 'map', icon: '/images/menu-map.jpg', name: 'マップ', link: '/map' },
   { id: 'program', icon: '/images/menu-program.jpg', name: 'プログラム', link: '/program' },
-  { id: 'blog', icon: '/images/menu-schedule.jpg', name: 'ブログ', link: '/blog' },
+  { id: 'youtube', icon: '/images/youtube.png', name: '動画', link: '/youtube' },
   { id: 'schedule', icon: '/images/menu-schedule.jpg', name: '開催日時', link: '/schedule' },
 ];
 
