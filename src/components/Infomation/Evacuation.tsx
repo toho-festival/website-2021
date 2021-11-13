@@ -4,12 +4,10 @@ import styled from "styled-components";
 const Evacuation: FC = () => {
   return (
     <Wrap>
-      <Center>
-        <Back>
-          <Center><Title id="evacuation">避難について</Title></Center>
-          <Pragraph>避難に関しては基本的に教職員の指示に従って、迅速に避難していただくようにお願い致します。避難場所は東グラウンドです。</Pragraph>
-        </Back>
-      </Center>
+      <Back>
+        <Center><Title id="evacuation">避難について</Title></Center>
+        <Center><p>避難に関しては基本的に教職員の指示に従って、迅速に避難していただくようにお願い致します。避難場所は東グラウンドです。</p></Center>
+      </Back>
     </Wrap>
   );
 }
@@ -44,8 +42,4 @@ const Back = styled.div`
   background-color: cornsilk;
   border-radius: 20px;
   display: inline-block;
-`;
-
-const Pragraph = styled.p`
-  text-align: center;
 `;

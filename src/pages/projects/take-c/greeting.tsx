@@ -12,9 +12,9 @@ const Greeting:FC = () => {
         <Article>
           <Img src="entrance-backgrund-1.jpg" alt="" />
         </Article>
-        <Sentence>
+        <aside>
           <First>どうも！昨年１０月位に</First><Decoration>ゆる～くできた、TAKE Cと</Decoration><Decoration>申します！音楽初心者ばかりなのに</Decoration><Decoration>最初の曲でシュガソンやったりと迷走しています。</Decoration><Decoration>ちょっとでも気になったら是非！遊びに来てください！</Decoration>
-        </Sentence>    
+        </aside>    
       </MainContents>
     </Wrap>
   );
@@ -46,10 +46,6 @@ const Article = styled.article`
 
 const Img = styled.img`
   width:30vw;
-`;
-
-const Sentence = styled.aside`
-
 `;
 
 const First = styled.h2`

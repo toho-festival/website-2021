@@ -4,14 +4,10 @@ import Greeting from './greeting';
 import List from './list';
 import Member from './member';
 
-const Takec:FC = () => <Wrap>
+const Takec:FC = () => <div>
     <Greeting />
     <List />
     <Member />
-</Wrap>;
+</div>;
 
 export default Takec; 
-
-const Wrap = styled.div`
-
-`;

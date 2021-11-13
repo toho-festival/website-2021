@@ -9,18 +9,18 @@ const QuizClub = () => {
       <Name>クイズ研究会</Name>
       <Theme>桐朋祭での活動</Theme>
       <Info>
-        <Box>
+        <span>
           <Content>ペーパークイズ</Content>
           <Text>75問のペーパークイズです。友達や家族とどっちがより多く取れるか勝負しよう。</Text>
-        </Box>
+        </span>
         <MidBox>
           <Content>早押し対決</Content>
           <Text>実際に早押しクイズをすることができます。部員がつくった1問1問を是非お楽しみください。</Text>
         </MidBox>
-        <Box>
+        <span>
           <Content>練習試合</Content>
           <Text>国立高校、立川高校等の他校との練習試合を予定しています。</Text>
-        </Box>
+        </span>
       </Info>
       <Drive>普段の活動</Drive>
       <Text>
@@ -49,10 +49,6 @@ const Info = styled.div`
   display: flex;
   list-style: none;
   padding: 3%;
-`;
-
-const Box = styled.span`
-  /* float: left; */
 `;
 
 const MidBox = styled.div`

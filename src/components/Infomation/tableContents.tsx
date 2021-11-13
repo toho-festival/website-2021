@@ -8,9 +8,7 @@ const Table: FC = () => {
     <Center><Title>ご案内</Title></Center>
     <Flex>
       <DefenceMan>
-          <Image  src={process.env.basePath + "/images/self-defence-man.png"}/>
-        <Center>
-        </Center>
+        <Image  src={process.env.basePath + "/images/self-defence-man.png"}/>
       </DefenceMan>
       <Wrap>
         <Center>
@@ -40,12 +38,6 @@ export default Table;
 
 const Flex = styled.div`
   display: flex;
-`;
-
-const However = styled.p`
-  @media screen and (max-width: 1230px) {
-    font-size: 10px;
-  }
 `;
 
 const DefenceMan = styled.div`
@@ -104,12 +96,10 @@ const Title = styled.h1`
 
 const Column = styled.div`
   margin-bottom: 1vw;
-  /* display: inline-block; */
 `;
 
 const Verse = styled.div`
   border-bottom: 1px #ddd solid;
-  /* border-left: 1px #ddd solid; */
   text-align: initial;
 `;
 

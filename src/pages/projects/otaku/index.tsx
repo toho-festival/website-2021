@@ -8,7 +8,7 @@ const Otaku: FC = () => {
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Center>
-      <Icon src={process.env.basePath + "/images/otakuIcon-min.png"} />
+      <img src={process.env.basePath + "/images/otakuimg-min.png"} />
       </Center>
       <div>
         <h2>展示内容</h2>
@@ -389,14 +389,6 @@ const Center = styled.div`
 
 const Img = styled.img`
   width: 30%;
-`;
-
-const Icon = styled.img`
-  text-align: center;
-`;
-
-const Name = styled.h1`
-  text-align: center;
 `;
 
 const SubTitle = styled.h2`

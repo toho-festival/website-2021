@@ -4,14 +4,12 @@ import styled from "styled-components";
 const Disaster: FC = () => {
   return (
     <Wrap>
-      <Center>
-        <Back>
+      <Back>
         <Center><Title id="disaster">もし災害が発生したら</Title></Center>
-          <Paragraph>地震が発生した場合、まずはその場で身の安全を確保して下さい。</Paragraph>
-          <Paragraph>本校舎は耐震構造になっており安全ですので、校舎内に留まり校外には出ないようお願い致します。</Paragraph>
-          <Paragraph>また、火災が発生した場合には速やかに火元から離れて下さい。即座に教職員による避難案内が開始されますので、誘導に従い避難を開始して下さい。</Paragraph>
-        </Back>
-      </Center>
+        <Center><p>地震が発生した場合、まずはその場で身の安全を確保して下さい。</p></Center>
+        <Center><p>本校舎は耐震構造になっており安全ですので、校舎内に留まり校外には出ないようお願い致します。</p></Center>
+        <Center><p>また、火災が発生した場合には速やかに火元から離れて下さい。即座に教職員による避難案内が開始されますので、誘導に従い避難を開始して下さい。</p></Center>
+      </Back>
     </Wrap>
   );
 }
@@ -47,8 +45,4 @@ const Title = styled.h1`
     font-size: 25px;
     border-bottom: 7px solid #bf9d6d;
   }
-`;
-
-const Paragraph = styled.p`
-  text-align: center;
 `;

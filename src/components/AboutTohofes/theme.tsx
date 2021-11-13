@@ -6,7 +6,7 @@ const ThemeTOHO: FC = () => {
     <>
       <ThemeWrap>
         <Theme>今年のテーマ</Theme>
-        <Rubi>しき</Rubi>
+        <h4>しき</h4>
         <FestivalTheme>～ 織 ～</FestivalTheme>
       </ThemeWrap>
       <Arrangement>
@@ -72,10 +72,6 @@ const Discription = styled.h3`
   @media screen and (max-width:767px) { 
     font-size: 12px;
   }
-`;
-
-const Rubi = styled.h4`
-  
 `;
 
 const Creater = styled.h2`

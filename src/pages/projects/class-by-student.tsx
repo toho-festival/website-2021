@@ -9,13 +9,13 @@ const ClassByStudent = () => {
 			<Button onClick={() => router.back()}>＜元のページに戻る</Button>
 			<Organizer><p>主催:高校総務委員会企画部門</p></Organizer>
 			<Title>
-				<Top>
+				<p>
 					<BigCircle>生</BigCircle>
 					<NomalCircle>徒</NomalCircle>
 					<NomalCircle>に</NomalCircle>
 					<NomalCircle>よ</NomalCircle>
 					<NomalCircle>る</NomalCircle>
-				</Top>
+				</p>
 				<Bottom>
 					<ClassImage src={ process.env.basePath + "/images/classByStudents.png" } />
 					<BigCircle>授</BigCircle>
@@ -102,9 +102,6 @@ const NomalCircle = styled.div`
 	  line-height:3rem;
 		font-size:1rem;
 	}
-`;
-
-const Top = styled.p`
 `;
 
 const Date = styled.p`
