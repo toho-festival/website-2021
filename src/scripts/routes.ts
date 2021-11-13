@@ -8,7 +8,7 @@ export const routes: Route[] = [
   { logo: '/images/menu-top.jpg', key: 'top', path: '/' },
   { logo: '/images/menu-schedule.jpg', key: '開催日時', path: '/schedule' },
   { logo: '/images/menu-projects.jpg', key: '企画一覧', path: '/projects' },
-  { logo: '/images/menu-news.jpg', key: '最新情報', path: '/news' },
+  { logo: '/images/after-tohofes.jpg', key: '桐朋祭の様子', path: '/after-tohofes' },
   // { logo: '/images/menu-holdingEvents.jpg', key: '開催中イベント', path: '/event' },
   { logo: '/images/menu-guide.jpg', key: 'ご案内', path: '/info' },
   { logo: '/images/menu-map.jpg', key: 'マップ', path: '/map' },

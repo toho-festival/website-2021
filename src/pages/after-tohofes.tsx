@@ -23,7 +23,7 @@ const AfterTohofes = styled( props => <div {...props}>
   <div color="title">
     <h1>第70回桐朋祭の様子</h1>
   </div> 
-  <h3>ゆっくりスクロールしてご覧ください</h3>
+  <h3>ゆっくりスクロールしてご覧ください(あえてスライドショーの時間を長めに設定しています)</h3>
   <div color="table">
     <h2>おしながき</h2>
     {resultCategoly.map(({ id }) => <>
@@ -88,6 +88,7 @@ const AfterTohofes = styled( props => <div {...props}>
       display: inline-block;
       @media screen and (max-width: 1230px) {
         width: 50%;
+        margin: 5% 25%;
       }
       > h2{
         padding: 0 8px 8px;

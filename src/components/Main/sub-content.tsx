@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import Link   from 'next/link';
 
 const subContents = [
+  { image: '/images/newYoutube.png', name: 'YouTubeリンク', copy: '当日の様子を短い動画で配信', link: '/youtube' },
+  { image: '/images/afterTohofes.png', name: '桐朋祭の様子', copy: 'ありがとう', link: '/after-tohofes' },
   { image: '/images/newGreetings.png', name: '委員長挨拶', copy: '委員長たちの面白い挨拶を掲載', link: '/about#greeting' },
   { image: '/images/newSchedule.png', name: '開催日時', copy: '最高の３日間のスケジュール', link: '/schedule' },
   { image: '/images/newProgram.png', name: 'プログラム', copy: 'デジタルで見れるこだわりの一冊', link: '/program' },
-  { image: '/images/newYoutube.png', name: 'YouTubeリンク', copy: '当日の様子を短い動画で配信', link: '/youtube' },
 ];
 
 subContents.forEach(v => v.image = process.env.basePath + v.image);

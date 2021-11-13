@@ -13,7 +13,7 @@ const projects = [
 const information = [
   { id  : 'info', icon: '/images/menu-guide.jpg', name: 'ご案内', link: '/info'},
   { id  : 'about', icon: '/images/menu-aboutTohofes.jpg', name: '桐朋祭について', link: '/about' },
-  { id: 'newestInfo', icon: '/images/menu-news.jpg', name: '最新情報', link: '/news' },
+  { id: 'after-tohofes', icon: '/images/menu-news.jpg', name: '桐朋祭の様子', link: '/after-tohofes' },
   { id: 'map', icon: '/images/menu-map.jpg', name: 'マップ', link: '/map' },
   { id: 'program', icon: '/images/menu-program.jpg', name: 'プログラム', link: '/program' },
   { id: 'youtube', icon: '/images/youtube.png', name: '動画', link: '/youtube' },
