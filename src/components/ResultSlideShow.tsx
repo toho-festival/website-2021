@@ -12,10 +12,10 @@ const bgSlideShow = keyframes`
   0% {
     opacity: 1;
   }
-  33% {
+  25% {
     opacity: 1;
   }
-  34% {
+  26% {
     opacity: 0;
   }
   99% {
@@ -32,7 +32,7 @@ const SlideShow = styled.div<{url:string}>`
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: 30s linear infinite ${bgSlideShow};
+  animation: 20s linear infinite ${bgSlideShow};
 
   :nth-child(1) {
     background: url(${ ({url}) => process.env.basePath + url}) center / cover;
@@ -40,12 +40,16 @@ const SlideShow = styled.div<{url:string}>`
 
   :nth-child(2) {
     background: url(${ ({url}) => process.env.basePath + url}) center / cover;
-    animation-delay: -10s;
+    animation-delay: -5s;
   }
 
   :nth-child(3) {
     background: url(${ ({url}) => process.env.basePath + url}) center / cover;
-    animation-delay: -20s;
+    animation-delay: -10s;
+  }
+  :nth-child(4) {
+    background: url(${ ({url}) => process.env.basePath + url}) center / cover;
+    animation-delay: -15s;
   }
 
 `;
