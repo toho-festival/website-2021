@@ -8,6 +8,12 @@ const Mmt: FC = () => {
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <GroupName>-MMT-</GroupName>
+      <YoutubePlayer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/J_VFa7SJvTo" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
+      <YoutubePlayer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DYc-gJnw3BA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
       <Center><Logo src={process.env.basePath + "/images/mmtLogo.jpg"} /></Center>
       <SubTitle>メンバー</SubTitle>
       <MemberImage src={process.env.basePath + "/images/mmtMember.jpg"} />
@@ -43,6 +49,16 @@ const Center = styled.div`
 
 const Logo = styled.img`
   width: 50%;
+`;
+
+const YoutubePlayer = styled.div`
+  margin: 0px auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const SubTitle = styled.h2`

@@ -8,6 +8,12 @@ const Parallel:FC = () => {
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Name>~パラレルチンアナゴ~</Name>
+      <YoutubePlayer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BjvVg6KpZH8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
+      <YoutubePlayer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RYhKku5uBaI" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
       <Description>バンドエリアにて活動中！皆さんに楽しんで頂けるような曲を用意したので、是非来てください。事前に原曲を聞いていただいてもらうと、もっと楽しめます。</Description>
       <SubTitle>・メンバー紹介</SubTitle>
       <MemberImage src={process.env.basePath + "/images/parallelMusicMember.jpg"} />
@@ -40,6 +46,16 @@ const Wrap = styled.div`
 
 const Name = styled.h1`
   text-align: center;
+`;
+
+const YoutubePlayer = styled.div`
+  margin: 0px auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const Description = styled.div`

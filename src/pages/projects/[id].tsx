@@ -13,6 +13,9 @@ type CommonData = {
   building:string;
   floor:string;
   location:string;
+  url:string;
+  url2:string;
+  isUploaded:boolean;
 }
 
 type ParamsType = {
@@ -26,6 +29,19 @@ const CommonProjects = ({ postData }:{postData:CommonData}) => {
     <Indent>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
     </Indent>
+    {postData.isUploaded === true ?     
+      <YoutubePlayer>
+        <iframe width="560" height="315" src={postData.url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
+      : null
+    }
+    {postData.photo === '/images/acoustic-carpStreamer.jpg' ?     
+      <YoutubePlayer>
+        <iframe width="560" height="315" src={postData.url2} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
+      : null
+    }
+
     <Flex>
       <Symbol>
         {postData.categoly != "3" ? 
@@ -52,6 +68,7 @@ const CommonProjects = ({ postData }:{postData:CommonData}) => {
         <Location>{postData.building} {postData.floor}階 {postData.location}</Location>
       </Flex2>
     </Center>
+
 </Wrap>
   );
 }
@@ -191,4 +208,14 @@ const Explain = styled.h3`
 
 const Introduce = styled.ul`
   list-style: none;
+`;
+
+const YoutubePlayer = styled.div`
+  margin: 0px auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
 `;

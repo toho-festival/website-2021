@@ -12,6 +12,10 @@ const BiologyClub: FC = () => {
       </ButtonWrap>
       <Main>
         <Title>生物部</Title>
+        <YoutubePlayer>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/N4U10C77oDE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </YoutubePlayer>
+
         <Description>
           <p>この1年は生物部にとっては厳しい一年でした。</p>
           <p>活動も調査も満足にできず、生き物を飼ったり研究したりするのが桐朋生物部のポリシーですが、それすら崩れそうになりました。</p>
@@ -72,6 +76,16 @@ const Main = styled.div`
 const Title = styled.h1`
   text-align: center;
   color: #FFFF99;
+`;
+
+const YoutubePlayer = styled.div`
+  margin: 0px auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const Description = styled.div`
