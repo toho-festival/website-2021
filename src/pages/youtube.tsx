@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { YoutubeContents } from "~/src/scripts/youtube-contents";
-
+//youtubeの追加
 const Youtube = styled( props => <div { ...props }>
   <h1>桐朋祭の動画</h1>
   {/* <p><a href="">第70回桐朋祭の動画はここをクリック！</a></p> */}
