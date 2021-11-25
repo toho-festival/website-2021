@@ -4,12 +4,10 @@ import styled from "styled-components";
 const AfterEvacution: FC = () => {
   return (
     <Wrap>
-      <Center>
-        <Back>
-          <Center><Title id="afterEvacution">避難後について</Title></Center>
-          <Pragraph>避難誘導の終了後は教職員が指示を出しますのでその場でお待ち下さい。</Pragraph>
-        </Back>
-      </Center>
+      <Back>
+        <Center><Title id="afterEvacution">避難後について</Title></Center>
+        <Center><p>避難誘導の終了後は教職員が指示を出しますのでその場でお待ち下さい。</p></Center>
+      </Back>
     </Wrap>
   );
 }
@@ -44,8 +42,4 @@ const Title = styled.h1`
     border-bottom: 7px solid #bf9d6d;
     padding-top: 37px;
   }
-`;
-
-const Pragraph = styled.p`
-  text-align: center;
 `;

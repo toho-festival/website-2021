@@ -11,11 +11,11 @@ const Nihutei:FC = () => {
       <Main>
         <Img src={process.env.basePath + "/images/nihutei1.jpeg" } alt="二歩亭の写真" />
         <h2>◎概要</h2>
-        <Subject>・実施場所</Subject>
+        <p>・実施場所</p>
         <p>　特別教室棟2階</p>
-        <Subject>・実施時間</Subject>
+        <p>・実施時間</p>
         <p>　桐朋祭開始時間中</p>
-        <Subject>・実施内容</Subject>
+        <p>・実施内容</p>
         <p>　1.部員との対局</p>
         <p>　2.友人同士での対局</p>
       </Main>
@@ -65,10 +65,6 @@ const Name = styled.h1`
 
 const Title = styled.h2`
   clear: both;
-`;
-
-const Subject = styled.p`
-
 `;
 
 const Conversation = styled.div`

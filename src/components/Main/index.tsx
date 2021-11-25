@@ -1,29 +1,15 @@
 import type { FC }    from 'react';
-import styled         from 'styled-components';
 import Date           from '~/src/components/Main/date';
 import MainInfomation from '~/src/components/Main/main-infomation';
 import Project        from '~/src/components/Main/project';
 import SubContent     from '~/src/components/Main/sub-content';
 
 const Main: FC = () =>
-  <Layout>
+  <div>
     <Date/>
     <MainInfomation />
     <Project/>
     <SubContent/>
-  </Layout>;
-
-const Layout = styled.div`
-
-`;
-
-const Attention = styled.p`
-  margin: 0 15% 0 15%;
-  text-align: center;
-  color: white;
-  @media screen and (max-width: 1230px) {
-    font-size: calc(28 / 1230 * 100vw);
-  }
-`;
+  </div>;
 
 export default Main;

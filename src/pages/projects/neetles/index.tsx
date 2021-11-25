@@ -17,17 +17,17 @@ const Neetles: FC = () => {
         そのような曲たちを僕たちは紹介したいのです。
       <ListName>主なセットリスト</ListName>
       <MusicList>
-        <Music>1.A HARD DAY’S NIGHT</Music>
-        <Music>2.I’M A LOSER</Music>
-        <Music>3.PAPERBACK WRITER</Music>
-        <Music>4.YESTERDAY</Music>
-        <Music>5.BLACK BIRD</Music>
+        <li>1.A HARD DAY’S NIGHT</li>
+        <li>2.I’M A LOSER</li>
+        <li>3.PAPERBACK WRITER</li>
+        <li>4.YESTERDAY</li>
+        <li>5.BLACK BIRD</li>
       </MusicList>
       <p>ほかの曲ももしかしたらやるかもしれません…</p>
       </AboutBand>
       <SubTitle><Icon src={process.env.basePath + "/images/fishSakeKirimi.png"}/>見どころ</SubTitle>
       <Member src ="" />
-      <Explain><p>名曲続々・・・　誰もがきいいたことのある　あの曲まで</p></Explain>
+      <div><p>名曲続々・・・　誰もがきいいたことのある　あの曲まで</p></div>
     </Wrap>
   );
 }
@@ -69,14 +69,6 @@ const ListName = styled.h2`
 
 const MusicList = styled.ul`
   list-style:none;
-`;
-
-const Music = styled.li`
-
-`;
-
-const Explain = styled.div`
-
 `;
 
 const Button = styled.a`

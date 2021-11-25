@@ -7,7 +7,7 @@ const Computer:FC = () => {
   return (
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
-      <ClubName>～コンピューター部～</ClubName>
+      <h1>～コンピューター部～</h1>
       <Center>
         <ImageTop src={process.env.basePath + "/images/tcc3.png"} alt="TCCの画像" />
       </Center>
@@ -38,10 +38,6 @@ const Wrap = styled.div`
   color: white;
   padding-left: 5%;
   padding-top: 3%;
-`;
-
-const ClubName = styled.h1`
-
 `;
 
 const ImageTop = styled.img`

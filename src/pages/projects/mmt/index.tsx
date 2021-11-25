@@ -8,19 +8,27 @@ const Mmt: FC = () => {
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <GroupName>-MMT-</GroupName>
+      <YoutubePlayer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/J_VFa7SJvTo" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
+      <YoutubePlayer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DYc-gJnw3BA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
       <Center><Logo src={process.env.basePath + "/images/mmtLogo.jpg"} /></Center>
       <SubTitle>メンバー</SubTitle>
       <MemberImage src={process.env.basePath + "/images/mmtMember.jpg"} />
       <MemberList>
-        <Member>古山　円造</Member>
-        <Member>橋本　結</Member>
-        <Member>天野　赳瑠</Member>
-        <Member>堀口　晃維</Member>
+        <li>古山　円造</li>
+        <li>橋本　結</li>
+        <li>天野　赳瑠</li>
+        <li>堀口　晃維</li>
       </MemberList>
       <SubTitle>曲</SubTitle>
-      <Music>令人震惊的打击<Link href="https://www.youtube.com/watch?v=TgxOMybZ_o0">リンク</Link></Music>
-      <Music>خيال<Link href="https://www.youtube.com/watch?v=ZFoJYI7Q4iA">リンク</Link></Music>
-      <Music>šialenstvo Hej!deti!<Link href="https://www.youtube.com/watch?v=C-o8pTi6vd8">リンク</Link></Music>
+      <Center>
+        <div>令人震惊的打击<Link href="https://www.youtube.com/watch?v=TgxOMybZ_o0">リンク</Link></div>
+        <div>خيال<Link href="https://www.youtube.com/watch?v=ZFoJYI7Q4iA">リンク</Link></div>
+        <div>šialenstvo Hej!deti!<Link href="https://www.youtube.com/watch?v=C-o8pTi6vd8">リンク</Link></div>
+      </Center>
     </Wrap>
   );
 }
@@ -45,6 +53,16 @@ const Logo = styled.img`
   width: 50%;
 `;
 
+const YoutubePlayer = styled.div`
+  margin: 0px auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
 const SubTitle = styled.h2`
   clear: both;
 `;
@@ -56,9 +74,6 @@ const MemberImage = styled.img`
 
 const MemberList = styled.ul`
   list-style: none;
-`;
-
-const Member = styled.li`
 `;
 
 const Link = styled.a`
@@ -76,10 +91,6 @@ const Link = styled.a`
     color: #FF0000;
     text-decoration: underline;
   }
-`;
-
-const Music = styled.div`
-  text-align: center;
 `;
 
 const Button = styled.a`

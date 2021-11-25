@@ -7,4 +7,7 @@ building: '1-D'
 floor: '4' 
 location: '時間'
 categoly: '3'
+url: 'https://www.youtube.com/embed/a7fLgMFCt3A'
+
+isUploaded: true
 ---

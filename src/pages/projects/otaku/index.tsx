@@ -8,7 +8,7 @@ const Otaku: FC = () => {
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Center>
-      <Icon src={process.env.basePath + "/images/otakuicon-min.png"} />
+      <img src={process.env.basePath + "/images/otakuimg-min.png"} />
       </Center>
       <div>
         <h2>展示内容</h2>
@@ -299,6 +299,9 @@ const Otaku: FC = () => {
       <BigGraph src={process.env.basePath + "/images/otakuGraph-min.png"}/>
       <p>参考文献</p>
       <div>
+        iPhone Mania <Link href="https://iphone-mania.jp">https://iphone-mania.jp</Link>
+      </div>
+      <div>
         ITmedia Mobile <Link href="https://www.itmedia.co.jp/mobile/">https://www.itmedia.co.jp/mobile/</Link>
       </div>
       <div>
@@ -386,14 +389,6 @@ const Center = styled.div`
 
 const Img = styled.img`
   width: 30%;
-`;
-
-const Icon = styled.img`
-  text-align: center;
-`;
-
-const Name = styled.h1`
-  text-align: center;
 `;
 
 const SubTitle = styled.h2`

@@ -7,8 +7,8 @@ const Schedule: FC = () => {
       <Center>
         <Title>開催日時</Title>
       </Center>
-      <Contents>
-        <Detail>今年度の桐朋祭はコロナウイルス蔓延防止のため<Important>開催日時が例年と異なって</Important>います。<p>具体的な日時は以下の通りです。よくご確認の上でご来場ください</p></Detail>
+      <article>
+      <Center><section>今年度の桐朋祭はコロナウイルス蔓延防止のため<Important>開催日時が例年と異なって</Important>います。<p>具体的な日時は以下の通りです。よくご確認の上でご来場ください</p></section></Center>
         <Center>
           <Date>
             <Frame>
@@ -24,7 +24,7 @@ const Schedule: FC = () => {
             <p>※今年度の桐朋祭は生徒のみとなります</p>
           </Attentions>
         </Center>
-      </Contents>
+      </article>
       <Center>
         <Image src={process.env.basePath + "/images/rainy-cool-guy.png"} />
       </Center>
@@ -56,14 +56,6 @@ const Wrap = styled.div`
   @media screen and (max-width: 1230px) {
     
   }
-`;
-
-const Contents = styled.article`
-    
-`;
-
-const Detail = styled.section`
-  text-align: center;
 `;
 
 const Important = styled.i`
