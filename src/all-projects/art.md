@@ -7,4 +7,7 @@ building: '教科教室棟'
 floor: '1' 
 location: '美術教室A'
 categoly: '2'
+url: 'https://www.youtube.com/embed/qMCiJH6psqs'
+url2: ''
+isUploaded: true
 ---
