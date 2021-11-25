@@ -8,5 +8,6 @@ floor: '3'
 location: '2-E'
 categoly: '2'
 url: 'https://www.youtube.com/embed/nsrgS03-qqQ'
+url2: ''
 isUploaded: true
 ---

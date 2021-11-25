@@ -7,4 +7,7 @@ building: '特別教室棟'
 floor: '2' 
 location: '大会議室'
 categoly: '2'
+url: ''
+url2: ''
+isUploaded: false
 ---
