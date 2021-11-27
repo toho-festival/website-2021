@@ -1,17 +1,26 @@
-import { FC } from "react";
 import styled from "styled-components";
-import { YoutubeContents } from "~/src/scripts/youtube-contents";
+import { MovieInfo, youtubeMovies } from "~/src/scripts/youtube-contents";
+
+const transformed = youtubeMovies.reduce((p, c)=> {
+  const last = p[p.length - 1];
+  if (last.length < 2) last.push(c);
+  else p.push([c]);
+  return p;
+},[[]] as unknown as MovieInfo[][])
+
 //youtubeの追加
 const Youtube = styled( props => <div { ...props }>
   <h1>桐朋祭の動画</h1>
   {/* <p><a href="">第70回桐朋祭の動画はここをクリック！</a></p> */}
   <table>
-  { YoutubeContents
-      .map(({name1, name2, id, url1, url2}) =>
-     
-        <tr key={ id }>
-          <td><a href={url1}>{name1}</a></td>
-          <td><a href={url2}>{name2}</a></td>
+  { transformed
+      .map(movies  =>
+        <tr key={ movies.map(m => m.id).join('+') }>
+          {
+            movies.map(({ id, url, name}) => <td>
+              <a key={id} href={url}>{name}</a>
+              </td>)
+          }
         </tr>,
       )
     }

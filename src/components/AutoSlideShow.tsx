@@ -1,5 +1,4 @@
 import { FC }                from 'react';
-import 'react-slideshow-image/dist/styles.css';
 import styled, { keyframes } from 'styled-components';
 
 const AutoSlideShow: FC = () => {
