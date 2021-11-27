@@ -12,3 +12,4 @@ dest
 !.vscode/extensions.json
 *.code-workspace
 
+**/.DS_Store

@@ -1,5 +1,6 @@
 const next     = require('next');
 const port     = +process.env.PORT || 8080;
+console.log(process.env.NODE_ENV);
 const dev      = process.env.NODE_ENV === 'development';
 const basePath = process.env.NODE_ENV === 'production' ? '/70th/' : '/staging/';
 const app      = next({ dev });

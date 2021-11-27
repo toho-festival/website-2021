@@ -1,6 +1,5 @@
 import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { firestore } from '~/firebase/client';
 // import ReactMarkdown from 'react-markdown';
 
 type Props = {
