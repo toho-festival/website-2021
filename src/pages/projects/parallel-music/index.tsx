@@ -8,6 +8,12 @@ const Parallel:FC = () => {
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Name>~パラレルチンアナゴ~</Name>
+      <YoutubePlayer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BjvVg6KpZH8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
+      <YoutubePlayer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RYhKku5uBaI" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
       <Description>バンドエリアにて活動中！皆さんに楽しんで頂けるような曲を用意したので、是非来てください。事前に原曲を聞いていただいてもらうと、もっと楽しめます。</Description>
       <SubTitle>・メンバー紹介</SubTitle>
       <MemberImage src={process.env.basePath + "/images/parallelMusicMember.jpg"} />
@@ -19,12 +25,12 @@ const Parallel:FC = () => {
         <Member><Strong>渡部瑛遥（Dr.）</Strong></Member>
       </MemberList>
       <SubTitle>・曲（曲名をタップすると曲が聞けます！）</SubTitle>
-      <MusicList>
+      <ul>
         <Music><a href="https://www.youtube.com/watch?v=j7CDb610Bg0" target="_blank" rel="noopener noreferrer"><Strong>天体観測</Strong>　（BUMP OF CHICKEN）</a></Music>
         <Music><a href="https://www.youtube.com/watch?v=9aJVr5tTTWk" target="_blank" rel="noopener noreferrer"><Strong>ピースサイン</Strong>　（米津玄師）</a></Music>
         <Music><a href="https://www.youtube.com/watch?v=by4SYYWlhEs" target="_blank" rel="noopener noreferrer"><Strong>夜に駆ける</Strong>　（YOASOBI）</a></Music>
         <Music><a href="https://www.youtube.com/watch?v=Nxwt_s1lM04" target="_blank" rel="noopener noreferrer"><Strong>Tomorrow never knows</Strong>　（Mr.Children）</a></Music>
-      </MusicList>
+      </ul>
     </Wrap>
   );
 }
@@ -40,6 +46,16 @@ const Wrap = styled.div`
 
 const Name = styled.h1`
   text-align: center;
+`;
+
+const YoutubePlayer = styled.div`
+  margin: 0px auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const Description = styled.div`
@@ -67,10 +83,6 @@ const MemberList = styled.ul`
 
 const Member = styled.li`
   color: black;
-`;
-
-const MusicList = styled.ul`
-
 `;
 
 const Music = styled.li`

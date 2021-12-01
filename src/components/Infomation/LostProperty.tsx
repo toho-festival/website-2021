@@ -4,12 +4,10 @@ import styled from "styled-components";
 const LostProperty: FC = () => {
   return (
     <Wrap>
-      <Center>
-        <Back>
-      <Center><Title id="lostProperty">落とし物について</Title></Center>
-      <Pragraph>落とし物は総合案内所にて保管しております。お心当たりの方は総合案内所までお越し下さい。</Pragraph>
+      <Back>
+        <Center><Title id="lostProperty">落とし物について</Title></Center>
+        <Center><p>落とし物は総合案内所にて保管しております。お心当たりの方は総合案内所までお越し下さい。</p></Center>
       </Back>
-      </Center>
     </Wrap>
   );
 }
@@ -45,8 +43,4 @@ const Title = styled.h1`
     font-size: 25px;
     border-bottom: 7px solid #bf9d6d;
   }
-`;
-
-const Pragraph = styled.p`
-  text-align: center;
 `;

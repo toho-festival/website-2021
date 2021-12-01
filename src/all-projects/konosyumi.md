@@ -7,4 +7,7 @@ building: '高校教室棟'
 floor: '2' 
 location: '3-C'
 categoly: '2'
+url: ''
+url2: ''
+isUploaded: false
 ---

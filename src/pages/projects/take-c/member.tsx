@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Member:FC = () => (
   <Wrap>
     <Div>
-        <MemberWrap>
+        <article>
             <SubTitle>メンバー</SubTitle>
             <Flex>
                 <MemberName>大森琢磨</MemberName>
@@ -12,7 +12,7 @@ const Member:FC = () => (
                 <MemberName>渋谷遥人</MemberName>
                 <MemberName>林潤一</MemberName>
             </Flex>
-        </MemberWrap>
+        </article>
         <MemberPicture>
             <Img src="entrance-backgrund-1.jpg" alt="" />
         </MemberPicture>
@@ -32,10 +32,6 @@ const Div = styled.div`
     margin-left: 15vw;
 `;
 
-const MemberWrap = styled.article`
-
-`;
-
 const SubTitle = styled.h3`
     font-size:5vw;
     text-align:center;
@@ -43,7 +39,6 @@ const SubTitle = styled.h3`
 `;
 
 const Flex = styled.div`
-    /* display: flex; */
     padding-bottom: 60px;
 `;
 

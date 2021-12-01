@@ -11,7 +11,7 @@ ARG MODE
 WORKDIR /app
 COPY . .
 COPY --from=deps /app/node_modules ./node_modules
-RUN NODE_ENV=$MODE yarn build && yarn install --production --ignore-scripts --prefer-offline
+RUN export NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=$MODE && yarn build && yarn install --production --ignore-scripts --prefer-offline
 
 FROM node:alpine AS runner
 

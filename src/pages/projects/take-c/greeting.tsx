@@ -8,13 +8,16 @@ const Greeting:FC = () => {
     <Wrap>
       <Button onClick={() => router.back()}>＜元のページに戻る</Button>
       <Name>TAKE C</Name>
+      <YoutubePlayer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LvqeHf9yKIQ" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </YoutubePlayer>
       <MainContents>
         <Article>
           <Img src="entrance-backgrund-1.jpg" alt="" />
         </Article>
-        <Sentence>
+        <aside>
           <First>どうも！昨年１０月位に</First><Decoration>ゆる～くできた、TAKE Cと</Decoration><Decoration>申します！音楽初心者ばかりなのに</Decoration><Decoration>最初の曲でシュガソンやったりと迷走しています。</Decoration><Decoration>ちょっとでも気になったら是非！遊びに来てください！</Decoration>
-        </Sentence>    
+        </aside>    
       </MainContents>
     </Wrap>
   );
@@ -35,6 +38,16 @@ const Name = styled.h1`
   text-align:center;
 `;
 
+const YoutubePlayer = styled.div`
+  margin: 0px auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
 const MainContents = styled.div`
   display:flex;
 `;
@@ -46,10 +59,6 @@ const Article = styled.article`
 
 const Img = styled.img`
   width:30vw;
-`;
-
-const Sentence = styled.aside`
-
 `;
 
 const First = styled.h2`

@@ -12,6 +12,10 @@ const BiologyClub: FC = () => {
       </ButtonWrap>
       <Main>
         <Title>生物部</Title>
+        <YoutubePlayer>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/N4U10C77oDE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </YoutubePlayer>
+
         <Description>
           <p>この1年は生物部にとっては厳しい一年でした。</p>
           <p>活動も調査も満足にできず、生き物を飼ったり研究したりするのが桐朋生物部のポリシーですが、それすら崩れそうになりました。</p>
@@ -20,10 +24,10 @@ const BiologyClub: FC = () => {
         </Description>
         <Space>　</Space>
       </Main>
-        <SubTitle>展示内容</SubTitle>
+        <h2>展示内容</h2>
         <MainContent>
           <Content>
-            <DisplayList>
+            <ul>
               <Legend>例年通り</Legend>
               <DisplayContent>両生類・爬虫類の生体</DisplayContent>
               <DisplayContent>淡水魚の生体</DisplayContent>
@@ -34,7 +38,7 @@ const BiologyClub: FC = () => {
               <Legend>例年と異なる点</Legend>
               <DisplayContent>クイズがありません。</DisplayContent>
               {/* <DisplayContent>入場制限があります。</DisplayContent> */}
-            </DisplayList>
+            </ul>
           </Content>
           <ImgContent>
             <ImgLegend>昨年の様子</ImgLegend>
@@ -74,6 +78,16 @@ const Title = styled.h1`
   color: #FFFF99;
 `;
 
+const YoutubePlayer = styled.div`
+  margin: 0px auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
 const Description = styled.div`
   margin-left: 10%;
   margin-right: 10%;
@@ -99,14 +113,6 @@ const MainContent = styled.div`
 
 const Content = styled.div`
   width:100%;
-`;
-
-const SubTitle = styled.h2`
-
-`;
-
-const DisplayList = styled.ul`
-
 `;
 
 const Legend = styled.p`

@@ -7,4 +7,7 @@ building: '高校教室棟'
 floor: '1' 
 location: '多目的ラウンジ'
 categoly: '2'
+url: 'https://www.youtube.com/embed/Q1Dp6HfqRns'
+url2: ''
+isUploaded: true
 ---

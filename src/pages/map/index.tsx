@@ -38,7 +38,6 @@ const Map = ({ allPostsData }:{allPostsData:AllPropsDataType[]}) => {
             <Link href={"/projects/" + id}>
               <Align>
               <a>
-                {/* <ProjectImg src={process.env.basePath + "/images/photo-" + id + ".png"} /> */}
                 <Project key={id}>{title}</Project>
               </a>
               </Align>
@@ -137,10 +136,6 @@ const Title = styled.h2`
   color: white;
   padding: 0px 8px 8px;
   border-bottom: 5px solid #bf9d6d;
-`;
-
-const ProjectImg = styled.img`
-
 `;
 
 const Project = styled.div`

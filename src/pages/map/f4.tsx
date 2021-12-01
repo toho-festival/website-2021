@@ -38,7 +38,6 @@ const Map = ({ allPostsData }:{allPostsData:AllPropsDataType[]}) => {
               <Link href={"/projects/" + id}>
                 <Align>
                   <a>
-                    {/* <ProjectImg src={process.env.basePath + "/images/photo-" + id + ".png"} /> */}
                     <Project key={id}>{title}</Project>
                   </a>
                 </Align>
@@ -96,9 +95,6 @@ const Tab = styled.div`
 
 const Anchor = styled.a`
   display: block;
-  /* text-shadow: 0 0 15px rgba(250, 250, 214, 0.5),
-    0 0 15px rgba(250, 250, 214, 0.5), 0 0 15px rgba(250, 250, 214, 0.5),
-    0 0 15px rgba(250, 250, 214, 0.5); */
   &[color="blue"]{
       color: white;
       font-size: 250%;
@@ -149,10 +145,6 @@ const FloorProject = styled.div`
     margin-right: 20%;
     text-align: center;
   }
-`;
-
-const ProjectImg = styled.img`
-
 `;
 
 const Project = styled.div`

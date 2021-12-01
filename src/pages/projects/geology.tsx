@@ -25,6 +25,9 @@ const Geology = () => {
           <Center>
             <Subject>地学部</Subject>
           </Center>
+          <YoutubePlayer>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FvxPeyCBydU" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </YoutubePlayer>
           <Explain>
             <p>
               地学部は、自然科学分野におけるマイナー科目(笑)である地学に関する活動を行っています。
@@ -62,7 +65,7 @@ const Geology = () => {
       <Center>
         <Flex2>
           <Image src={process.env.basePath + "/images/mapIcon.png"} />
-          <Location>教科教室棟　4F　地学教室　国語教室　太陽観測所にて</Location>
+          <div>教科教室棟　4F　地学教室　国語教室　太陽観測所にて</div>
         </Flex2>
       </Center>
     </Wrap>
@@ -70,7 +73,6 @@ const Geology = () => {
 }
 
 export default Geology;
-
 
 const Wrap = styled.div`
   color: white;
@@ -123,9 +125,6 @@ const Flex2 = styled.div`
   }
 `;
 
-const Location = styled.div`
-`;
-
 const Image = styled.img`
   width:40px;
   height: 40px;
@@ -176,4 +175,14 @@ const Explain = styled.h3`
 
 const Introduce = styled.ul`
   list-style: none;
+`;
+
+const YoutubePlayer = styled.div`
+  margin: 0px auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
 `;

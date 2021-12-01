@@ -6,5 +6,8 @@ textup: 'アコースティックギターが表現の限界に挑戦。いろ�
 building: ''
 floor: '-' 
 location: '-'
+url: ''
+url2: ''
+isUploaded: false
 categoly: '3'
 ---

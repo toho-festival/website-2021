@@ -7,4 +7,7 @@ building: '教科教室棟'
 floor: '3' 
 location: '化学講義室 化学実験室A,B'
 categoly: '2'
+url: 'https://www.youtube.com/embed/tFVHF0onzr8'
+url2: ''
+isUploaded: true
 ---

@@ -5,21 +5,17 @@ import styled from 'styled-components';
 
 const Contents: FC = () => {
   return (
-    <Wrap>
+    <div>
       <Question><Red>何</Red>ヲカ<Red>見</Red>ル</Question>
       <Answer>A.本格ミステリーを捌く</Answer>
       <Introduce>　ロジック一本で勝負する「本格ミステリ」の系譜やトリックの種類をご紹介</Introduce>
       <Answer>B.紙製ブックカバー配布</Answer>
       <Introduce>　図書委員会初の試み。何ができるかは分からないが、もらっておいて損はないはず。</Introduce>
-    </Wrap>
+    </div>
   )
 }
 
 export default Contents;
-
-const Wrap = styled.div`
-
-`;
 
 const Question = styled.h2`
   font-size:3vw;
