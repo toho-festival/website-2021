@@ -2,6 +2,16 @@ import { FC } from "react";
 import styled from "styled-components";
 import Link from 'next/link';
 
+const TableContents = [
+ {href:"#attention", categoly:"各種総合ご案内",},
+ {href:"#disaster", categoly:"もし災害が発生したら",},
+ {href:"#evacuation", categoly:"避難について",},
+ {href:"#afterEvacution", categoly:"避難後について",},
+ {href:"#lostChild", categoly:"迷子について",},
+ {href:"#suspiciousObject", categoly:"不審物について",},
+ {href:"#lostProperty", categoly:"落とし物について",},
+];
+
 const Table: FC = () => {
   return(
     <>
@@ -14,13 +24,10 @@ const Table: FC = () => {
         <Center>
           <TableTitle>目次</TableTitle>
           <Column>
-            <Verse><Link href="#attention"><Anchor>各種総合ご案内</Anchor></Link></Verse>
-            <Verse><Link href="#disaster"><Anchor>もし災害が発生したら</Anchor></Link></Verse>
-            <Verse><Link href="#evacuation"><Anchor>避難について</Anchor></Link></Verse>
-            <Verse><Link href="#afterEvacution"><Anchor>避難後について</Anchor></Link></Verse>
-            <Verse><Link href="#lostChild"><Anchor>迷子について</Anchor></Link></Verse>
-            <Verse><Link href="#suspiciousObject"><Anchor>不審物について</Anchor></Link></Verse>
-            <Verse><Link href="#lostProperty"><Anchor>落とし物について</Anchor></Link></Verse>
+          { TableContents.map(({ href, categoly }) => <div key={ categoly }>
+              <Verse><Link href={href}><Anchor>{categoly}</Anchor></Link></Verse>
+            </div>)
+          }
           </Column>
         </Center>
       </Wrap>
