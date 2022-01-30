@@ -2,7 +2,6 @@ import { FC } from "react";
 import styled from "styled-components";
 import { resultCategoly } from "~/src/scripts/result-categoly";
 import ResultSlideShow from "~/src/components/ResultSlideShow";
-import ResultComment from "~/src/components/ResultComment";
 import Head                        from 'next/head';
 
 const AfterTohofes = styled( props => <div {...props}>
@@ -34,7 +33,6 @@ const AfterTohofes = styled( props => <div {...props}>
   <div color="slide">
     {resultCategoly.map(({id, contents}) => <>
       <h2>{id}</h2>
-      <ResultComment contents={contents}/>
       <ResultSlideShow contents={contents}/>
     </>
     )}
