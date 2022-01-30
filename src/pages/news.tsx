@@ -22,7 +22,7 @@ const News: FC<Props> = (props) => {
       <Box>
         <ReactMarkdown children={props.content} />
       </Box> */}
-      <Center>現在記事を作成中です！</Center>
+      <Center>事件です！</Center>
     </Wrap>
   )
 }
