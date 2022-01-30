@@ -7,7 +7,7 @@ building: '中学教室棟'
 floor: '3' 
 location: '2-4'
 categoly: '2'
-url: ''
+url: 'https://www.youtube.com/embed/LbspQrMt4-o'
 url2: ''
-isUploaded: false
+isUploaded: true
 ---
