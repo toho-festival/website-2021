@@ -3,7 +3,7 @@ export type Route = {
   path: string
   logo: string
 }
-
+//あわわわわわあわわあ
 export const routes: Route[] = [
   { logo: '/images/menu-top.jpg', key: 'top', path: '/' },
   { logo: '/images/menu-schedule.jpg', key: '開催日時', path: '/schedule' },
